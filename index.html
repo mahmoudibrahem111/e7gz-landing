@@ -1,372 +1,683 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>E7GZ — Book. Play. Win | Football Field Booking App</title>
-  <meta name="description" content="E7GZ is your ultimate app for booking football fields, joining matches, and connecting with players. Fast, easy, and reliable." />
-  <link rel="icon" type="image/png" href="assets/e7gz-logo.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
-</head>
-<body>
-
-  <!-- ============ NAVBAR ============ -->
-  <header class="navbar" id="navbar">
-    <div class="container nav-inner">
-      <a href="#home" class="brand">
-        <img src="assets/e7gz-logo.png" alt="E7GZ احجز logo" class="brand-logo" />
-      </a>
-      <nav class="nav-links" id="navLinks">
-        <a href="#home" class="nav-link active">Home</a>
-        <a href="#features" class="nav-link">Features</a>
-        <a href="#screenshots" class="nav-link">Screenshots</a>
-        <a href="#how-it-works" class="nav-link">How It Works</a>
-        <a href="#contact" class="nav-link">Contact</a>
-      </nav>
-      <div class="nav-cta">
-        <a href="#download" class="btn btn-primary btn-sm">Download App</a>
-        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <!-- ============ HERO ============ -->
-  <section class="hero" id="home">
-    <div class="hero-bg">
-      <div class="floodlight floodlight-1"></div>
-      <div class="floodlight floodlight-2"></div>
-      <div class="hero-pitch"></div>
-    </div>
-    <div class="container hero-inner">
-      <div class="hero-copy reveal">
-        <h1 class="hero-title">Book. Play.<br />Win with <span class="green">E7GZ</span></h1>
-        <p class="hero-sub">
-          E7GZ is your ultimate app for booking football fields,
-          joining matches, and connecting with players.
-          Fast, easy, and reliable.
-        </p>
-        <div class="hero-actions" id="download">
-          <div class="dl-item">
-            <a href="#" class="btn btn-primary btn-lg">
-              <svg viewBox="0 0 24 24" fill="currentColor" class="icon"><path d="M6 18c0 .55.45 1 1 1h1v3.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5V19h2v3.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5V19h1c.55 0 1-.45 1-1V8H6v10zM3.5 8C2.67 8 2 8.67 2 9.5v7c0 .83.67 1.5 1.5 1.5S5 17.33 5 16.5v-7C5 8.67 4.33 8 3.5 8zm17 0c-.83 0-1.5.67-1.5 1.5v7c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5v-7c0-.83-.67-1.5-1.5-1.5zm-4.97-5.84l1.3-1.3c.2-.2.2-.51 0-.71-.2-.2-.51-.2-.71 0l-1.48 1.48A5.84 5.84 0 0 0 12 1c-.96 0-1.86.23-2.66.63L7.85.15c-.2-.2-.51-.2-.71 0-.2.2-.2.51 0 .71l1.31 1.31A5.98 5.98 0 0 0 6 7h12c0-1.99-.97-3.75-2.47-4.84zM10 5H9V4h1v1zm5 0h-1V4h1v1z"/></svg>
-              Download for Android
-            </a>
-            <small class="dl-note">Coming soon on Google Play</small>
-          </div>
-          <div class="dl-item">
-            <a href="#" class="btn btn-dark btn-lg">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-              Download our Web App
-            </a>
-            <small class="dl-note">Web app coming soon</small>
-          </div>
-          <div class="dl-item">
-            <a href="#how-it-works" class="btn btn-ghost btn-lg">
-              <svg viewBox="0 0 24 24" fill="currentColor" class="icon"><path d="M8 5v14l11-7z"/></svg>
-              See How It Works
-            </a>
-          </div>
-        </div>
-        <ul class="hero-trust">
-          <li>
-            <span class="trust-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
-            </span>
-            <div><strong>Secure Payments</strong><small>Powered by Paymob</small></div>
-          </li>
-          <li>
-            <span class="trust-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>
-            </span>
-            <div><strong>Instant Booking</strong><small>Real-time availability</small></div>
-          </li>
-          <li>
-            <span class="trust-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            </span>
-            <div><strong>Play Together</strong><small>Invite &amp; join matches</small></div>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Hero phones : real app screenshots -->
-      <div class="hero-phones reveal">
-        <div class="phone phone-left">
-          <div class="phone-screen">
-            <img class="shot-img" src="assets/screen-booking.jpg" alt="E7GZ app — booking slots at Alex Arena" />
-          </div>
-        </div>
-
-        <div class="phone phone-center">
-          <div class="phone-screen">
-            <img class="shot-img" src="assets/screen-home.jpg" alt="E7GZ app — find and book football fields near you" />
-          </div>
-        </div>
-
-        <div class="phone phone-right">
-          <div class="phone-screen">
-            <img class="shot-img" src="assets/screen-matches.jpg" alt="E7GZ app — matches explorer" />
-          </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E7GZ — Book. Play. Win | Football Field Booking App</title>
+    <meta
+      name="description"
+      content="E7GZ is your ultimate app for booking football fields, joining matches, and connecting with players. Fast, easy, and reliable."
+    />
+    <link rel="icon" type="image/png" href="assets/e7gz-logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- ============ NAVBAR ============ -->
+    <header class="navbar" id="navbar">
+      <div class="container nav-inner">
+        <a href="#home" class="brand">
+          <img
+            src="assets/e7gz-logo.png"
+            alt="E7GZ احجز logo"
+            class="brand-logo"
+          />
+        </a>
+        <nav class="nav-links" id="navLinks">
+          <a href="#home" class="nav-link active">Home</a>
+          <a href="#features" class="nav-link">Features</a>
+          <a href="#screenshots" class="nav-link">Screenshots</a>
+          <a href="#how-it-works" class="nav-link">How It Works</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+        <div class="nav-cta">
+          <a href="#download" class="btn btn-primary btn-sm">Download App</a>
+          <button
+            class="hamburger"
+            id="hamburger"
+            aria-label="Toggle menu"
+            aria-expanded="false"
+          >
+            <span></span><span></span><span></span>
+          </button>
         </div>
       </div>
-    </div>
-  </section>
+    </header>
 
-  <!-- ============ FEATURES ============ -->
-  <section class="section features" id="features">
-    <div class="container">
-      <div class="features-head reveal">
-        <span class="eyebrow">FEATURES</span>
-        <h2>Everything you need<br />to enjoy the game</h2>
-        <p>Whether you play or you run the venue, E7GZ gives you all the tools — book fields, join matches, manage your game experience, and run your business.</p>
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="home">
+      <div class="hero-bg">
+        <div class="floodlight floodlight-1"></div>
+        <div class="floodlight floodlight-2"></div>
+        <div class="hero-pitch"></div>
       </div>
-
-      <div class="seg-tabs reveal" data-group="features">
-        <button class="seg-tab active" data-target="feat-players">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-          For Players
-        </button>
-        <button class="seg-tab" data-target="feat-owners">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l7-4 7 4v14"/><path d="M9 21v-4h6v4"/><path d="M9 11h.01M15 11h.01M12 13h.01"/></svg>
-          For Venue Owners
-        </button>
-      </div>
-
-      <!-- Player features -->
-      <div class="tab-panel active" id="feat-players" data-group="features">
-        <div class="features-grid">
-          <div class="feature-card reveal">
-            <span class="feature-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m9 6-6 3v12l6-3 6 3 6-3V3l-6 3-6-3z"/><path d="M9 6v12"/><path d="m15 9v12"/></svg>
-            </span>
-            <h3>Discover &amp; Filter Venues</h3>
-            <p>Browse stadiums near you on a map, filter by pitch type — 5-a-side, 7-a-side, indoor futsal — compare prices, and save favorites.</p>
-          </div>
-          <div class="feature-card reveal">
-            <span class="feature-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="m9 15 2 2 4-4"/></svg>
-            </span>
-            <h3>Instant Slot Booking</h3>
-            <p>Pick a venue, see real-time availability with live prices in EGP, choose your slot, and pay securely with cards or mobile wallets via Paymob.</p>
-          </div>
-          <div class="feature-card reveal">
-            <span class="feature-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            </span>
-            <h3>Join or Host Matches</h3>
-            <p>Find open matches near you, see spots filled in real time, join with one tap — or create your own match and chat with your squad.</p>
-          </div>
-          <div class="feature-card reveal">
-            <span class="feature-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="M8 14h3M8 18h5"/></svg>
-            </span>
-            <h3>Track Your Bookings</h3>
-            <p>All your reservations in one place — upcoming, past, and cancelled — with venue details, times, prices, and full booking history.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Owner features -->
-      <div class="tab-panel" id="feat-owners" data-group="features">
-        <div class="features-grid">
-          <div class="feature-card reveal">
-            <span class="feature-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M7 16l4-6 4 3 5-7"/></svg>
-            </span>
-            <h3>Live Owner Dashboard</h3>
-            <p>Today's revenue, bookings, and free slots at a glance — across all your venues. Switch between facilities instantly and record walk-in customers.</p>
-          </div>
-          <div class="feature-card reveal">
-            <span class="feature-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><circle cx="12" cy="15" r="2.5"/></svg>
-            </span>
-            <h3>Daily Calendar</h3>
-            <p>Every booking on a clear timeline. See bookings, revenue, and rate per hour for any day, and manage confirmed slots for each venue.</p>
-          </div>
-          <div class="feature-card reveal">
-            <span class="feature-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-            </span>
-            <h3>Weekly Hours Template</h3>
-            <p>Set recurring opening hours once — future slots generate automatically. Toggle days on or off, adjust open and close times, and override any single day later.</p>
-          </div>
-          <div class="feature-card reveal">
-            <span class="feature-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21h18M5 21V7l7-4 7 4v14"/><path d="M9 21v-4h6v4"/><path d="M9 11h.01M15 11h.01M12 13h.01"/></svg>
-            </span>
-            <h3>Multi-Venue Management</h3>
-            <p>Register new venues, list photos, prices, and amenities, and manage all your facilities from one app — with walk-in bookings to keep everything accurate.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ SCREENSHOTS ============ -->
-  <section class="section screenshots" id="screenshots">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="eyebrow">SCREENSHOTS</span>
-        <h2>Take a look inside <span class="green">E7GZ</span></h2>
-        <p>One app, two experiences — a player app to book and play, and an owner app to run your venues.</p>
-      </div>
-
-      <div class="seg-tabs reveal" data-group="shots">
-        <button class="seg-tab active" data-target="shots-players">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-          Player App
-        </button>
-        <button class="seg-tab" data-target="shots-owners">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l7-4 7 4v14"/><path d="M9 21v-4h6v4"/><path d="M9 11h.01M15 11h.01M12 13h.01"/></svg>
-          Owner App
-        </button>
-      </div>
-
-      <!-- Player screens -->
-      <div class="tab-panel active" id="shots-players" data-group="shots">
-        <div class="shots-grid">
-
-        <div class="shot reveal">
-          <div class="phone phone-sm">
-            <div class="phone-screen">
-              <img class="shot-img" src="assets/screen-home.jpg" alt="E7GZ home screen — discover venues near you" loading="lazy" />
+      <div class="container hero-inner">
+        <div class="hero-copy reveal">
+          <h1 class="hero-title">
+            Book. Play.<br />Win with <span class="green">E7GZ</span>
+          </h1>
+          <p class="hero-sub">
+            E7GZ is your ultimate app for booking football fields, joining
+            matches, and connecting with players. Fast, easy, and reliable.
+          </p>
+          <div class="hero-actions" id="download">
+            <div class="dl-item">
+              <a
+                href="https://e7gz.onrender.com/api/v1/download/apk"
+                class="btn btn-primary btn-lg"
+              >
+                <svg viewBox="0 0 24 24" fill="currentColor" class="icon"></svg>
+                Download for Android
+              </a>
+              <small class="dl-note">Coming soon on Google Play</small>
+            </div>
+            <div class="dl-item">
+              <a href="#" class="btn btn-dark btn-lg">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  class="icon"
+                >
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M2 12h20" />
+                  <path
+                    d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+                  />
+                </svg>
+                Download our Web App
+              </a>
+              <small class="dl-note">Web app coming soon</small>
+            </div>
+            <div class="dl-item">
+              <a href="#how-it-works" class="btn btn-ghost btn-lg">
+                <svg viewBox="0 0 24 24" fill="currentColor" class="icon">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+                See How It Works
+              </a>
             </div>
           </div>
-          <h4>Discover Venues</h4>
-          <p>Find football, padel and basketball fields near you with real-time availability.</p>
+          <ul class="hero-trust">
+            <li>
+              <span class="trust-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
+                  />
+                  <path d="m9 12 2 2 4-4" />
+                </svg>
+              </span>
+              <div>
+                <strong>Secure Payments</strong><small>Powered by Paymob</small>
+              </div>
+            </li>
+            <li>
+              <span class="trust-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"
+                  />
+                </svg>
+              </span>
+              <div>
+                <strong>Instant Booking</strong
+                ><small>Real-time availability</small>
+              </div>
+            </li>
+            <li>
+              <span class="trust-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                  <circle cx="9" cy="7" r="4" />
+                  <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                </svg>
+              </span>
+              <div>
+                <strong>Play Together</strong
+                ><small>Invite &amp; join matches</small>
+              </div>
+            </li>
+          </ul>
         </div>
 
-        <div class="shot reveal">
-          <div class="phone phone-sm">
+        <!-- Hero phones : real app screenshots -->
+        <div class="hero-phones reveal">
+          <div class="phone phone-left">
             <div class="phone-screen">
-              <img class="shot-img" src="assets/screen-explore.jpg" alt="E7GZ explore stadiums screen with filters and favorites" loading="lazy" />
+              <img
+                class="shot-img"
+                src="assets/screen-booking.jpg"
+                alt="E7GZ app — booking slots at Alex Arena"
+              />
             </div>
           </div>
-          <h4>Browse &amp; Filter</h4>
-          <p>Filter by pitch type, compare prices, and save your favorite venues with one tap.</p>
-        </div>
 
-        <div class="shot reveal">
-          <div class="phone phone-sm">
+          <div class="phone phone-center">
             <div class="phone-screen">
-              <img class="shot-img" src="assets/screen-matches.jpg" alt="E7GZ matches explorer — join a game or host your own" loading="lazy" />
+              <img
+                class="shot-img"
+                src="assets/screen-home.jpg"
+                alt="E7GZ app — find and book football fields near you"
+              />
             </div>
           </div>
-          <h4>Join Matches</h4>
-          <p>Host your own game or join open matches and fill the spots with players nearby.</p>
-        </div>
 
-        <div class="shot reveal">
-          <div class="phone phone-sm">
+          <div class="phone phone-right">
             <div class="phone-screen">
-              <img class="shot-img" src="assets/screen-squad.jpg" alt="E7GZ match details screen — squad status and player management" loading="lazy" />
+              <img
+                class="shot-img"
+                src="assets/screen-matches.jpg"
+                alt="E7GZ app — matches explorer"
+              />
             </div>
           </div>
-          <h4>Manage Your Squad</h4>
-          <p>Track confirmed players, chat with your squad, and manage your match in one place.</p>
-        </div>
-
-        <div class="shot reveal">
-          <div class="phone phone-sm">
-            <div class="phone-screen">
-              <img class="shot-img" src="assets/screen-booking.jpg" alt="E7GZ booking screen — pick your slot at Alex Arena" loading="lazy" />
-            </div>
-          </div>
-          <h4>Book in Seconds</h4>
-          <p>Pick your date and time slot, see live prices, and confirm your booking instantly.</p>
-        </div>
-
-        <div class="shot reveal">
-          <div class="phone phone-sm">
-            <div class="phone-screen">
-              <img class="shot-img" src="assets/screen-bookings.jpg" alt="E7GZ my bookings screen — upcoming, past and cancelled reservations" loading="lazy" />
-            </div>
-          </div>
-          <h4>Track Bookings</h4>
-          <p>View upcoming, past and cancelled reservations with prices and full history.</p>
-        </div>
-
         </div>
       </div>
+    </section>
 
-      <!-- Owner screens -->
-      <div class="tab-panel" id="shots-owners" data-group="shots">
-        <div class="shots-grid shots-grid-3">
+    <!-- ============ FEATURES ============ -->
+    <section class="section features" id="features">
+      <div class="container">
+        <div class="features-head reveal">
+          <span class="eyebrow">FEATURES</span>
+          <h2>Everything you need<br />to enjoy the game</h2>
+          <p>
+            Whether you play or you run the venue, E7GZ gives you all the tools
+            — book fields, join matches, manage your game experience, and run
+            your business.
+          </p>
+        </div>
 
-        <div class="shot reveal">
-          <div class="phone phone-sm">
-            <div class="phone-screen">
-              <img class="shot-img" src="assets/owner-dashboard.jpg" alt="E7GZ owner dashboard — live revenue, bookings and venues managed" loading="lazy" />
+        <div class="seg-tabs reveal" data-group="features">
+          <button class="seg-tab active" data-target="feat-players">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+              <circle cx="12" cy="7" r="4" />
+            </svg>
+            For Players
+          </button>
+          <button class="seg-tab" data-target="feat-owners">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M3 21h18M5 21V7l7-4 7 4v14" />
+              <path d="M9 21v-4h6v4" />
+              <path d="M9 11h.01M15 11h.01M12 13h.01" />
+            </svg>
+            For Venue Owners
+          </button>
+        </div>
+
+        <!-- Player features -->
+        <div class="tab-panel active" id="feat-players" data-group="features">
+          <div class="features-grid">
+            <div class="feature-card reveal">
+              <span class="feature-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                >
+                  <path d="m9 6-6 3v12l6-3 6 3 6-3V3l-6 3-6-3z" />
+                  <path d="M9 6v12" />
+                  <path d="m15 9v12" />
+                </svg>
+              </span>
+              <h3>Discover &amp; Filter Venues</h3>
+              <p>
+                Browse stadiums near you on a map, filter by pitch type —
+                5-a-side, 7-a-side, indoor futsal — compare prices, and save
+                favorites.
+              </p>
+            </div>
+            <div class="feature-card reveal">
+              <span class="feature-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                >
+                  <rect x="3" y="4" width="18" height="18" rx="2" />
+                  <path d="M16 2v4M8 2v4M3 10h18" />
+                  <path d="m9 15 2 2 4-4" />
+                </svg>
+              </span>
+              <h3>Instant Slot Booking</h3>
+              <p>
+                Pick a venue, see real-time availability with live prices in
+                EGP, choose your slot, and pay securely with cards or mobile
+                wallets via Paymob.
+              </p>
+            </div>
+            <div class="feature-card reveal">
+              <span class="feature-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                >
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                  <circle cx="9" cy="7" r="4" />
+                  <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                </svg>
+              </span>
+              <h3>Join or Host Matches</h3>
+              <p>
+                Find open matches near you, see spots filled in real time, join
+                with one tap — or create your own match and chat with your
+                squad.
+              </p>
+            </div>
+            <div class="feature-card reveal">
+              <span class="feature-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                >
+                  <rect x="3" y="4" width="18" height="18" rx="2" />
+                  <path d="M16 2v4M8 2v4M3 10h18" />
+                  <path d="M8 14h3M8 18h5" />
+                </svg>
+              </span>
+              <h3>Track Your Bookings</h3>
+              <p>
+                All your reservations in one place — upcoming, past, and
+                cancelled — with venue details, times, prices, and full booking
+                history.
+              </p>
             </div>
           </div>
-          <h4>Owner Dashboard</h4>
-          <p>Live revenue, bookings today, slots left, and all your venues — switch facilities with one tap.</p>
         </div>
 
-        <div class="shot reveal">
-          <div class="phone phone-sm">
-            <div class="phone-screen">
-              <img class="shot-img" src="assets/owner-schedule.jpg" alt="E7GZ owner schedule — daily calendar with bookings timeline" loading="lazy" />
+        <!-- Owner features -->
+        <div class="tab-panel" id="feat-owners" data-group="features">
+          <div class="features-grid">
+            <div class="feature-card reveal">
+              <span class="feature-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                >
+                  <path d="M3 3v16a2 2 0 0 0 2 2h16" />
+                  <path d="M7 16l4-6 4 3 5-7" />
+                </svg>
+              </span>
+              <h3>Live Owner Dashboard</h3>
+              <p>
+                Today's revenue, bookings, and free slots at a glance — across
+                all your venues. Switch between facilities instantly and record
+                walk-in customers.
+              </p>
+            </div>
+            <div class="feature-card reveal">
+              <span class="feature-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                >
+                  <rect x="3" y="4" width="18" height="18" rx="2" />
+                  <path d="M16 2v4M8 2v4M3 10h18" />
+                  <circle cx="12" cy="15" r="2.5" />
+                </svg>
+              </span>
+              <h3>Daily Calendar</h3>
+              <p>
+                Every booking on a clear timeline. See bookings, revenue, and
+                rate per hour for any day, and manage confirmed slots for each
+                venue.
+              </p>
+            </div>
+            <div class="feature-card reveal">
+              <span class="feature-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                >
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M12 6v6l4 2" />
+                </svg>
+              </span>
+              <h3>Weekly Hours Template</h3>
+              <p>
+                Set recurring opening hours once — future slots generate
+                automatically. Toggle days on or off, adjust open and close
+                times, and override any single day later.
+              </p>
+            </div>
+            <div class="feature-card reveal">
+              <span class="feature-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                >
+                  <path d="M3 21h18M5 21V7l7-4 7 4v14" />
+                  <path d="M9 21v-4h6v4" />
+                  <path d="M9 11h.01M15 11h.01M12 13h.01" />
+                </svg>
+              </span>
+              <h3>Multi-Venue Management</h3>
+              <p>
+                Register new venues, list photos, prices, and amenities, and
+                manage all your facilities from one app — with walk-in bookings
+                to keep everything accurate.
+              </p>
             </div>
           </div>
-          <h4>Daily Calendar</h4>
-          <p>Every booking on a timeline with day revenue and hourly rate — confirm and manage slots easily.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SCREENSHOTS ============ -->
+    <section class="section screenshots" id="screenshots">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">SCREENSHOTS</span>
+          <h2>Take a look inside <span class="green">E7GZ</span></h2>
+          <p>
+            One app, two experiences — a player app to book and play, and an
+            owner app to run your venues.
+          </p>
         </div>
 
-        <div class="shot reveal">
-          <div class="phone phone-sm">
-            <div class="phone-screen">
-              <img class="shot-img" src="assets/owner-hours.jpg" alt="E7GZ edit schedule — weekly hours template per venue" loading="lazy" />
+        <div class="seg-tabs reveal" data-group="shots">
+          <button class="seg-tab active" data-target="shots-players">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+              <circle cx="12" cy="7" r="4" />
+            </svg>
+            Player App
+          </button>
+          <button class="seg-tab" data-target="shots-owners">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M3 21h18M5 21V7l7-4 7 4v14" />
+              <path d="M9 21v-4h6v4" />
+              <path d="M9 11h.01M15 11h.01M12 13h.01" />
+            </svg>
+            Owner App
+          </button>
+        </div>
+
+        <!-- Player screens -->
+        <div class="tab-panel active" id="shots-players" data-group="shots">
+          <div class="shots-grid">
+            <div class="shot reveal">
+              <div class="phone phone-sm">
+                <div class="phone-screen">
+                  <img
+                    class="shot-img"
+                    src="assets/screen-home.jpg"
+                    alt="E7GZ home screen — discover venues near you"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+              <h4>Discover Venues</h4>
+              <p>
+                Find football, padel and basketball fields near you with
+                real-time availability.
+              </p>
+            </div>
+
+            <div class="shot reveal">
+              <div class="phone phone-sm">
+                <div class="phone-screen">
+                  <img
+                    class="shot-img"
+                    src="assets/screen-explore.jpg"
+                    alt="E7GZ explore stadiums screen with filters and favorites"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+              <h4>Browse &amp; Filter</h4>
+              <p>
+                Filter by pitch type, compare prices, and save your favorite
+                venues with one tap.
+              </p>
+            </div>
+
+            <div class="shot reveal">
+              <div class="phone phone-sm">
+                <div class="phone-screen">
+                  <img
+                    class="shot-img"
+                    src="assets/screen-matches.jpg"
+                    alt="E7GZ matches explorer — join a game or host your own"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+              <h4>Join Matches</h4>
+              <p>
+                Host your own game or join open matches and fill the spots with
+                players nearby.
+              </p>
+            </div>
+
+            <div class="shot reveal">
+              <div class="phone phone-sm">
+                <div class="phone-screen">
+                  <img
+                    class="shot-img"
+                    src="assets/screen-squad.jpg"
+                    alt="E7GZ match details screen — squad status and player management"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+              <h4>Manage Your Squad</h4>
+              <p>
+                Track confirmed players, chat with your squad, and manage your
+                match in one place.
+              </p>
+            </div>
+
+            <div class="shot reveal">
+              <div class="phone phone-sm">
+                <div class="phone-screen">
+                  <img
+                    class="shot-img"
+                    src="assets/screen-booking.jpg"
+                    alt="E7GZ booking screen — pick your slot at Alex Arena"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+              <h4>Book in Seconds</h4>
+              <p>
+                Pick your date and time slot, see live prices, and confirm your
+                booking instantly.
+              </p>
+            </div>
+
+            <div class="shot reveal">
+              <div class="phone phone-sm">
+                <div class="phone-screen">
+                  <img
+                    class="shot-img"
+                    src="assets/screen-bookings.jpg"
+                    alt="E7GZ my bookings screen — upcoming, past and cancelled reservations"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+              <h4>Track Bookings</h4>
+              <p>
+                View upcoming, past and cancelled reservations with prices and
+                full history.
+              </p>
             </div>
           </div>
-          <h4>Weekly Hours</h4>
-          <p>Set recurring opening hours per day — slots auto-generate, and you can override any day later.</p>
         </div>
 
-        </div>
-      </div>
-    </div>
-  </section>
+        <!-- Owner screens -->
+        <div class="tab-panel" id="shots-owners" data-group="shots">
+          <div class="shots-grid shots-grid-3">
+            <div class="shot reveal">
+              <div class="phone phone-sm">
+                <div class="phone-screen">
+                  <img
+                    class="shot-img"
+                    src="assets/owner-dashboard.jpg"
+                    alt="E7GZ owner dashboard — live revenue, bookings and venues managed"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+              <h4>Owner Dashboard</h4>
+              <p>
+                Live revenue, bookings today, slots left, and all your venues —
+                switch facilities with one tap.
+              </p>
+            </div>
 
-  <!-- ============ HOW IT WORKS ============ -->
-  <section class="section how" id="how-it-works">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="eyebrow">HOW IT WORKS</span>
-        <h2>From booking to kickoff<br />in 4 simple steps</h2>
-      </div>
-      <div class="steps-grid">
-        <div class="step reveal">
-          <span class="step-num">01</span>
-          <h3>Download &amp; Sign Up</h3>
-          <p>Get E7GZ on Android and create your player profile in under a minute.</p>
-        </div>
-        <div class="step reveal">
-          <span class="step-num">02</span>
-          <h3>Find Your Field</h3>
-          <p>Browse stadiums near you, check amenities, ratings, and locations on the map.</p>
-        </div>
-        <div class="step reveal">
-          <span class="step-num">03</span>
-          <h3>Pick a Slot &amp; Pay</h3>
-          <p>Choose an available time slot and pay securely with Paymob-powered checkout.</p>
-        </div>
-        <div class="step reveal">
-          <span class="step-num">04</span>
-          <h3>Play!</h3>
-          <p>Show up and play — or host a match and invite players to fill the spots.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+            <div class="shot reveal">
+              <div class="phone phone-sm">
+                <div class="phone-screen">
+                  <img
+                    class="shot-img"
+                    src="assets/owner-schedule.jpg"
+                    alt="E7GZ owner schedule — daily calendar with bookings timeline"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+              <h4>Daily Calendar</h4>
+              <p>
+                Every booking on a timeline with day revenue and hourly rate —
+                confirm and manage slots easily.
+              </p>
+            </div>
 
-  <!-- ============ STATS ============ -->
-<!--  <section class="section stats-section">
+            <div class="shot reveal">
+              <div class="phone phone-sm">
+                <div class="phone-screen">
+                  <img
+                    class="shot-img"
+                    src="assets/owner-hours.jpg"
+                    alt="E7GZ edit schedule — weekly hours template per venue"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+              <h4>Weekly Hours</h4>
+              <p>
+                Set recurring opening hours per day — slots auto-generate, and
+                you can override any day later.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ HOW IT WORKS ============ -->
+    <section class="section how" id="how-it-works">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">HOW IT WORKS</span>
+          <h2>From booking to kickoff<br />in 4 simple steps</h2>
+        </div>
+        <div class="steps-grid">
+          <div class="step reveal">
+            <span class="step-num">01</span>
+            <h3>Download &amp; Sign Up</h3>
+            <p>
+              Get E7GZ on Android and create your player profile in under a
+              minute.
+            </p>
+          </div>
+          <div class="step reveal">
+            <span class="step-num">02</span>
+            <h3>Find Your Field</h3>
+            <p>
+              Browse stadiums near you, check amenities, ratings, and locations
+              on the map.
+            </p>
+          </div>
+          <div class="step reveal">
+            <span class="step-num">03</span>
+            <h3>Pick a Slot &amp; Pay</h3>
+            <p>
+              Choose an available time slot and pay securely with Paymob-powered
+              checkout.
+            </p>
+          </div>
+          <div class="step reveal">
+            <span class="step-num">04</span>
+            <h3>Play!</h3>
+            <p>
+              Show up and play — or host a match and invite players to fill the
+              spots.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STATS ============ -->
+    <!--  <section class="section stats-section">
     <div class="container">
       <div class="stats-band reveal">
         <p class="stats-title">Trusted by players and field owners</p>
@@ -394,50 +705,76 @@
 >
 
   <!-- ============ CONTACT / CTA ============ -->
-  <section class="section cta" id="contact">
-    <div class="container">
-      <div class="cta-card reveal">
-        <h2>Ready to play?</h2>
-        <p>Download E7GZ today and book your next match in seconds.<br />Questions? Reach us at <a href="mailto:e7gzsupport@gmail.com">e7gzsupport@gmail.com</a></p>
-        <div class="cta-actions">
-          <div class="dl-item">
-            <a href="#" class="btn btn-primary btn-lg">
-              <svg viewBox="0 0 24 24" fill="currentColor" class="icon"><path d="M6 18c0 .55.45 1 1 1h1v3.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5V19h2v3.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5V19h1c.55 0 1-.45 1-1V8H6v10zM3.5 8C2.67 8 2 8.67 2 9.5v7c0 .83.67 1.5 1.5 1.5S5 17.33 5 16.5v-7C5 8.67 4.33 8 3.5 8zm17 0c-.83 0-1.5.67-1.5 1.5v7c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5v-7c0-.83-.67-1.5-1.5-1.5zm-4.97-5.84l1.3-1.3c.2-.2.2-.51 0-.71-.2-.2-.51-.2-.71 0l-1.48 1.48A5.84 5.84 0 0 0 12 1c-.96 0-1.86.23-2.66.63L7.85.15c-.2-.2-.51-.2-.71 0-.2.2-.2.51 0 .71l1.31 1.31A5.98 5.98 0 0 0 6 7h12c0-1.99-.97-3.75-2.47-4.84zM10 5H9V4h1v1zm5 0h-1V4h1v1z"/></svg>
-              Download for Android
-            </a>
-            <small class="dl-note">Coming soon on Google Play</small>
+    <section class="section cta" id="contact">
+      <div class="container">
+        <div class="cta-card reveal">
+          <h2>Ready to play?</h2>
+          <p>
+            Download E7GZ today and book your next match in seconds.<br />Questions?
+            Reach us at
+            <a href="mailto:e7gzsupport@gmail.com">e7gzsupport@gmail.com</a>
+          </p>
+          <div class="cta-actions">
+            <div class="dl-item">
+              <a href="#" class="btn btn-primary btn-lg">
+                <svg viewBox="0 0 24 24" fill="currentColor" class="icon">
+                  <path
+                    d="M6 18c0 .55.45 1 1 1h1v3.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5V19h2v3.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5V19h1c.55 0 1-.45 1-1V8H6v10zM3.5 8C2.67 8 2 8.67 2 9.5v7c0 .83.67 1.5 1.5 1.5S5 17.33 5 16.5v-7C5 8.67 4.33 8 3.5 8zm17 0c-.83 0-1.5.67-1.5 1.5v7c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5v-7c0-.83-.67-1.5-1.5-1.5zm-4.97-5.84l1.3-1.3c.2-.2.2-.51 0-.71-.2-.2-.51-.2-.71 0l-1.48 1.48A5.84 5.84 0 0 0 12 1c-.96 0-1.86.23-2.66.63L7.85.15c-.2-.2-.51-.2-.71 0-.2.2-.2.51 0 .71l1.31 1.31A5.98 5.98 0 0 0 6 7h12c0-1.99-.97-3.75-2.47-4.84zM10 5H9V4h1v1zm5 0h-1V4h1v1z"
+                  />
+                </svg>
+                Download for Android
+              </a>
+              <small class="dl-note">Coming soon on Google Play</small>
+            </div>
+            <div class="dl-item">
+              <a href="#" class="btn btn-dark btn-lg">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  class="icon"
+                >
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M2 12h20" />
+                  <path
+                    d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+                  />
+                </svg>
+                Download our Web App
+              </a>
+              <small class="dl-note">Web app coming soon</small>
+            </div>
+            <a href="#home" class="btn btn-ghost btn-lg">Back to top</a>
           </div>
-          <div class="dl-item">
-            <a href="#" class="btn btn-dark btn-lg">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-              Download our Web App
-            </a>
-            <small class="dl-note">Web app coming soon</small>
-          </div>
-          <a href="#home" class="btn btn-ghost btn-lg">Back to top</a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ============ FOOTER ============ -->
-  <footer class="footer">
-    <div class="container footer-inner">
-      <img src="assets/e7gz-logo.png" alt="E7GZ احجز" class="footer-logo" />
-      <nav class="footer-links">
-        <a href="#home">Home</a>
-        <a href="#features">Features</a>
-        <a href="#screenshots">Screenshots</a>
-        <a href="#how-it-works">How It Works</a>
-        <a href="#contact">Contact</a>
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="terms.html">Terms of Use</a>
-      </nav>
-      <a href="mailto:e7gzsupport@gmail.com" class="footer-mail">e7gzsupport@gmail.com</a>
-      <p class="copyright">© 2026 E7GZ. All rights reserved. · <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Use</a></p>
-    </div>
-  </footer>
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+      <div class="container footer-inner">
+        <img src="assets/e7gz-logo.png" alt="E7GZ احجز" class="footer-logo" />
+        <nav class="footer-links">
+          <a href="#home">Home</a>
+          <a href="#features">Features</a>
+          <a href="#screenshots">Screenshots</a>
+          <a href="#how-it-works">How It Works</a>
+          <a href="#contact">Contact</a>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Use</a>
+        </nav>
+        <a href="mailto:e7gzsupport@gmail.com" class="footer-mail"
+          >e7gzsupport@gmail.com</a
+        >
+        <p class="copyright">
+          © 2026 E7GZ. All rights reserved. ·
+          <a href="privacy.html">Privacy Policy</a> ·
+          <a href="terms.html">Terms of Use</a>
+        </p>
+      </div>
+    </footer>
 
-  <script src="js/script.js"></script>
-</body>
+    <script src="js/script.js"></script>
+  </body>
 </html>

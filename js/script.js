@@ -1,0 +1,76 @@
+// Mobile nav
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("navLinks");
+
+hamburger.addEventListener("click", () => {
+  const open = navLinks.classList.toggle("open");
+  hamburger.classList.toggle("open", open);
+  hamburger.setAttribute("aria-expanded", open);
+});
+
+navLinks.querySelectorAll("a").forEach((link) =>
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("open");
+    hamburger.classList.remove("open");
+    hamburger.setAttribute("aria-expanded", "false");
+  })
+);
+
+// Active nav link on scroll
+const sections = document.querySelectorAll("section[id]");
+const links = document.querySelectorAll(".nav-link");
+
+const setActive = () => {
+  const scrollPos = window.scrollY + 120;
+  let current = "home";
+  sections.forEach((section) => {
+    if (section.offsetTop <= scrollPos) current = section.id;
+  });
+  links.forEach((link) =>
+    link.classList.toggle("active", link.getAttribute("href") === `#${current}`)
+  );
+};
+
+window.addEventListener("scroll", setActive, { passive: true });
+setActive();
+
+// Segmented tabs (Players / Owners)
+function activateTab(group, targetId) {
+  const tabs = document.querySelector(`.seg-tabs[data-group="${group}"]`);
+  if (!tabs) return;
+  tabs.querySelectorAll(".seg-tab").forEach((b) => b.classList.toggle("active", b.dataset.target === targetId));
+  document.querySelectorAll(`.tab-panel[data-group="${group}"]`).forEach((panel) => {
+    const show = panel.id === targetId;
+    panel.classList.toggle("active", show);
+    if (show) panel.querySelectorAll(".reveal").forEach((el) => el.classList.add("visible"));
+  });
+}
+
+document.querySelectorAll(".seg-tabs").forEach((tabs) => {
+  const group = tabs.dataset.group;
+  tabs.querySelectorAll(".seg-tab").forEach((btn) => {
+    btn.addEventListener("click", () => activateTab(group, btn.dataset.target));
+  });
+});
+
+// Deep link: #owners opens the owner tab in both groups
+if (window.location.hash === "#owners") {
+  activateTab("features", "feat-owners");
+  activateTab("shots", "shots-owners");
+  document.getElementById("features")?.scrollIntoView({ behavior: "smooth" });
+}
+
+// Reveal on scroll
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.12 }
+);
+
+document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));

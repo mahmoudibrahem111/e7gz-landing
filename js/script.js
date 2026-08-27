@@ -74,3 +74,45 @@ const observer = new IntersectionObserver(
 );
 
 document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+
+// Download countdown
+document.querySelectorAll(".dl-item .btn-primary, .dl-item .btn-dark").forEach((btn) => {
+  if (!btn.getAttribute("href") || btn.getAttribute("href") === "#") return;
+
+  const url = btn.getAttribute("href");
+  const note = btn.closest(".dl-item")?.querySelector(".dl-note");
+  const originalHTML = btn.innerHTML;
+  const originalNote = note?.textContent || "";
+  let timer = null;
+
+  btn.addEventListener("click", function (e) {
+    e.preventDefault();
+    if (btn.classList.contains("dl-counting")) return;
+
+    btn.classList.add("dl-counting");
+    btn.style.pointerEvents = "none";
+    btn.style.opacity = "0.5";
+    let remaining = 3;
+
+    if (note) note.textContent = `Download will start in ${remaining} sec`;
+
+    timer = setInterval(() => {
+      remaining--;
+      if (remaining > 0) {
+        if (note) note.textContent = `Download will start in ${remaining} sec`;
+      } else {
+        clearInterval(timer);
+        window.location.href = url;
+
+        // Fallback: if download didn't trigger in 2s, show retry
+        setTimeout(() => {
+          btn.classList.remove("dl-counting");
+          btn.style.pointerEvents = "";
+          btn.style.opacity = "";
+          btn.innerHTML = originalHTML;
+          if (note) note.textContent = "Download didn't start? Tap to retry";
+        }, 2000);
+      }
+    }, 1000);
+  });
+});

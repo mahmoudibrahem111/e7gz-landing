@@ -1,30 +1,22 @@
-const CACHE_NAME = "e7gz-landing-v1";
-const ASSETS = [
-  "/",
-  "/index.html",
-  "/css/style.css",
-  "/js/script.js",
-  "/assets/e7gz-logo.png"
-];
+const CACHE_NAME = "e7gz-landing-v2";
 
-self.addEventListener("install", (e) => {
-  e.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => cache.addAll(ASSETS))
-  );
-  self.skipWaiting();
-});
+self.addEventListener("install", () => self.skipWaiting());
 
 self.addEventListener("activate", (e) => {
   e.waitUntil(
     caches.keys().then((keys) =>
-      Promise.all(keys.filter((k) => k !== CACHE_NAME).map((k) => caches.delete(k)))
-    )
+      Promise.all(keys.map((k) => caches.delete(k)))
+    ).then(() => self.clients.claim())
   );
-  self.clients.claim();
 });
 
 self.addEventListener("fetch", (e) => {
+  if (e.request.method !== "GET") return;
   e.respondWith(
-    caches.match(e.request).then((r) => r || fetch(e.request))
+    fetch(e.request).then((r) => {
+      const clone = r.clone();
+      caches.open(CACHE_NAME).then((c) => c.put(e.request, clone));
+      return r;
+    }).catch(() => caches.match(e.request))
   );
 });

@@ -89,13 +89,13 @@ webAppBtns.forEach((btn) => {
   btn.removeAttribute("href");
   btn.addEventListener("click", function (e) {
     e.preventDefault();
+    e.stopPropagation();
     if (deferredPrompt) {
       deferredPrompt.prompt();
       deferredPrompt.userChoice.then((choice) => {
         deferredPrompt = null;
       });
     } else {
-      // Fallback: show manual instructions
       const note = btn.closest(".dl-item")?.querySelector(".dl-note");
       if (note) {
         const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
@@ -104,7 +104,7 @@ webAppBtns.forEach((btn) => {
           : "Tap the browser menu (⋮), then 'Install app' or 'Add to Home Screen'";
       }
     }
-  });
+  }, true);
 });
 
 // Download countdown (APK buttons only)

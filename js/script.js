@@ -75,40 +75,8 @@ const observer = new IntersectionObserver(
 
 document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
 
-// PWA install prompt
-let deferredPrompt = null;
-
-window.addEventListener("beforeinstallprompt", (e) => {
-  e.preventDefault();
-  deferredPrompt = e;
-});
-
-// Web App install buttons
-const webAppBtns = document.querySelectorAll(".dl-item .btn-dark");
-webAppBtns.forEach((btn) => {
-  btn.removeAttribute("href");
-  btn.addEventListener("click", function (e) {
-    e.preventDefault();
-    e.stopPropagation();
-    if (deferredPrompt) {
-      deferredPrompt.prompt();
-      deferredPrompt.userChoice.then((choice) => {
-        deferredPrompt = null;
-      });
-    } else {
-      const note = btn.closest(".dl-item")?.querySelector(".dl-note");
-      if (note) {
-        const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
-        note.textContent = isIOS
-          ? "Tap the Share button, then 'Add to Home Screen'"
-          : "Tap the browser menu (⋮), then 'Install app' or 'Add to Home Screen'";
-      }
-    }
-  }, true);
-});
-
-// Download countdown (APK buttons only)
-document.querySelectorAll(".dl-item .btn-primary").forEach((btn) => {
+// Download countdown
+document.querySelectorAll(".dl-item .btn-primary, .dl-item .btn-dark").forEach((btn) => {
   if (!btn.getAttribute("href") || btn.getAttribute("href") === "#") return;
 
   const url = btn.getAttribute("href");

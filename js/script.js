@@ -53,10 +53,11 @@ document.querySelectorAll(".seg-tabs").forEach((tabs) => {
   });
 });
 
-// Deep link: #owners opens the owner tab in both groups
+// Deep link: #owners opens the owner tab in all groups
 if (window.location.hash === "#owners") {
   activateTab("features", "feat-owners");
   activateTab("shots", "shots-owners");
+  activateTab("how", "how-owners");
   document.getElementById("features")?.scrollIntoView({ behavior: "smooth" });
 }
 

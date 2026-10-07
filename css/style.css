@@ -761,6 +761,46 @@ a { color: inherit; text-decoration: none; }
 .step h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 8px; }
 .step p { color: var(--muted); font-size: 0.9rem; }
 
+/* ============ Prices ============ */
+.prices {
+  background:
+    linear-gradient(180deg, rgba(24, 56, 34, 0.28) 0%, rgba(11, 16, 11, 0) 34%),
+    var(--bg-soft);
+  border-top: 1px solid var(--border);
+}
+.prices-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 22px; }
+.price-card {
+  background: linear-gradient(180deg, #141c14 0%, #0f150f 100%);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 26px 22px;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+.price-card:hover { transform: translateY(-6px); border-color: rgba(34, 197, 94, 0.4); }
+.price-type {
+  display: inline-block;
+  color: var(--green-bright);
+  font-weight: 800;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: rgba(34, 197, 94, 0.1);
+  border-radius: 8px;
+  padding: 4px 10px;
+  margin-bottom: 16px;
+}
+.price-value { display: flex; align-items: baseline; gap: 6px; margin-bottom: 10px; }
+.price-value strong { font-size: 2rem; font-weight: 900; letter-spacing: -0.02em; }
+.price-value span { color: var(--muted); font-size: 0.85rem; font-weight: 600; }
+.price-card p { color: var(--muted); font-size: 0.85rem; margin: 0; }
+.prices-note {
+  color: var(--muted);
+  font-size: 0.85rem;
+  text-align: center;
+  max-width: 640px;
+  margin: 30px auto 0;
+}
+
 /* ============ Install ============ */
 .install-grid {
   display: grid;
@@ -943,6 +983,7 @@ a { color: inherit; text-decoration: none; }
   .features-grid, .steps-grid { grid-template-columns: repeat(2, 1fr); }
   .shots-grid { grid-template-columns: repeat(2, 1fr); }
   .shot:nth-child(odd) .phone { margin-top: 0; }
+  .prices-grid { grid-template-columns: repeat(3, 1fr); }
 }
 
 @media (max-width: 1120px) {
@@ -977,6 +1018,7 @@ a { color: inherit; text-decoration: none; }
 @media (max-width: 640px) {
   .section { padding: 68px 0; }
   .features-grid, .steps-grid, .shots-grid, .stats-grid { grid-template-columns: 1fr; }
+  .prices-grid { grid-template-columns: 1fr; }
   .stats-band { padding: 32px 24px; }
   .stat { justify-content: flex-start; }
   .hero-actions .btn { width: 100%; justify-content: center; }

@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
@@ -29,15 +29,19 @@
           />
         </a>
         <nav class="nav-links" id="navLinks">
-          <a href="#home" class="nav-link active">Home</a>
-          <a href="#features" class="nav-link">Features</a>
-          <a href="#screenshots" class="nav-link">Screenshots</a>
-          <a href="#how-it-works" class="nav-link">How It Works</a>
-          <a href="#install" class="nav-link">Install</a>
-          <a href="#contact" class="nav-link">Contact</a>
+          <a href="#home" class="nav-link active" data-i18n="nav.home">Home</a>
+          <a href="#features" class="nav-link" data-i18n="nav.features">Features</a>
+          <a href="#screenshots" class="nav-link" data-i18n="nav.screenshots">Screenshots</a>
+          <a href="#how-it-works" class="nav-link" data-i18n="nav.how">How It Works</a>
+          <a href="#install" class="nav-link" data-i18n="nav.install">Install</a>
+          <a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a>
         </nav>
         <div class="nav-cta">
-          <a href="#download" class="btn btn-primary btn-sm">Download App</a>
+          <button class="lang-toggle" id="langToggle" type="button" aria-label="Switch language / تبديل اللغة">
+            <span class="lt-ar">العربية</span>
+            <span class="lt-en">EN</span>
+          </button>
+          <a href="#download" class="btn btn-primary btn-sm" data-i18n="nav.download">Download App</a>
           <button
             class="hamburger"
             id="hamburger"
@@ -59,10 +63,10 @@
       </div>
       <div class="container hero-inner">
         <div class="hero-copy reveal">
-          <h1 class="hero-title">
+          <h1 class="hero-title" data-i18n="hero.title">
             Book. Play.<br />Win with <span class="green">E7GZ</span>
           </h1>
-          <p class="hero-sub">
+          <p class="hero-sub" data-i18n="hero.sub">
             E7GZ is your ultimate app for booking football fields, joining
             matches, and connecting with players. Fast, easy, and reliable.
           </p>
@@ -75,9 +79,9 @@
                 <svg viewBox="0 0 24 24" fill="currentColor" class="icon">
   <path d="M6.523 15.34c0 .58.47 1.05 1.05 1.05h.699l.01 2.45c0 1.94 2.93 1.93 2.93 0v-2.45h1.6v2.45c0 1.93 2.93 1.94 2.93 0l.01-2.45h.7c.58 0 1.05-.47 1.05-1.05V8.821H6.523v6.52zM4.71 8.821c-.78 0-1.4.63-1.4 1.4v5.19c0 1.85 2.8 1.85 2.8 0v-5.19c0-.77-.63-1.4-1.4-1.4zm14.58 0c-.78 0-1.4.63-1.4 1.4v5.19c0 1.85 2.8 1.85 2.8 0v-5.19c0-.77-.63-1.4-1.4-1.4zM15.94 4.30l1.09-1.09a.4.4 0 0 0-.57-.57l-1.24 1.24A5.87 5.87 0 0 0 12 3.02c-1.15 0-2.24.28-3.21.78L7.55 2.56a.4.4 0 1 0-.57.57l1.09 1.09A6.42 6.42 0 0 0 5.6 8.02h12.8a6.42 6.42 0 0 0-2.46-3.72zM9.9 6.15a.55.55 0 1 1 0-1.1.55.55 0 0 1 0 1.1zm4.2 0a.55.55 0 1 1 0-1.1.55.55 0 0 1 0 1.1z"/>
 </svg>
-                Download Android APK
+                <span data-i18n="hero.apk">Download Android APK</span>
               </a>
-              <small class="dl-note">For Android phones &mdash; direct APK download</small>
+              <small class="dl-note" data-i18n="hero.apkNote">For Android phones &mdash; direct APK download</small>
             </div>
             <div class="dl-item">
               <a href="https://www.e7gz.app" class="btn btn-dark btn-lg" target="_blank" rel="noopener">
@@ -94,11 +98,11 @@
                     d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
                   />
                 </svg>
-                Open Web App
+                <span data-i18n="hero.web">Open Web App</span>
               </a>
-              <small class="dl-note">For iPhone &mdash; opens in Safari, no download</small>
+              <small class="dl-note" data-i18n="hero.webNote">For iPhone &mdash; opens in Safari, no download</small>
             </div>
-            <a href="#install" class="section-link">
+            <a href="#install" class="section-link" data-i18n="hero.installLink">
               How to install it on your phone &mdash; step-by-step guide &rarr;
             </a>
           </div>
@@ -120,7 +124,7 @@
                 </svg>
               </span>
               <div>
-                <strong>Secure Payments</strong><small>Safe &amp; encrypted checkout</small>
+                <strong data-i18n="trust.pay.t">Secure Payments</strong><small data-i18n="trust.pay.s">Safe &amp; encrypted checkout</small>
               </div>
             </li>
             <li>
@@ -139,8 +143,8 @@
                 </svg>
               </span>
               <div>
-                <strong>Instant Booking</strong
-                ><small>Real-time availability</small>
+                <strong data-i18n="trust.instant.t">Instant Booking</strong
+                ><small data-i18n="trust.instant.s">Real-time availability</small>
               </div>
             </li>
             <li>
@@ -160,8 +164,8 @@
                 </svg>
               </span>
               <div>
-                <strong>Play Together</strong
-                ><small>Invite &amp; join matches</small>
+                <strong data-i18n="trust.play.t">Play Together</strong
+                ><small data-i18n="trust.play.s">Invite &amp; join matches</small>
               </div>
             </li>
           </ul>
@@ -206,9 +210,9 @@
     <section class="section features" id="features">
       <div class="container">
         <div class="features-head reveal">
-          <span class="eyebrow">FEATURES</span>
-          <h2>Everything you need<br />to enjoy the game</h2>
-          <p>
+          <span class="eyebrow" data-i18n="features.eyebrow">FEATURES</span>
+          <h2 data-i18n="features.title">Everything you need<br />to enjoy the game</h2>
+          <p data-i18n="features.sub">
             Whether you play or you run the venue, E7GZ gives you all the tools
             — book fields, join matches, manage your game experience, and run
             your business.
@@ -226,7 +230,7 @@
               <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
               <circle cx="12" cy="7" r="4" />
             </svg>
-            For Players
+            <span data-i18n="tabs.players">For Players</span>
           </button>
           <button class="seg-tab" data-target="feat-owners">
             <svg
@@ -239,7 +243,7 @@
               <path d="M9 21v-4h6v4" />
               <path d="M9 11h.01M15 11h.01M12 13h.01" />
             </svg>
-            For Venue Owners
+            <span data-i18n="tabs.owners">For Venue Owners</span>
           </button>
         </div>
 
@@ -259,8 +263,8 @@
                   <path d="m15 9v12" />
                 </svg>
               </span>
-              <h3>Discover &amp; Filter Venues</h3>
-              <p>
+              <h3 data-i18n="feat1.title">Discover &amp; Filter Venues</h3>
+              <p data-i18n="feat1.desc">
                 Browse stadiums near you on a map, filter by pitch type —
                 5-a-side, 7-a-side, indoor futsal — compare prices, and save
                 favorites.
@@ -279,8 +283,8 @@
                   <path d="m9 15 2 2 4-4" />
                 </svg>
               </span>
-              <h3>Instant Slot Booking</h3>
-              <p>
+              <h3 data-i18n="feat2.title">Instant Slot Booking</h3>
+              <p data-i18n="feat2.desc">
                 Pick a venue, see real-time availability with live prices in
                 EGP, choose your slot, and pay securely with cards or mobile
                 wallets.
@@ -300,8 +304,8 @@
                   <path d="M16 3.13a4 4 0 0 1 0 7.75" />
                 </svg>
               </span>
-              <h3>Join or Host Matches</h3>
-              <p>
+              <h3 data-i18n="feat3.title">Join or Host Matches</h3>
+              <p data-i18n="feat3.desc">
                 Find open matches near you, see spots filled in real time, join
                 with one tap — or create your own match and chat with your
                 squad.
@@ -320,8 +324,8 @@
                   <path d="M8 14h3M8 18h5" />
                 </svg>
               </span>
-              <h3>Track Your Bookings</h3>
-              <p>
+              <h3 data-i18n="feat4.title">Track Your Bookings</h3>
+              <p data-i18n="feat4.desc">
                 All your reservations in one place — upcoming, past, and
                 cancelled — with venue details, times, prices, and full booking
                 history.
@@ -345,8 +349,8 @@
                   <path d="M7 16l4-6 4 3 5-7" />
                 </svg>
               </span>
-              <h3>Live Owner Dashboard</h3>
-              <p>
+              <h3 data-i18n="feat5.title">Live Owner Dashboard</h3>
+              <p data-i18n="feat5.desc">
                 Today's revenue, bookings, and free slots at a glance — across
                 all your venues. Switch between facilities instantly and record
                 walk-in customers.
@@ -365,8 +369,8 @@
                   <circle cx="12" cy="15" r="2.5" />
                 </svg>
               </span>
-              <h3>Daily Calendar</h3>
-              <p>
+              <h3 data-i18n="feat6.title">Daily Calendar</h3>
+              <p data-i18n="feat6.desc">
                 Every booking on a clear timeline. See bookings, revenue, and
                 rate per hour for any day, and manage confirmed slots for each
                 venue.
@@ -384,8 +388,8 @@
                   <path d="M12 6v6l4 2" />
                 </svg>
               </span>
-              <h3>Weekly Hours Template</h3>
-              <p>
+              <h3 data-i18n="feat7.title">Weekly Hours Template</h3>
+              <p data-i18n="feat7.desc">
                 Set recurring opening hours once — future slots generate
                 automatically. Toggle days on or off, adjust open and close
                 times, and override any single day later.
@@ -404,8 +408,8 @@
                   <path d="M9 11h.01M15 11h.01M12 13h.01" />
                 </svg>
               </span>
-              <h3>Multi-Venue Management</h3>
-              <p>
+              <h3 data-i18n="feat8.title">Multi-Venue Management</h3>
+              <p data-i18n="feat8.desc">
                 Register new venues, list photos, prices, and amenities, and
                 manage all your facilities from one app — with walk-in bookings
                 to keep everything accurate.
@@ -420,9 +424,9 @@
     <section class="section screenshots" id="screenshots">
       <div class="container">
         <div class="section-head reveal">
-          <span class="eyebrow">SCREENSHOTS</span>
-          <h2>Take a look inside <span class="green">E7GZ</span></h2>
-          <p>
+          <span class="eyebrow" data-i18n="shots.eyebrow">SCREENSHOTS</span>
+          <h2 data-i18n="shots.title">Take a look inside <span class="green">E7GZ</span></h2>
+          <p data-i18n="shots.sub">
             One app, two experiences — a player app to book and play, and an
             owner app to run your venues.
           </p>
@@ -439,7 +443,7 @@
               <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
               <circle cx="12" cy="7" r="4" />
             </svg>
-            Player App
+            <span data-i18n="tabs.playerApp">Player App</span>
           </button>
           <button class="seg-tab" data-target="shots-owners">
             <svg
@@ -452,7 +456,7 @@
               <path d="M9 21v-4h6v4" />
               <path d="M9 11h.01M15 11h.01M12 13h.01" />
             </svg>
-            Owner App
+            <span data-i18n="tabs.ownerApp">Owner App</span>
           </button>
         </div>
 
@@ -470,8 +474,8 @@
                   />
                 </div>
               </div>
-              <h4>Discover Venues</h4>
-              <p>
+              <h4 data-i18n="shot1.title">Discover Venues</h4>
+              <p data-i18n="shot1.desc">
                 Find football, padel and basketball fields near you with
                 real-time availability.
               </p>
@@ -488,8 +492,8 @@
                   />
                 </div>
               </div>
-              <h4>Browse &amp; Filter</h4>
-              <p>
+              <h4 data-i18n="shot2.title">Browse &amp; Filter</h4>
+              <p data-i18n="shot2.desc">
                 Filter by pitch type, compare prices, and save your favorite
                 venues with one tap.
               </p>
@@ -506,8 +510,8 @@
                   />
                 </div>
               </div>
-              <h4>Join Matches</h4>
-              <p>
+              <h4 data-i18n="shot3.title">Join Matches</h4>
+              <p data-i18n="shot3.desc">
                 Host your own game or join open matches and fill the spots with
                 players nearby.
               </p>
@@ -524,8 +528,8 @@
                   />
                 </div>
               </div>
-              <h4>Manage Your Squad</h4>
-              <p>
+              <h4 data-i18n="shot4.title">Manage Your Squad</h4>
+              <p data-i18n="shot4.desc">
                 Track confirmed players, chat with your squad, and manage your
                 match in one place.
               </p>
@@ -542,8 +546,8 @@
                   />
                 </div>
               </div>
-              <h4>Book in Seconds</h4>
-              <p>
+              <h4 data-i18n="shot5.title">Book in Seconds</h4>
+              <p data-i18n="shot5.desc">
                 Pick your date and time slot, see live prices, and confirm your
                 booking instantly.
               </p>
@@ -560,8 +564,8 @@
                   />
                 </div>
               </div>
-              <h4>Track Bookings</h4>
-              <p>
+              <h4 data-i18n="shot6.title">Track Bookings</h4>
+              <p data-i18n="shot6.desc">
                 View upcoming, past and cancelled reservations with prices and
                 full history.
               </p>
@@ -583,8 +587,8 @@
                   />
                 </div>
               </div>
-              <h4>Owner Dashboard</h4>
-              <p>
+              <h4 data-i18n="shot7.title">Owner Dashboard</h4>
+              <p data-i18n="shot7.desc">
                 Live revenue, bookings today, slots left, and all your venues —
                 switch facilities with one tap.
               </p>
@@ -601,8 +605,8 @@
                   />
                 </div>
               </div>
-              <h4>Daily Calendar</h4>
-              <p>
+              <h4 data-i18n="shot8.title">Daily Calendar</h4>
+              <p data-i18n="shot8.desc">
                 Every booking on a timeline with day revenue and hourly rate —
                 confirm and manage slots easily.
               </p>
@@ -619,8 +623,8 @@
                   />
                 </div>
               </div>
-              <h4>Weekly Hours</h4>
-              <p>
+              <h4 data-i18n="shot9.title">Weekly Hours</h4>
+              <p data-i18n="shot9.desc">
                 Set recurring opening hours per day — slots auto-generate, and
                 you can override any day later.
               </p>
@@ -634,8 +638,8 @@
     <section class="section how" id="how-it-works">
       <div class="container">
         <div class="section-head reveal">
-          <span class="eyebrow">HOW IT WORKS</span>
-          <h2>From booking to kickoff<br />in 4 simple steps</h2>
+          <span class="eyebrow" data-i18n="how.eyebrow">HOW IT WORKS</span>
+          <h2 data-i18n="how.title">From booking to kickoff<br />in 4 simple steps</h2>
         </div>
 
         <div class="seg-tabs reveal" data-group="how">
@@ -649,7 +653,7 @@
               <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
               <circle cx="12" cy="7" r="4" />
             </svg>
-            For Players
+            <span data-i18n="tabs.players">For Players</span>
           </button>
           <button class="seg-tab" data-target="how-owners">
             <svg
@@ -662,7 +666,7 @@
               <path d="M9 21v-4h6v4" />
               <path d="M9 11h.01M15 11h.01M12 13h.01" />
             </svg>
-            For Venue Owners
+            <span data-i18n="tabs.owners">For Venue Owners</span>
           </button>
         </div>
 
@@ -671,32 +675,32 @@
           <div class="steps-grid">
             <div class="step reveal">
               <span class="step-num">01</span>
-              <h3>Open &amp; Sign Up</h3>
-              <p>
+              <h3 data-i18n="step1.title">Open &amp; Sign Up</h3>
+              <p data-i18n="step1.desc">
                 Install the web app on your phone (or grab the Android APK)
                 and create your player profile in under a minute.
               </p>
             </div>
             <div class="step reveal">
               <span class="step-num">02</span>
-              <h3>Find Your Field</h3>
-              <p>
+              <h3 data-i18n="step2.title">Find Your Field</h3>
+              <p data-i18n="step2.desc">
                 Browse stadiums near you, check amenities, ratings, and
                 locations on the map.
               </p>
             </div>
             <div class="step reveal">
               <span class="step-num">03</span>
-              <h3>Pick a Slot &amp; Pay</h3>
-              <p>
+              <h3 data-i18n="step3.title">Pick a Slot &amp; Pay</h3>
+              <p data-i18n="step3.desc">
                 Choose an available time slot and pay securely with
                 card or mobile wallet.
               </p>
             </div>
             <div class="step reveal">
               <span class="step-num">04</span>
-              <h3>Play!</h3>
-              <p>
+              <h3 data-i18n="step4.title">Play!</h3>
+              <p data-i18n="step4.desc">
                 Show up and play — or host a match and invite players to fill
                 the spots.
               </p>
@@ -709,32 +713,32 @@
           <div class="steps-grid">
             <div class="step reveal">
               <span class="step-num">01</span>
-              <h3>List Your Venue</h3>
-              <p>
+              <h3 data-i18n="ostep1.title">List Your Venue</h3>
+              <p data-i18n="ostep1.desc">
                 Register as an owner, add photos, prices, and amenities — we
                 review and publish your listing.
               </p>
             </div>
             <div class="step reveal">
               <span class="step-num">02</span>
-              <h3>Set Hours &amp; Prices</h3>
-              <p>
+              <h3 data-i18n="ostep2.title">Set Hours &amp; Prices</h3>
+              <p data-i18n="ostep2.desc">
                 Define your weekly opening hours once — future slots generate
                 automatically for every day.
               </p>
             </div>
             <div class="step reveal">
               <span class="step-num">03</span>
-              <h3>Manage Bookings</h3>
-              <p>
+              <h3 data-i18n="ostep3.title">Manage Bookings</h3>
+              <p data-i18n="ostep3.desc">
                 Track every reservation on a live daily calendar, confirm
                 slots, and record walk-in customers.
               </p>
             </div>
             <div class="step reveal">
               <span class="step-num">04</span>
-              <h3>Grow Your Business</h3>
-              <p>
+              <h3 data-i18n="ostep4.title">Grow Your Business</h3>
+              <p data-i18n="ostep4.desc">
                 Watch today's revenue, bookings, and free slots at a glance —
                 across all your venues.
               </p>
@@ -748,41 +752,41 @@
     <section class="section prices" id="prices">
       <div class="container">
         <div class="section-head reveal">
-          <span class="eyebrow">PRICES</span>
-          <h2>Sample venue prices<br />per hour</h2>
-          <p>
+          <span class="eyebrow" data-i18n="prices.eyebrow">PRICES</span>
+          <h2 data-i18n="prices.title">Sample venue prices<br />per hour</h2>
+          <p data-i18n="prices.sub">
             Prices are set by each venue owner in EGP and include applicable
             taxes. Here's a sample of what you'll pay on E7GZ:
           </p>
         </div>
         <div class="prices-grid">
           <div class="price-card reveal">
-            <span class="price-type">5-a-side Pitch</span>
-            <div class="price-value"><strong>450</strong> <span>EGP / hour</span></div>
-            <p>Indoor turf, floodlit at night — Cairo Nasr City.</p>
+            <span class="price-type" data-i18n="price1.type">5-a-side Pitch</span>
+            <div class="price-value"><strong>450</strong> <span data-i18n="prices.unit">EGP / hour</span></div>
+            <p data-i18n="price1.desc">Indoor turf, floodlit at night — Cairo Nasr City.</p>
           </div>
           <div class="price-card reveal">
-            <span class="price-type">7-a-side Pitch</span>
-            <div class="price-value"><strong>650</strong> <span>EGP / hour</span></div>
-            <p>Outdoor grass pitch with locker rooms — Giza.</p>
+            <span class="price-type" data-i18n="price2.type">7-a-side Pitch</span>
+            <div class="price-value"><strong>650</strong> <span data-i18n="prices.unit">EGP / hour</span></div>
+            <p data-i18n="price2.desc">Outdoor grass pitch with locker rooms — Giza.</p>
           </div>
           <div class="price-card reveal">
-            <span class="price-type">Futsal Court</span>
-            <div class="price-value"><strong>550</strong> <span>EGP / hour</span></div>
-            <p>Covered hard court, perfect for 5-a-side — Maadi.</p>
+            <span class="price-type" data-i18n="price3.type">Futsal Court</span>
+            <div class="price-value"><strong>550</strong> <span data-i18n="prices.unit">EGP / hour</span></div>
+            <p data-i18n="price3.desc">Covered hard court, perfect for 5-a-side — Maadi.</p>
           </div>
           <div class="price-card reveal">
-            <span class="price-type">11-a-side Stadium</span>
-            <div class="price-value"><strong>1,200</strong> <span>EGP / hour</span></div>
-            <p>Full-size pitch with stands — 6th of October.</p>
+            <span class="price-type" data-i18n="price4.type">11-a-side Stadium</span>
+            <div class="price-value"><strong>1,200</strong> <span data-i18n="prices.unit">EGP / hour</span></div>
+            <p data-i18n="price4.desc">Full-size pitch with stands — 6th of October.</p>
           </div>
           <div class="price-card reveal">
-            <span class="price-type">Premium Turf</span>
-            <div class="price-value"><strong>800</strong> <span>EGP / hour</span></div>
-            <p>FIFA-grade artificial turf, indoor &amp; air-conditioned — New Cairo.</p>
+            <span class="price-type" data-i18n="price5.type">Premium Turf</span>
+            <div class="price-value"><strong>800</strong> <span data-i18n="prices.unit">EGP / hour</span></div>
+            <p data-i18n="price5.desc">FIFA-grade artificial turf, indoor &amp; air-conditioned — New Cairo.</p>
           </div>
         </div>
-        <p class="prices-note reveal">
+        <p class="prices-note reveal" data-i18n="prices.note">
           Final prices may vary by venue, slot time, and peak hours — always
           confirmed in the app before you pay securely.
         </p>
@@ -793,9 +797,9 @@
     <section class="section install" id="install">
       <div class="container">
         <div class="section-head reveal">
-          <span class="eyebrow">INSTALL ON YOUR PHONE</span>
-          <h2>Add E7GZ to your home screen<br />in a few taps</h2>
-          <p class="section-sub">
+          <span class="eyebrow" data-i18n="install.eyebrow">INSTALL ON YOUR PHONE</span>
+          <h2 data-i18n="install.title">Add E7GZ to your home screen<br />in a few taps</h2>
+          <p class="section-sub" data-i18n="install.sub">
             The web app runs full-screen and works offline &mdash; no app
             store needed. Follow the steps for your phone:
           </p>
@@ -809,17 +813,17 @@
                   d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"
                 />
               </svg>
-              <h3>iPhone &mdash; Safari</h3>
+              <h3 data-i18n="install.iphone">iPhone &mdash; Safari</h3>
             </div>
             <ol class="install-steps">
-              <li>
+              <li data-i18n="install.ios1">
                 Open
                 <a href="https://www.e7gz.app" target="_blank" rel="noopener"
                   >www.e7gz.app</a
                 >
                 in <strong>Safari</strong>
               </li>
-              <li>
+              <li data-i18n="install.ios2">
                 Tap the <strong>Share</strong> button
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="install-mini">
                   <path d="M4 12v8h16v-8" />
@@ -827,12 +831,12 @@
                 </svg>
                 (square with an upward arrow)
               </li>
-              <li>
+              <li data-i18n="install.ios3">
                 Scroll down and tap <strong>&ldquo;Add to Home Screen&rdquo;</strong>, then
                 <strong>Add</strong>
               </li>
             </ol>
-            <p class="install-note">E7GZ appears on your home screen and opens full-screen, just like an app.</p>
+            <p class="install-note" data-i18n="install.iosNote">E7GZ appears on your home screen and opens full-screen, just like an app.</p>
           </div>
 
           <div class="install-card reveal">
@@ -842,40 +846,40 @@
                   d="M17.6 9.48l1.84-3.18c.16-.31.04-.69-.26-.85-.29-.15-.65-.06-.83.22l-1.88 3.24a11.46 11.46 0 0 0-8.94 0L5.65 5.67c-.19-.29-.58-.38-.87-.2-.28.18-.37.54-.22.83L6.4 9.48A10.81 10.81 0 0 0 1 18h22a10.81 10.81 0 0 0-5.4-8.52M7 15.25a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5m10 0a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5z"
                 />
               </svg>
-              <h3>Android &mdash; Chrome</h3>
+              <h3 data-i18n="install.android">Android &mdash; Chrome</h3>
             </div>
             <ol class="install-steps">
-              <li>
+              <li data-i18n="install.and1">
                 Open
                 <a href="https://www.e7gz.app" target="_blank" rel="noopener"
                   >www.e7gz.app</a
                 >
                 in <strong>Chrome</strong>
               </li>
-              <li>
+              <li data-i18n="install.and2">
                 Tap the <strong>&#8942;</strong> menu (top-right corner)
               </li>
-              <li>
+              <li data-i18n="install.and3">
                 Tap <strong>&ldquo;Install app&rdquo;</strong> (or &ldquo;Add to Home
                 screen&rdquo;), then <strong>Install</strong>
               </li>
             </ol>
-            <p class="install-note">E7GZ is added to your home screen with its own icon &mdash; launch it like any other app.</p>
+            <p class="install-note" data-i18n="install.andNote">E7GZ is added to your home screen with its own icon &mdash; launch it like any other app.</p>
           </div>
         </div>
 
         <div class="install-cta reveal">
           <div class="dl-item">
             <a href="https://www.e7gz.app" class="btn btn-primary btn-lg" target="_blank" rel="noopener">
-              Open Web App (iPhone)
+              <span data-i18n="install.openWeb">Open Web App (iPhone)</span>
             </a>
-            <small class="dl-note">Opens in Safari &mdash; add it to your home screen</small>
+            <small class="dl-note" data-i18n="install.openWebNote">Opens in Safari &mdash; add it to your home screen</small>
           </div>
           <div class="dl-item">
             <a href="https://api.e7gz.app/api/v1/download/apk" class="btn btn-dark btn-lg">
-              Download Android APK
+              <span data-i18n="install.dlApk">Download Android APK</span>
             </a>
-            <small class="dl-note">For Android phones &mdash; install the APK</small>
+            <small class="dl-note" data-i18n="install.dlApkNote">For Android phones &mdash; install the APK</small>
           </div>
         </div>
       </div>
@@ -913,8 +917,8 @@
     <section class="section cta" id="contact">
       <div class="container">
         <div class="cta-card reveal">
-          <h2>Ready to play?</h2>
-          <p>
+          <h2 data-i18n="cta.title">Ready to play?</h2>
+          <p data-i18n="cta.sub">
             Download E7GZ today and book your next match in seconds.<br />Questions?
             Reach us at<br />
             <a href="mailto:e7gzsupport@gmail.com">e7gzsupport@gmail.com</a><br />
@@ -928,9 +932,9 @@
                     d="M6 18c0 .55.45 1 1 1h1v3.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5V19h2v3.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5V19h1c.55 0 1-.45 1-1V8H6v10zM3.5 8C2.67 8 2 8.67 2 9.5v7c0 .83.67 1.5 1.5 1.5S5 17.33 5 16.5v-7C5 8.67 4.33 8 3.5 8zm17 0c-.83 0-1.5.67-1.5 1.5v7c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5v-7c0-.83-.67-1.5-1.5-1.5zm-4.97-5.84l1.3-1.3c.2-.2.2-.51 0-.71-.2-.2-.51-.2-.71 0l-1.48 1.48A5.84 5.84 0 0 0 12 1c-.96 0-1.86.23-2.66.63L7.85.15c-.2-.2-.51-.2-.71 0-.2.2-.2.51 0 .71l1.31 1.31A5.98 5.98 0 0 0 6 7h12c0-1.99-.97-3.75-2.47-4.84zM10 5H9V4h1v1zm5 0h-1V4h1v1z"
                   />
                 </svg>
-                Download Android APK
+                <span data-i18n="cta.apk">Download Android APK</span>
               </a>
-              <small class="dl-note">For Android phones &mdash; direct APK download</small>
+              <small class="dl-note" data-i18n="cta.apkNote">For Android phones &mdash; direct APK download</small>
             </div>
             <div class="dl-item">
               <a href="https://www.e7gz.app" class="btn btn-dark btn-lg" target="_blank" rel="noopener">
@@ -947,11 +951,11 @@
                     d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
                   />
                 </svg>
-                Open Web App
+                <span data-i18n="cta.web">Open Web App</span>
               </a>
-              <small class="dl-note">For iPhone &mdash; opens in Safari, no download</small>
+              <small class="dl-note" data-i18n="cta.webNote">For iPhone &mdash; opens in Safari, no download</small>
             </div>
-            <a href="#home" class="section-link">Back to top &uarr;</a>
+            <a href="#home" class="section-link" data-i18n="cta.back">Back to top &uarr;</a>
           </div>
         </div>
       </div>
@@ -962,20 +966,20 @@
       <div class="container footer-inner">
         <img src="assets/e7gz-logo.png" alt="E7GZ احجز" class="footer-logo" />
         <nav class="footer-links">
-          <a href="#home">Home</a>
-          <a href="#features">Features</a>
-          <a href="#screenshots">Screenshots</a>
-          <a href="#how-it-works">How It Works</a>
-          <a href="#install">Install</a>
-          <a href="#contact">Contact</a>
-          <a href="privacy.html">Privacy Policy</a>
-          <a href="terms.html">Terms of Use</a>
+          <a href="#home" data-i18n="nav.home">Home</a>
+          <a href="#features" data-i18n="nav.features">Features</a>
+          <a href="#screenshots" data-i18n="nav.screenshots">Screenshots</a>
+          <a href="#how-it-works" data-i18n="nav.how">How It Works</a>
+          <a href="#install" data-i18n="nav.install">Install</a>
+          <a href="#contact" data-i18n="nav.contact">Contact</a>
+          <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a>
+          <a href="terms.html" data-i18n="footer.terms">Terms of Use</a>
         </nav>
         <a href="mailto:e7gzsupport@gmail.com" class="footer-mail"
           >e7gzsupport@gmail.com</a
         >
         <a href="tel:+201155246156" class="footer-mail">+20 115 524 6156</a>
-        <p class="copyright">
+        <p class="copyright" data-i18n="footer.copy">
           © 2026 E7GZ. All rights reserved. ·
           <a href="privacy.html">Privacy Policy</a> ·
           <a href="terms.html">Terms of Use</a>
@@ -984,5 +988,6 @@
     </footer>
 
     <script src="js/script.js"></script>
+    <script src="js/i18n.js"></script>
   </body>
 </html>

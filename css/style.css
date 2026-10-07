@@ -978,6 +978,47 @@ a { color: inherit; text-decoration: none; }
 .legal-footer a { color: var(--muted); margin: 0 10px; }
 .legal-footer a:hover { color: var(--green-bright); }
 
+/* ============ Language toggle ============ */
+.lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 58px;
+  padding: 8px 14px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+.lang-toggle:hover {
+  border-color: rgba(34, 197, 94, 0.5);
+  color: var(--green-bright);
+}
+.lang-toggle .lt-en { display: none; }
+html[lang="ar"] .lang-toggle .lt-ar { display: none; }
+html[lang="ar"] .lang-toggle .lt-en { display: inline; }
+
+/* ============ Arabic (RTL) ============ */
+html[lang="ar"] body {
+  font-family: "Cairo", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+html[lang="ar"] h1, html[lang="ar"] h2, html[lang="ar"] h3, html[lang="ar"] h4,
+html[lang="ar"] .eyebrow, html[lang="ar"] .price-type, html[lang="ar"] .step-num,
+html[lang="ar"] .install-steps li::before,
+html[lang="ar"] .price-value strong { letter-spacing: normal; }
+
+html[dir="rtl"] .install-steps li { padding-left: 0; padding-right: 46px; }
+html[dir="rtl"] .install-steps li::before { left: auto; right: 0; }
+@media (min-width: 1121px) {
+  html[dir="rtl"] .phone-left { margin-right: 0; margin-left: -44px; }
+  html[dir="rtl"] .phone-right { margin-left: 0; margin-right: -44px; }
+}
+
 /* ============ Responsive ============ */
 @media (max-width: 1080px) {
   .features-grid, .steps-grid { grid-template-columns: repeat(2, 1fr); }

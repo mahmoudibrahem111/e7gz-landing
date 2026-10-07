@@ -82,25 +82,32 @@ document.querySelectorAll(".dl-item .btn-primary, .dl-item .btn-dark").forEach((
 
   const url = btn.getAttribute("href");
   const note = btn.closest(".dl-item")?.querySelector(".dl-note");
-  const originalHTML = btn.innerHTML;
-  const originalNote = note?.textContent || "";
   let timer = null;
 
   btn.addEventListener("click", function (e) {
     e.preventDefault();
     if (btn.classList.contains("dl-counting")) return;
 
+    // capture current (possibly translated) content at click time
+    const originalHTML = btn.innerHTML;
+    const originalNote = note?.textContent || "";
+
     btn.classList.add("dl-counting");
     btn.style.pointerEvents = "none";
     btn.style.opacity = "0.5";
     let remaining = 3;
 
-    if (note) note.textContent = `Download will start in ${remaining} sec`;
+    const isAr = document.documentElement.lang === "ar";
+    const noteCount = (n) =>
+      isAr ? `سيبدأ التنزيل خلال ${n} ث` : `Download will start in ${n} sec`;
+    const noteRetry = isAr ? "لم يبدأ التنزيل؟ اضغط لإعادة المحاولة" : "Download didn't start? Tap to retry";
+
+    if (note) note.textContent = noteCount(remaining);
 
     timer = setInterval(() => {
       remaining--;
       if (remaining > 0) {
-        if (note) note.textContent = `Download will start in ${remaining} sec`;
+        if (note) note.textContent = noteCount(remaining);
       } else {
         clearInterval(timer);
         window.location.href = url;
@@ -111,7 +118,7 @@ document.querySelectorAll(".dl-item .btn-primary, .dl-item .btn-dark").forEach((
           btn.style.pointerEvents = "";
           btn.style.opacity = "";
           btn.innerHTML = originalHTML;
-          if (note) note.textContent = "Download didn't start? Tap to retry";
+          if (note) note.textContent = noteRetry;
         }, 2000);
       }
     }, 1000);

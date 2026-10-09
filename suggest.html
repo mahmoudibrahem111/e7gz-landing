@@ -1,0 +1,261 @@
+<!doctype html>
+<html
+  lang="en"
+  data-title-en="Suggest a Court — E7GZ"
+  data-title-ar="اقترح ملعب — E7GZ"
+  data-desc-en="Know a football or padel court missing on E7GZ? Send us the details and our team will review it."
+  data-desc-ar="تعرف ملعب كورة أو بادل مش موجود على E7GZ؟ ابعتلنا تفاصيله وفريقنا هيراجعه."
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Suggest a Court — E7GZ</title>
+    <meta
+      name="description"
+      content="Know a football or padel court missing on E7GZ? Send us the details and our team will review it."
+    />
+    <link rel="icon" type="image/png" href="assets/e7gz-logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- ============ NAVBAR ============ -->
+    <header class="navbar" id="navbar">
+      <div class="container nav-inner">
+        <a href="index.html" class="brand">
+          <img src="assets/e7gz-logo.png" alt="E7GZ احجز logo" class="brand-logo" />
+        </a>
+        <nav class="nav-links" id="navLinks">
+          <a href="index.html#home" class="nav-link" data-i18n="nav.home">Home</a>
+          <a href="index.html#features" class="nav-link" data-i18n="nav.features">Features</a>
+          <a href="index.html#screenshots" class="nav-link" data-i18n="nav.screenshots">Screenshots</a>
+          <a href="index.html#how-it-works" class="nav-link" data-i18n="nav.how">How It Works</a>
+          <a href="index.html#install" class="nav-link" data-i18n="nav.install">Install</a>
+          <a href="index.html#contact" class="nav-link" data-i18n="nav.contact">Contact</a>
+        </nav>
+        <div class="nav-cta">
+          <button class="lang-toggle" id="langToggle" type="button" aria-label="Switch language / تبديل اللغة">
+            <span class="lt-ar">العربية</span>
+            <span class="lt-en">EN</span>
+          </button>
+          <a href="index.html#download" class="btn btn-primary btn-sm" data-i18n="nav.download">Download App</a>
+          <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ============ PAGE HERO ============ -->
+    <section class="page-hero">
+      <div class="container">
+        <a href="index.html" class="back-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px"><path d="m15 18-6-6 6-6"/></svg>
+          <span data-i18n="nav.home">Home</span>
+        </a>
+        <span class="eyebrow" data-i18n="sg.eyebrow">COURT SUGGESTIONS</span>
+        <h1 data-i18n="sg.h1">Suggest <span class="green">a Court</span></h1>
+        <p data-i18n="sg.sub">
+          Know a football or padel court that's not on E7GZ yet? Send us the
+          details — we review every suggestion and contact you if we need
+          anything.
+        </p>
+        <div class="hero-chips">
+          <span class="hchip" data-i18n="sg.chip1">Free to submit</span>
+          <span class="hchip" data-i18n="sg.chip2">Reviewed within ~24h</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FORM ============ -->
+    <section class="form-section">
+      <div class="container form-layout">
+        <div class="form-main">
+          <form data-form="suggest" data-type="COURT" novalidate>
+            <!-- 1 — Who are you -->
+            <div class="fg-card">
+              <div class="fg-head">
+                <div class="fg-num">1</div>
+                <div class="fg-title" data-i18n="f.about">Who are you</div>
+                <div class="fg-badge" data-i18n="f.badgeContact">Contact</div>
+              </div>
+              <div class="field-row">
+                <div class="field">
+                  <label for="sg-name" data-i18n="f.name">Full name</label>
+                  <input id="sg-name" name="name" type="text" required autocomplete="name" placeholder="e.g. Ahmed Mohamed" data-i18n-ph="f.namePh" />
+                  <div class="field-err"></div>
+                </div>
+                <div class="field">
+                  <label for="sg-phone" data-i18n="f.phone">Phone / WhatsApp</label>
+                  <input id="sg-phone" name="phone" type="tel" required autocomplete="tel" placeholder="01X XXXX XXXX" />
+                  <div class="field-err"></div>
+                </div>
+              </div>
+              <div class="field">
+                <label for="sg-email">
+                  <span data-i18n="f.email">Email</span>
+                  <span class="opt" data-i18n="f.optional">(optional)</span>
+                </label>
+                <input id="sg-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" />
+                <div class="field-err"></div>
+              </div>
+            </div>
+
+            <!-- 2 — The court -->
+            <div class="fg-card">
+              <div class="fg-head">
+                <div class="fg-num">2</div>
+                <div class="fg-title" data-i18n="sg.card2">The court</div>
+                <div class="fg-badge" data-i18n="f.badgeDetails">Details</div>
+              </div>
+              <div class="field-row">
+                <div class="field">
+                  <label for="sg-court" data-i18n="f.court">Court name</label>
+                  <input id="sg-court" name="courtName" type="text" required placeholder="e.g. El Forsan Sporting Turf" data-i18n-ph="f.courtPh" />
+                  <div class="field-err"></div>
+                </div>
+                <div class="field">
+                  <label for="sg-city" data-i18n="f.city">City / Area</label>
+                  <input id="sg-city" name="city" type="text" required placeholder="e.g. Nasr City, Cairo" data-i18n-ph="f.cityPh" />
+                  <div class="field-err"></div>
+                </div>
+              </div>
+              <div class="field">
+                <label for="sg-landmark">
+                  <span data-i18n="f.landmark">Street / Landmark</span>
+                  <span class="opt" data-i18n="f.optional">(optional)</span>
+                </label>
+                <input id="sg-landmark" name="landmark" type="text" placeholder="e.g. Beside PetroSport Club" data-i18n-ph="f.landmarkPh" />
+                <div class="field-err"></div>
+              </div>
+              <div class="field">
+                <label for="sg-maps" data-i18n="f.maps">Google Maps link</label>
+                <input id="sg-maps" name="mapsLink" type="url" required placeholder="https://maps.google.com/..." data-i18n-ph="f.mapsPh" />
+                <div class="field-err"></div>
+              </div>
+              <div class="field">
+                <label data-i18n="f.sports">Sports played here</label>
+                <div class="chip-group" data-req-group>
+                  <label class="chip"><input type="checkbox" name="sports" value="FOOTBALL" data-sport /><span data-i18n="f.football">Football</span></label>
+                  <label class="chip"><input type="checkbox" name="sports" value="PADEL" data-sport /><span data-i18n="f.padel">Padel</span></label>
+                  <label class="chip"><input type="checkbox" name="sports" value="TENNIS" data-sport /><span data-i18n="f.tennis">Tennis</span></label>
+                  <label class="chip"><input type="checkbox" name="sports" value="BASKETBALL" data-sport /><span data-i18n="f.basketball">Basketball</span></label>
+                </div>
+                <div class="chip-group-hint" data-i18n="f.sportsHint">Pick at least one</div>
+              </div>
+              <div class="field">
+                <label for="sg-other-sports">
+                  <span data-i18n="f.otherSports">Other sports</span>
+                  <span class="opt" data-i18n="f.optional">(optional)</span>
+                </label>
+                <input id="sg-other-sports" name="otherSports" type="text" placeholder="e.g. Volleyball, boxing — type anything" data-i18n-ph="f.otherSportsPh" />
+                <div class="field-err"></div>
+              </div>
+            </div>
+
+            <!-- 3 — Anything else -->
+            <div class="fg-card">
+              <div class="fg-head">
+                <div class="fg-num">3</div>
+                <div class="fg-title" data-i18n="f.card3">Anything else?</div>
+                <div class="fg-badge" data-i18n="f.badgeOptional">Optional</div>
+              </div>
+              <div class="field">
+                <label for="sg-notes">
+                  <span data-i18n="f.notes">Notes</span>
+                  <span class="opt" data-i18n="f.optional">(optional)</span>
+                </label>
+                <textarea id="sg-notes" name="notes" placeholder="Surfaces, prices, opening hours — anything useful…" data-i18n-ph="sg.notesPh"></textarea>
+                <div class="field-err"></div>
+              </div>
+            </div>
+
+            <!-- honeypot -->
+            <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+            <div class="form-banner" role="alert"></div>
+
+            <div class="submit-bar">
+              <button type="submit" class="btn btn-primary btn-lg" data-i18n="sg.submit">Send Suggestion</button>
+              <span class="submit-note" data-i18n="sg.agree">We'll only contact you about this suggestion.</span>
+            </div>
+          </form>
+
+          <div class="thanks-box">
+            <div class="thanks-icon">&#10003;</div>
+            <h3 data-i18n="sg.thanksT">Thanks — got it!</h3>
+            <p data-i18n="sg.thanksD">We'll review the court and contact you if we need anything else.</p>
+            <div class="thanks-actions">
+              <button type="button" class="btn btn-ghost" onclick="location.reload()" data-i18n="sg.thanksAgain">Suggest another</button>
+              <a href="list-your-court.html" class="btn btn-primary" data-i18n="own.b">Add your court →</a>
+            </div>
+          </div>
+        </div>
+
+        <aside class="form-aside">
+          <div class="aside-card">
+            <h3 data-i18n="how.title">How it works</h3>
+            <div class="aside-step">
+              <div class="n">1</div>
+              <div>
+                <strong data-i18n="how.s1t">Send the details</strong>
+                <p data-i18n="how.s1d">Tell us what you know about the court in under a minute.</p>
+              </div>
+            </div>
+            <div class="aside-step">
+              <div class="n">2</div>
+              <div>
+                <strong data-i18n="how.s2t">We check it</strong>
+                <p data-i18n="how.s2d">Our team reviews every suggestion and contacts you if needed.</p>
+              </div>
+            </div>
+            <div class="aside-step">
+              <div class="n">3</div>
+              <div>
+                <strong data-i18n="how.s3t">It goes live</strong>
+                <p data-i18n="how.s3d">Once listed, players can find and book it on E7GZ.</p>
+              </div>
+            </div>
+          </div>
+          <div class="aside-card aside-cta">
+            <h3 data-i18n="own.t">Own this court?</h3>
+            <p data-i18n="own.d">List your venue on E7GZ and start taking bookings.</p>
+            <a href="list-your-court.html" class="btn btn-primary" data-i18n="own.b">Add your court →</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+      <div class="container footer-inner">
+        <img src="assets/e7gz-logo.png" alt="E7GZ احجز" class="footer-logo" />
+        <nav class="footer-links">
+          <a href="index.html#home" data-i18n="nav.home">Home</a>
+          <a href="index.html#features" data-i18n="nav.features">Features</a>
+          <a href="index.html#how-it-works" data-i18n="nav.how">How It Works</a>
+          <a href="suggest.html" data-i18n="footer.suggest">Suggest a Court</a>
+          <a href="list-your-court.html" data-i18n="footer.list">Add Your Court</a>
+          <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a>
+          <a href="terms.html" data-i18n="footer.terms">Terms of Use</a>
+        </nav>
+        <a href="mailto:e7gzsupport@gmail.com" class="footer-mail">e7gzsupport@gmail.com</a>
+        <a href="tel:+201155246156" class="footer-mail">+20 115 524 6156</a>
+        <p class="copyright" data-i18n="footer.copy">
+          © 2026 E7GZ. All rights reserved. ·
+          <a href="privacy.html">Privacy Policy</a> ·
+          <a href="terms.html">Terms of Use</a>
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/form.js"></script>
+  </body>
+</html>

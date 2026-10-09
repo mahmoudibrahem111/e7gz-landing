@@ -36,6 +36,9 @@
     "features.sub":
       "لو بتلعب أو بتدير الملعب، E7GZ بيديك كل الأدوات — احجز الملاعب، انضم للمباريات، وتحكّم في تجربتك، وأدر شغلك.",
 
+    "badge.players": "لاعبين",
+    "badge.owners": "أصحاب ملاعب",
+
     "tabs.players": "للاعبين",
     "tabs.owners": "لأصحاب الملاعب",
     "tabs.playerApp": "تطبيق اللاعب",
@@ -65,6 +68,16 @@
     "feat8.title": "أكتر من ملعب في تطبيق واحد",
     "feat8.desc":
       "سجّل ملاعب جديدة، زوّد صور وأسعار ومميزات، وأدر كل منشآتك من تطبيق واحد — مع حجوزات الحضور عشان كل حاجة تفضل مظبوطة.",
+
+    "feat1.tag": "استكشاف",
+    "feat2.tag": "دفع",
+    "feat3.tag": "مباريات",
+    "feat4.tag": "سجل الحجوزات",
+    "feat5.tag": "لوحة التحكم",
+    "feat6.tag": "التقويم",
+    "feat7.tag": "المواعيد",
+    "feat8.tag": "الملاعب",
+    "shots.foot": "جوّه الأبليكيشن",
 
     "shots.eyebrow": "لقطات من التطبيق",
     "shots.title": "بص جوّه <span class=\"green\">E7GZ</span>",
@@ -172,6 +185,11 @@
     "install.dlApk": "حمّل APK للأندرويد",
     "install.dlApkNote": "لفونات الأندرويد — ثبّت ملف الـ APK",
 
+    "owncta.title": "عندك ملعب؟ <span class=\"hl\">ضيفه على E7GZ.</span>",
+    "owncta.desc":
+      "حوّل ساعات فاضية لدخل يومي — حدّد مواعيدك وأسعارك، واستقبل الحجوزات والدفعات، وأدر كل حاجة من تطبيق واحد.",
+    "owncta.btn": "ضيف ملعبك",
+
     "cta.title": "جاهز تلعب؟",
     "cta.sub":
       "حمّل E7GZ النهارده واحجز ماتشك الجاي في ثواني.<br />عندك أسئلة؟ كلّمنا على<br /><a href=\"mailto:e7gzsupport@gmail.com\">e7gzsupport@gmail.com</a><br /><a href=\"tel:+201155246156\">+20 115 524 6156</a>",
@@ -184,7 +202,85 @@
     "footer.privacy": "سياسة الخصوصية",
     "footer.terms": "شروط الاستخدام",
     "footer.copy":
-      "© 2026 E7GZ. كل الحقوق محفوظة · <a href=\"privacy.html\">سياسة الخصوصية</a> · <a href=\"terms.html\">شروط الاستخدام</a>"
+      "© 2026 E7GZ. كل الحقوق محفوظة · <a href=\"privacy.html\">سياسة الخصوصية</a> · <a href=\"terms.html\">شروط الاستخدام</a>",
+    "footer.suggest": "اقترح ملعب",
+    "footer.list": "ضيف ملعبك",
+
+    "f.about": "إنت مين",
+    "f.badgeContact": "تواصل",
+    "f.badgeDetails": "تفاصيل",
+    "f.badgeOptional": "اختياري",
+    "f.name": "الاسم بالكامل",
+    "f.namePh": "مثال: أحمد محمد",
+    "f.phone": "تليفون / واتساب",
+    "f.email": "البريد الإلكتروني",
+    "f.optional": "(اختياري)",
+    "f.court": "اسم الملعب",
+    "f.courtPh": "مثال: ملعب فرسان الرياضي",
+    "f.city": "المحافظة / المنطقة",
+    "f.cityPh": "مثال: مدينة نصر، القاهرة",
+    "f.landmark": "الشارع / أقرب علامة",
+    "f.landmarkPh": "مثال: جنب بتروسبورت",
+    "f.maps": "لينك جوجل ماب",
+    "f.mapsPh": "https://maps.google.com/...",
+    "f.otherSports": "رياضات تانية",
+    "f.otherSportsPh": "مثال: كرة طائرة، ملاكمة — اكتب أي رياضة",
+    "f.sports": "الرياضات اللي بتتلعب فيه",
+    "f.sportsHint": "اختر واحدة على الأقل",
+    "f.football": "كورة قدم",
+    "f.padel": "بادل",
+    "f.tennis": "تينيس",
+    "f.basketball": "كرة سلة",
+    "f.notes": "ملاحظات",
+    "f.card3": "حاجة تانية؟",    "how.title": "إزاي بيشتغل",
+    "how.s1t": "ابعت التفاصيل",
+    "how.s1d": "احكيلنا اللي تعرفه عن الملعب في أقل من دقيقة.",
+    "how.s2t": "بنراجعه",
+    "how.s2d": "فريقنا بيراجع كل اقتراح وبيتواصل لو محتاجين أي حاجة.",
+    "how.s3t": "بيظهر في الأبليكيشن",
+    "how.s3d": "بعد ما نضيفه، اللاعبين يقدروا يلاقوه ويحجزوه على E7GZ.",
+
+    "sg.eyebrow": "اقتراح ملعب",
+    "sg.h1": "اقترح <span class=\"green\">ملعب</span>",
+    "sg.sub": "ملعب كورة أو بادل مش موجود على E7GZ؟ ابعتلنا تفاصيله — بنراجع كل اقتراح ولو محتاجين حاجة هنتواصل معاك.",
+    "sg.chip1": "مجاني تمامًا",
+    "sg.chip2": "بنراجعه خلال ٢٤ ساعة",
+    "sg.card2": "الملعب",
+    "sg.notesPh": "الفرش، الأسعار، المواعيد — أي معلومة مفيدة",
+    "sg.submit": "ابعت الاقتراح",
+    "sg.agree": "هنوصل معاك بخصوص الاقتراح ده بس.",
+    "sg.thanksT": "تمام — وصلنا!",
+    "sg.thanksD": "هنراجع الملعب ونتواصل معاك لو محتاجين أي تفاصيل تانية.",
+    "sg.thanksAgain": "ابعت اقتراح تاني",
+
+    "lc.eyebrow": "ضيف ملعبك",
+    "lc.h1": "ضيف <span class=\"green\">ملعبك</span>",
+    "lc.sub": "عندك ملعب كورة أو بادل أو ملعب متعدد؟ ابعتلنا تفاصيله وفريقنا هيتواصل معاك عشان تعرضه على E7GZ.",
+    "lc.chip1": "من غير أي رسوم تسجيل",
+    "lc.chip2": "بنتواصل معاك بسرعة",
+    "lc.card2": "ملعبك",
+    "lc.fields": "عدد الملاعب القابلة للحجز",
+    "lc.f1": "ملعب واحد",
+    "lc.f2": "ملاعبين",
+    "lc.f3": "3 ملاعب",
+    "lc.f4": "4 ملاعب أو أكتر",
+    "lc.hours": "مواعيد الشغل",
+    "lc.hoursPh": "مثال: من ٩ ص لـ ٢ ص كل يوم",
+    "lc.price": "سعر الساعة (ج.م)",
+    "lc.pricePh": "مثال: 500",
+    "lc.notesPh": "أي حاجة تانية تعرفها عن الملعب",
+    "lc.submit": "ابعت البيانات",
+    "lc.agree": "هنستخدم رقمك للتواصل بخصوص ملعبك ده بس.",
+    "lc.thanksT": "تمام — هنكلمك!",
+    "lc.thanksD": "فريقنا هيتواصل معاك على واتساب لتأكيد البيانات وعرض الملعب على E7GZ.",
+    "lc.thanksAgain": "ضيف ملعب تاني",
+
+    "own.t": "صاحب الملعب ده؟",
+    "own.d": "ضيف ملعبك على E7GZ وابدأ تستقبل حجوزات.",
+    "own.b": "ضيف ملعبك ←",
+    "miss.t": "لاقيت ملعب ناقص؟",
+    "miss.d": "اقترح ملعب يتنضاف على E7GZ.",
+    "miss.b": "اقترح ملعب ←"
   };
 
   var nodes = document.querySelectorAll("[data-i18n]");
@@ -192,16 +288,29 @@
     el._enHtml = el.innerHTML;
   });
 
+  var phNodes = document.querySelectorAll("[data-i18n-ph]");
+  phNodes.forEach(function (el) {
+    el._enPh = el.getAttribute("placeholder") || "";
+  });
+
+  var htmlEl = document.documentElement;
   var metaDesc = document.querySelector('meta[name="description"]');
   var EN_TITLE = document.title;
   var EN_DESC = metaDesc ? metaDesc.content : "";
 
   function apply(lang) {
     var isAr = lang === "ar";
-    document.documentElement.lang = isAr ? "ar" : "en";
-    document.documentElement.dir = isAr ? "rtl" : "ltr";
-    document.title = isAr ? AR["doc.title"] || EN_TITLE : EN_TITLE;
-    if (metaDesc) metaDesc.content = isAr ? AR["doc.desc"] || EN_DESC : EN_DESC;
+    htmlEl.lang = isAr ? "ar" : "en";
+    htmlEl.dir = isAr ? "rtl" : "ltr";
+    var tEn = htmlEl.getAttribute("data-title-en");
+    var tAr = htmlEl.getAttribute("data-title-ar");
+    var dEn = htmlEl.getAttribute("data-desc-en");
+    var dAr = htmlEl.getAttribute("data-desc-ar");
+    document.title = isAr ? tAr || AR["doc.title"] || EN_TITLE : tEn || EN_TITLE;
+    if (metaDesc)
+      metaDesc.content = isAr
+        ? dAr || AR["doc.desc"] || EN_DESC
+        : dEn || EN_DESC;
 
     nodes.forEach(function (el) {
       var key = el.getAttribute("data-i18n");
@@ -209,6 +318,15 @@
         if (AR[key] != null) el.innerHTML = AR[key];
       } else {
         el.innerHTML = el._enHtml;
+      }
+    });
+
+    phNodes.forEach(function (el) {
+      var key = el.getAttribute("data-i18n-ph");
+      if (isAr) {
+        if (AR[key] != null) el.setAttribute("placeholder", AR[key]);
+      } else {
+        el.setAttribute("placeholder", el._enPh);
       }
     });
 

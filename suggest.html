@@ -198,6 +198,31 @@
         </div>
 
         <aside class="form-aside">
+          <div class="aside-card about-card">
+            <details id="aboutBox">
+              <summary>
+                <span data-i18n="about.t">What is E7GZ?</span>
+                <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+              </summary>
+              <div class="about-body">
+                <p data-i18n="about.intro">E7GZ connects venue owners with players — players find and book a court in seconds, and owners run their court, bookings, and revenue from one place.</p>
+                <strong class="about-h" data-i18n="about.pt">For players</strong>
+                <ul class="about-list">
+                  <li data-i18n="about.p1">Find nearby courts with photos, prices and ratings.</li>
+                  <li data-i18n="about.p2">See free slots and book online in seconds.</li>
+                  <li data-i18n="about.p3">Pay online and track all your bookings in the app.</li>
+                  <li data-i18n="about.p4">Create or join a match when you need players.</li>
+                </ul>
+                <strong class="about-h" data-i18n="about.ot">For venue owners</strong>
+                <ul class="about-list">
+                  <li data-i18n="about.o1">List your court and get new bookings instead of calls.</li>
+                  <li data-i18n="about.o2">Set prices and hours — block any slot from online booking.</li>
+                  <li data-i18n="about.o3">See your calendar, free slots, revenue and booking notifications.</li>
+                  <li data-i18n="about.o4">Manage everything in one place — no paper or WhatsApp.</li>
+                </ul>
+              </div>
+            </details>
+          </div>
           <div class="aside-card">
             <h3 data-i18n="how.title">How it works</h3>
             <div class="aside-step">
@@ -244,8 +269,10 @@
           <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a>
           <a href="terms.html" data-i18n="footer.terms">Terms of Use</a>
         </nav>
-        <a href="mailto:e7gzsupport@gmail.com" class="footer-mail">e7gzsupport@gmail.com</a>
-        <a href="tel:+201155246156" class="footer-mail">+20 115 524 6156</a>
+        <div class="footer-contact">
+          <a href="mailto:e7gzsupport@gmail.com" class="footer-mail">e7gzsupport@gmail.com</a>
+          <a href="tel:+201155246156" class="footer-mail">+20 115 524 6156</a>
+        </div>
         <p class="copyright" data-i18n="footer.copy">
           © 2026 E7GZ. All rights reserved. ·
           <a href="privacy.html">Privacy Policy</a> ·
@@ -254,6 +281,19 @@
       </div>
     </footer>
 
+    <script>
+      (function () {
+        var box = document.getElementById("aboutBox");
+        if (!box) return;
+        if (window.matchMedia("(min-width: 1101px)").matches) {
+          box.open = true;
+          return;
+        }
+        var card = box.closest(".about-card");
+        var layout = document.querySelector(".form-layout");
+        if (card && layout) layout.insertBefore(card, layout.firstChild);
+      })();
+    </script>
     <script src="js/script.js"></script>
     <script src="js/i18n.js"></script>
     <script src="js/form.js"></script>

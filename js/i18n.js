@@ -172,14 +172,14 @@
       "انزل لتحت واضغط <strong>«إضافة إلى الشاشة الرئيسية»</strong> وبعدين <strong>إضافة</strong>",
     "install.iosNote":
       "E7GZ هتظهر على شاشة موبايلك وتفتح بملء الشاشة، زي أي تطبيق.",
-    "install.android": "أندرويد — Chrome",
+    "install.android": "أندرويد — APK",
     "install.and1":
-      "افتح <a href=\"https://www.e7gz.app\" target=\"_blank\" rel=\"noopener\">www.e7gz.app</a> في <strong>Chrome</strong>",
-    "install.and2": "اضغط قائمة <strong>&#8942;</strong> (فوق على اليمين)",
+      "حمّل <a href=\"https://api.e7gz.app/api/v1/download/apk\">ملف الـ APK</a> على موبايلك",
+    "install.and2": "افتح ملف الـ <strong>.apk</strong> اللي نزل من الإشعارات",
     "install.and3":
-      "اضغط <strong>«تثبيت التطبيق»</strong> (أو «إضافة إلى الشاشة الرئيسية») وبعدين <strong>تثبيت</strong>",
+      "اضغط <strong>«تثبيت»</strong> وبعدين <strong>افتح</strong> التطبيق",
     "install.andNote":
-      "E7GZ هتتضاف على شاشة موبايلك بأيقونتها الخاصة — افتحها زي أي تطبيق تاني.",
+      "E7GZ هتتثبت على موبايلك على طول — من غير متجر التطبيقات.",
     "install.openWeb": "افتح تطبيق الويب (للآيفن)",
     "install.openWebNote": "بيفتح في Safari — ضيفه على شاشتك الرئيسية",
     "install.dlApk": "حمّل APK للأندرويد",

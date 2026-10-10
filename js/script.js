@@ -76,11 +76,10 @@ const observer = new IntersectionObserver(
 
 document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
 
-// Download countdown
+// Download countdown (APK links only — web app buttons open instantly)
 document.querySelectorAll(".dl-item .btn-primary, .dl-item .btn-dark").forEach((btn) => {
-  if (!btn.getAttribute("href") || btn.getAttribute("href") === "#") return;
-
   const url = btn.getAttribute("href");
+  if (!url || url === "#" || !url.includes("download/apk")) return;
   const note = btn.closest(".dl-item")?.querySelector(".dl-note");
   let timer = null;
 

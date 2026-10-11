@@ -1,203 +1,394 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"
+  data-title-en="Privacy Policy — E7GZ"
+  data-title-ar="سياسة الخصوصية — E7GZ"
+  data-desc-en="E7GZ Privacy Policy — how we collect, use, share and protect your personal data."
+  data-desc-ar="سياسة الخصوصية لـ E7GZ — كيف نجمع بياناتك الشخصية ونستخدمها ونشاركها ونحميها.">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Privacy Policy — E7GZ</title>
   <meta name="description" content="E7GZ Privacy Policy — how we collect, use, share and protect your personal data." />
   <link rel="icon" type="image/png" href="assets/e7gz-logo.png" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-  <header class="navbar">
+  <header class="navbar" id="navbar">
     <div class="container nav-inner">
       <a href="index.html" class="brand">
         <img src="assets/e7gz-logo.png" alt="E7GZ احجز logo" class="brand-logo" />
       </a>
-      <nav class="nav-links">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="index.html#features" class="nav-link">Features</a>
-        <a href="index.html#screenshots" class="nav-link">Screenshots</a>
-        <a href="privacy.html" class="nav-link active">Privacy Policy</a>
-        <a href="terms.html" class="nav-link">Terms of Use</a>
-        <a href="privacy-ar.html" class="nav-link">العربية</a>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html" class="nav-link" data-i18n="nav.home">Home</a>
+        <a href="index.html#features" class="nav-link" data-i18n="nav.features">Features</a>
+        <a href="index.html#screenshots" class="nav-link" data-i18n="nav.screenshots">Screenshots</a>
+        <a href="privacy.html" class="nav-link active" data-i18n="footer.privacy">Privacy Policy</a>
+        <a href="terms.html" class="nav-link" data-i18n="footer.terms">Terms of Use</a>
       </nav>
       <div class="nav-cta">
-        <a href="index.html#download" class="btn btn-primary btn-sm">Download App</a>
+        <button class="lang-toggle" id="langToggle" type="button" aria-label="Switch language / تبديل اللغة">
+          <span class="lt-ar">العربية</span>
+          <span class="lt-en">EN</span>
+        </button>
+        <a href="index.html#download" class="btn btn-primary btn-sm" data-i18n="nav.download">Download App</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </div>
   </header>
 
-  <section class="legal-hero">
-    <div class="container">
-      <a href="index.html" class="back-link">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px"><path d="m15 18-6-6 6-6"/></svg>
-        Back to home
-      </a>
-      <h1>Privacy Policy</h1>
-      <p>Version 1.1 — Effective date: October 11, 2026</p>
+  <!-- ===== English ===== -->
+  <div class="legal-block-en">
+
+    <section class="legal-hero">
+      <div class="container">
+        <a href="index.html" class="back-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px"><path d="m15 18-6-6 6-6"/></svg>
+          Back to home
+        </a>
+        <h1>Privacy Policy</h1>
+        <p>Version 1.1 — Effective date: October 11, 2026</p>
+      </div>
+    </section>
+
+    <div class="legal-body">
+      <div class="legal-wrap">
+
+        <p>This Privacy Policy explains how E7GZ (the "App", "we", "us", "our") collects, uses, shares, and protects the personal data of people who use the App, including players who book stadiums and join matches, and stadium owners who list their venues.</p>
+        <p>The App is operated by Mahmoud Ibrahim, an individual. E7GZ is the name of the project and is not a registered company.</p>
+        <p>By using the App or agreeing to this Policy when you register, you acknowledge that you have read it. If you do not agree with this Policy, please do not use the App.</p>
+
+        <h2>1. Definitions</h2>
+        <ul>
+          <li><strong>"App":</strong> The E7GZ application, its interfaces, and related services.</li>
+          <li><strong>"Personal Data":</strong> Information that can be linked to a specific user or that helps identify them.</li>
+          <li><strong>"Player":</strong> A user who books stadiums or joins matches.</li>
+          <li><strong>"Owner":</strong> A user who lists and manages stadiums.</li>
+          <li><strong>"Booking":</strong> A reservation of a time slot at a stadium made through the App.</li>
+          <li><strong>"Match":</strong> A sporting event created or joined through the App.</li>
+          <li><strong>"Stadium":</strong> A stadium, pitch, court, or similar sports facility listed on the App.</li>
+        </ul>
+
+        <h2>2. Data Controller</h2>
+        <p>The App is operated, and personal data is controlled, by <strong>Mahmoud Ibrahim</strong>, an individual. E7GZ is a project name and the trade name used for the App, and is not a registered company.</p>
+        <p><strong>Contact:</strong> <a href="mailto:e7gzsupport@gmail.com">e7gzsupport@gmail.com</a></p>
+
+        <h2>3. Information We Collect</h2>
+
+        <h3>3.1 Account and Profile Data</h3>
+        <p>We may collect your first name, last name, username, email address, phone number, password, and any additional details you choose to add to your profile. Passwords are stored as salted hashes and are never stored in plain text.</p>
+
+        <h3>3.2 Verification Data</h3>
+        <p>We use one-time passcodes (OTP), currently sent by email, to verify accounts. We may log that a verification attempt occurred, when it occurred, whether it succeeded, and the channel used.</p>
+
+        <h3>3.3 Booking Records</h3>
+        <p>We collect booking data, including the stadium, the time slot, the price, booking status, cancellation status, refund status, and the times of changes made to a booking. This data is used to manage bookings, serve users, handle disputes, and manage financial records.</p>
+
+        <h3>3.4 Payments</h3>
+        <p>Booking payments are currently made directly between the Player and the Owner using <strong>InstaPay</strong>. E7GZ does not receive, hold, or process this money.</p>
+        <p>When paying via InstaPay, you upload a screenshot of the transfer with the transfer reference, and the Owner uploads their receipt and confirms the booking. We store these images and the reference in private storage. We may automatically process the uploaded screenshot to read the reference number (text extraction, also known as OCR) to help fill in the details.</p>
+        <p>We do not store card numbers. Card and e-wallet payments are not currently available in the App. If we make them available in the future, they will be processed by a third-party payment provider, and we will keep only transaction-related data such as the transaction or reference number, amount, payment method, and date.</p>
+
+        <h3>3.5 Location</h3>
+        <p>If you grant the App access to your device location, we may use it to show nearby stadiums, order search results, and provide directions. Location access is optional, and you can search by city, area, or name without granting it. Maps, geocoding, and directions rely on Google Maps services, which may process data under their own policies and terms.</p>
+
+        <h3>3.6 Matches and Social Features</h3>
+        <p>When you create or join a Match, we process your participation data, player lists, invitations, and the details you provide. Other participants in a Match may be able to see your username and some of your profile information that is available to them within the App.</p>
+
+        <h3>3.7 Chats and Reports</h3>
+        <p>We process the messages you send in Match chats and direct chats, as well as the reports you file about users or content. This data is used to provide the messaging feature, handle reports, address abuse, and keep the service safe. Messages are stored in our database and are not routinely reviewed, but they may be accessed when necessary to handle a report, a security issue, abuse, or a legal request.</p>
+
+        <h3>3.8 Stadium Owner Data</h3>
+        <p>If you register as an Owner, we may process the stadium data you list, including names, addresses, locations, photos, prices, schedules, descriptions, and amenities. We may also process the review status of a stadium and any walk-in bookings you record.</p>
+
+        <h3>3.9 Server and Technical Data</h3>
+        <p>Our servers automatically log some technical data related to your use of the App, such as IP address, app version, device or operating system information, and errors. We use error-monitoring tools to detect, diagnose, and fix crashes and issues. We do not use advertising tracking tools, and we do not use your data for behavioral advertising.</p>
+
+        <h3>3.10 Notifications and App Version</h3>
+        <p>When you enable notifications, we keep a device push token so we can send booking, match, and account notifications, and you can turn notifications off at any time from your device settings. When the App runs, it checks our servers for whether a newer release is required and which version you are using, so we can keep the App secure and up to date.</p>
+
+        <h2>4. Legal Bases for Processing</h2>
+        <p>Under Egyptian law, including Personal Data Protection Law No. 151 of 2020, we process your personal data on the following bases:</p>
+        <ul>
+          <li><strong>Performance of a contract:</strong> to create and manage your account, process bookings and payments, provide chats and notifications, and deliver the features you request.</li>
+          <li><strong>Consent:</strong> where you agree, for example when you accept these policies during registration, grant location access, or enable notifications. You can withdraw your consent at any time.</li>
+          <li><strong>Legitimate interests:</strong> to secure the App, prevent fraud and abuse, and defend legal claims.</li>
+          <li><strong>Legal obligation:</strong> to comply with applicable Egyptian laws and respond to lawful requests from competent authorities.</li>
+        </ul>
+
+        <h2>5. How We Use Data</h2>
+        <p>We use the data we collect to create, operate, and secure accounts; verify accounts; display stadiums and manage bookings, cancellations, and refunds; run matches, invitations, and in-app notifications; provide chats; review stadiums submitted by Owners; handle reports and abuse; detect and address technical issues and errors; keep the App secure; respond to support requests; maintain records and obligations related to operating the service; and handle legal requests or proceedings that reach us.</p>
+        <p>We do not sell users' personal data, we do not use it for behavioral advertising, and we do not place advertising tracking tools in the App.</p>
+
+        <h2>6. Sharing Data</h2>
+        <ul>
+          <li><strong>Stadium Owners:</strong> when you book a stadium, the Owner may receive the information needed to fulfill the booking and host you, such as your name, contact number, booking time, and number of players.</li>
+          <li><strong>Other users:</strong> participants in a Match or a chat may see your username and the profile information available to them within the App.</li>
+          <li><strong>Service providers:</strong> we rely on third-party service providers, including <strong>Amazon Web Services (AWS)</strong> for hosting, <strong>Supabase</strong> for the database and file storage, <strong>Resend</strong> for sending email, <strong>Google</strong> for maps and geocoding services, and push notification services (Expo and Web Push) for sending notifications. If card or wallet payments are enabled in the future, they will be processed by a third-party payment provider.</li>
+          <li><strong>Advisors and authorities:</strong> we may share data where necessary to handle a dispute, claim, or legal proceeding, or to protect the rights of users or the safety of the service.</li>
+          <li><strong>Business transfer:</strong> if the App is sold, merged, or transferred to another entity, some data related to the service may be transferred to the entity taking over its operation, with appropriate steps to inform users where required.</li>
+        </ul>
+
+        <h2>7. Transfers Outside Egypt</h2>
+        <p>Some data may be processed outside Egypt because our service providers operate in other countries. These countries may include countries in the European Union and the United States. We choose service providers that apply appropriate data protection measures, and the locations where data is processed may vary depending on the infrastructure or the provider.</p>
+
+        <h2>8. Data Retention</h2>
+        <p>We keep data only for as long as necessary for the purposes described in this Policy:</p>
+        <ul>
+          <li><strong>Account and profile data:</strong> kept while the account is in use. When you delete your account, we delete or anonymize the data described in Section 11.</li>
+          <li><strong>Booking, payment, and financial records:</strong> kept longer where necessary to manage financial records, disputes, or legal obligations.</li>
+          <li><strong>Chat messages and reports:</strong> kept as needed to operate the service and handle safety issues, disputes, or reports.</li>
+          <li><strong>Verification data, push tokens, and server logs:</strong> kept as needed for security, troubleshooting, and operating the service.</li>
+        </ul>
+        <p>We do not set a fixed retention period for every category. We keep data only while there is a legitimate need or a legal obligation, and afterward it is deleted or anonymized.</p>
+
+        <h2>9. Data Protection</h2>
+        <ul>
+          <li>Encrypting the connection between the App and our servers using TLS.</li>
+          <li>Storing passwords as salted hashes.</li>
+          <li>Keeping session tokens in secure storage on the device.</li>
+          <li>Restricting access to production data to authorized people.</li>
+          <li>Reviewing protective measures as needed.</li>
+        </ul>
+        <p>No method of electronic transmission or storage can be guaranteed to be completely secure, so we cannot guarantee absolute security of data. If we detect a security incident affecting data, we will take appropriate steps to handle it and notify affected parties or the competent authorities where required.</p>
+
+        <h2>10. User Rights</h2>
+        <p>You can contact us about your personal data to request:</p>
+        <ul>
+          <li>To know the data linked to your account and obtain a copy of it.</li>
+          <li>To correct inaccurate or incomplete data.</li>
+          <li>To delete your account and the data linked to it, taking into account records we may need to keep (see Section 11).</li>
+          <li>To restrict or object to certain processing.</li>
+          <li>To withdraw any consent you gave where possible.</li>
+          <li>To receive your data in a commonly used format where technically possible.</li>
+        </ul>
+        <p>You can edit some of your profile data and cancel bookings directly in the App. For other requests, including account deletion, email us at <a href="mailto:e7gzsupport@gmail.com">e7gzsupport@gmail.com</a>. We will review and handle the request within a reasonable time. If you believe your rights have been violated, you can file a complaint with the competent data protection authority in Egypt.</p>
+
+        <h2>11. Account Deletion</h2>
+        <p>You can delete your account at any time:</p>
+        <ul>
+          <li>From inside the App, from the account settings; or</li>
+          <li>Through our account-deletion page at <a href="https://app.e7gz.app/delete-account">https://app.e7gz.app/delete-account</a>; or</li>
+          <li>By emailing <a href="mailto:e7gzsupport@gmail.com">e7gzsupport@gmail.com</a> from the email address registered to your account.</li>
+        </ul>
+        <p>When your account is deleted:</p>
+        <ul>
+          <li>We remove your sign-in details (email, username, and password) and anonymize your profile so it no longer identifies you.</li>
+          <li>We delete your active sessions, push tokens, notifications, favorites, blocked-users list, and profile photo.</li>
+          <li>We keep some records where we have a legal or legitimate reason — for example, booking and payment records, completed matches and their player lists, reviews, chat messages, reports, and uploaded payment-proof images. These are retained as described in Section 8. Some of these records may still contain details you provided, such as a name shown on a receipt.</li>
+        </ul>
+        <p>If you want a record erased that we are keeping, email us and we will assess the request against our legal obligations.</p>
+
+        <h2>12. Children</h2>
+        <p>The App is intended for people aged <strong>18 or older</strong>. When registering, you confirm that you are at least 18 years old. We do not aim to collect data from people under 18. If we learn that a person under this age has created an account, you can contact us at <a href="mailto:e7gzsupport@gmail.com">e7gzsupport@gmail.com</a>.</p>
+
+        <h2>13. Device Permissions and Local Storage</h2>
+        <ul>
+          <li><strong>Location:</strong> To show nearby stadiums and directions. Optional; can be controlled from your device settings.</li>
+          <li><strong>Photos/Media:</strong> To select profile pictures, stadium photos, or a payment screenshot. Optional.</li>
+          <li><strong>Notifications:</strong> To inform you about bookings, matches, and payments. Optional; can be controlled from your device settings.</li>
+        </ul>
+        <p>We may also store your language, theme, and authentication token on your device. The authentication token is used to recognize your session when connecting to our servers.</p>
+
+        <h2>14. Third-Party Services</h2>
+        <p>The App may use services provided by third parties, such as maps, infrastructure, hosting, email, notifications, and payment services. When these services are used, some data may be processed by their providers in accordance with their own policies and terms.</p>
+
+        <h2>15. Changes to This Privacy Policy</h2>
+        <p>We may update this Privacy Policy from time to time as a result of changes to the App, the services, or how we handle data. When we make material changes, we will update the version or effective date, and we may notify you through the App or other appropriate means.</p>
+
+        <h2>16. Contact</h2>
+        <p>For any questions or requests related to privacy and personal data: <a href="mailto:e7gzsupport@gmail.com">e7gzsupport@gmail.com</a></p>
+      </div>
     </div>
-  </section>
 
-  <main class="legal-body">
-    <div class="legal-wrap">
+    <footer class="legal-footer">
+      <div class="container">
+        <p>© 2026 E7GZ. All rights reserved.</p>
+        <p><a href="index.html">Home</a> · <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Use</a> · <a href="mailto:e7gzsupport@gmail.com">e7gzsupport@gmail.com</a></p>
+      </div>
+    </footer>
 
-      <p>This Privacy Policy explains how E7GZ (the "App", "we", "us", "our") collects, uses, shares, and protects the personal data of people who use the App, including players who book stadiums and join matches, and stadium owners who list their venues.</p>
-      <p>The App is operated by Mahmoud Ibrahim, an individual. E7GZ is the name of the project and is not a registered company.</p>
-      <p>By using the App or agreeing to this Policy when you register, you acknowledge that you have read it. If you do not agree with this Policy, please do not use the App.</p>
+  </div>
 
-      <h2>1. Definitions</h2>
-      <ul>
-        <li><strong>"App":</strong> The E7GZ application, its interfaces, and related services.</li>
-        <li><strong>"Personal Data":</strong> Information that can be linked to a specific user or that helps identify them.</li>
-        <li><strong>"Player":</strong> A user who books stadiums or joins matches.</li>
-        <li><strong>"Owner":</strong> A user who lists and manages stadiums.</li>
-        <li><strong>"Booking":</strong> A reservation of a time slot at a stadium made through the App.</li>
-        <li><strong>"Match":</strong> A sporting event created or joined through the App.</li>
-        <li><strong>"Stadium":</strong> A stadium, pitch, court, or similar sports facility listed on the App.</li>
-      </ul>
+  <!-- ===== العربية (RTL) ===== -->
+  <div class="legal-block-ar" dir="rtl">
 
-      <h2>2. Data Controller</h2>
-      <p>The App is operated, and personal data is controlled, by <strong>Mahmoud Ibrahim</strong>, an individual. E7GZ is a project and trade name used for the App and is not a registered company.</p>
-      <p><strong>Contact:</strong> <a href="mailto:e7gzsupport@gmail.com">e7gzsupport@gmail.com</a></p>
+    <section class="legal-hero">
+      <div class="container">
+        <a href="index.html" class="back-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px"><path d="m15 18-6-6 6-6"/></svg>
+          العودة إلى الرئيسية
+        </a>
+        <h1>سياسة الخصوصية</h1>
+        <p>الإصدار 1.1 — تاريخ السريان: 11 أكتوبر 2026</p>
+      </div>
+    </section>
 
-      <h2>3. Information We Collect</h2>
+    <div class="legal-body">
+      <div class="legal-wrap">
 
-      <h3>3.1 Account and Profile Data</h3>
-      <p>We may collect your first name, last name, username, email address, phone number, password, and any additional details you choose to add to your profile. Passwords are stored as salted hashes and are not stored in plain text.</p>
+        <p>توضح سياسة الخصوصية هذه كيفية قيام E7GZ ("التطبيق"، "نحن"، "لنا") بجمع واستخدام ومشاركة وحماية البيانات الشخصية للأشخاص الذين يستخدمون التطبيق، بما في ذلك اللاعبين الذين يحجزون الملاعب وينضمون إلى المباريات، ومالكي الملاعب الذين يقومون بإدراج ملاعبهم.</p>
+        <p>يُدار التطبيق بواسطة محمود إبراهيم، وهو فرد. وE7GZ هو اسم المشروع وليس شركة مسجلة.</p>
+        <p>باستخدامك للتطبيق أو موافقتك على هذه السياسة عند التسجيل، فإنك تقر بأنك اطلعت عليها. إذا كنت لا توافق على هذه السياسة، يُرجى عدم استخدام التطبيق.</p>
 
-      <h3>3.2 Verification Data</h3>
-      <p>We use one-time passcodes (OTPs), currently sent by email, to verify accounts. We may record that a verification attempt took place, when it occurred, whether it succeeded, and the channel used.</p>
+        <h2>1. التعريفات</h2>
+        <ul>
+          <li><strong>"التطبيق":</strong> تطبيق E7GZ وواجهاته وخدماته المرتبطة.</li>
+          <li><strong>"البيانات الشخصية":</strong> المعلومات التي يمكن أن ترتبط بمستخدم معين أو تساعد في التعرف عليه.</li>
+          <li><strong>"اللاعب":</strong> المستخدم الذي يحجز الملاعب أو ينضم إلى المباريات.</li>
+          <li><strong>"المالك":</strong> المستخدم الذي يقوم بإدراج الملاعب وإدارتها.</li>
+          <li><strong>"الحجز":</strong> حجز لفتحة زمنية في ملعب يتم من خلال التطبيق.</li>
+          <li><strong>"المباراة":</strong> فعالية رياضية يتم إنشاؤها أو الانضمام إليها من خلال التطبيق.</li>
+          <li><strong>"الملعب":</strong> استاد أو ملعب أو ساحة أو منشأة رياضية مماثلة مدرجة على التطبيق.</li>
+        </ul>
 
-      <h3>3.3 Booking Records</h3>
-      <p>We collect booking data, including the stadium, time slot, price, booking status, cancellation status, refund status, and the times of any changes made to the booking. This data is used to manage bookings, serve users, handle disputes, and maintain financial records.</p>
+        <h2>2. مسؤول معالجة البيانات</h2>
+        <p>يُدار التطبيق، وتُعالج البيانات الشخصية، بواسطة <strong>محمود إبراهيم</strong>، وهو فرد. وE7GZ هو اسم للمشروع والعلامة التجارية المستخدمة للتطبيق وليس شركة مسجلة.</p>
+        <p><strong>للتواصل:</strong> <a href="mailto:e7gzsupport@gmail.com">e7gzsupport@gmail.com</a></p>
 
-      <h3>3.4 Payments</h3>
-      <p>Booking payments are currently made directly between the Player and the Owner using <strong>InstaPay</strong>. E7GZ does not receive, hold, or process this money.</p>
-      <p>When you pay by InstaPay, you upload a screenshot of your transfer together with the transfer reference, and the Owner uploads their own receipt and confirms the Booking. We store these images and the reference in private file storage. We may process the uploaded screenshot automatically to read the reference number (text extraction, also known as OCR) to help fill in the details.</p>
-      <p>We do not store bank card numbers. Card and e-wallet payments are not currently available in the App. If we make them available in the future, they will be processed by a third-party payment provider, and we will keep only transaction-related data such as a transaction or reference number, the amount, the payment method, and the date.</p>
+        <h2>3. المعلومات التي نجمعها</h2>
 
-      <h3>3.5 Location</h3>
-      <p>If you grant the App permission to access your device's location, we may use it to show nearby stadiums, rank search results, and display directions. Location permission is optional; you can search by city, area, or name without it. Maps, geocoding, and directions rely on Google Maps services, which may process data in accordance with their own policies and terms.</p>
+        <h3>3.1 بيانات الحساب والملف الشخصي</h3>
+        <p>قد نجمع الاسم الأول، واسم العائلة، واسم المستخدم، وعنوان البريد الإلكتروني، ورقم الهاتف، وكلمة المرور، وأي تفاصيل إضافية تختار إضافتها إلى ملفك الشخصي. يتم تخزين كلمات المرور في صورة تجزئات مملحة (Salted Hashes)، ولا يتم تخزينها كنص واضح.</p>
 
-      <h3>3.6 Matches and Social Features</h3>
-      <p>When you create or join a match, we process your participation data, player lists, invitations, and the details you provide. Other match participants may be able to see your username and certain profile information made available to them within the App.</p>
+        <h3>3.2 بيانات التحقق</h3>
+        <p>نستخدم رموز مرور لمرة واحدة (OTP)، تُرسل حاليًا عبر البريد الإلكتروني، للتحقق من الحسابات. وقد نسجل حدوث محاولة التحقق ووقتها وما إذا كانت قد نجحت والقناة المستخدمة.</p>
 
-      <h3>3.7 Chats and Reports</h3>
-      <p>We process the messages you send in match chats and direct chats, as well as reports you submit about users or content. This data is used to provide the messaging service, handle reports, address abuse, and maintain the safety of the service. Messages are stored in our database and are not routinely reviewed, but they may be accessed when necessary to handle a report, a security issue, abuse, or a legal request.</p>
+        <h3>3.3 سجلات الحجوزات</h3>
+        <p>نجمع بيانات الحجوزات، بما في ذلك الملعب، والفتحة الزمنية، والسعر، وحالة الحجز، وحالة الإلغاء، وحالة استرداد الأموال، وأوقات التغييرات التي تطرأ على الحجز. وتُستخدم هذه البيانات لإدارة الحجوزات وخدمة المستخدمين ومعالجة النزاعات وإدارة السجلات المالية.</p>
 
-      <h3>3.8 Stadium Owner Data</h3>
-      <p>If you register as an Owner, we may process data about the stadiums you list, including names, addresses, locations, photos, prices, schedules, descriptions, and facilities. We may also process the review status of a stadium and any direct (walk-in) bookings you record.</p>
+        <h3>3.4 المدفوعات</h3>
+        <p>تتم مدفوعات الحجوزات حاليًا مباشرة بين اللاعب والمالك باستخدام <strong>إنستاباي (InstaPay)</strong>. ولا تستلم E7GZ هذه الأموال أو تحتفظ بها أو تعالجها.</p>
+        <p>عند الدفع عبر إنستاباي، تقوم برفع لقطة شاشة للتحويل مع مرجع التحويل، ويقوم المالك برفع الإيصال الخاص به وتأكيد الحجز. ونحتفظ بهذه الصور والمرجع في مساحة تخزين خاصة. وقد نعالج لقطة الشاشة المرفوعة تلقائيًا لقراءة رقم المرجع (استخراج النص، المعروف أيضًا بـ OCR) للمساعدة في تعبئة التفاصيل.</p>
+        <p>لا نقوم بتخزين أرقام البطاقات البنكية. ولا تتوفر حاليًا مدفوعات البطاقات والمحافظ الإلكترونية في التطبيق. وإذا أتحناها في المستقبل، فستُعالج بواسطة مزود خدمة دفع من جهات خارجية، ولن نحتفظ إلا ببيانات مرتبطة بالمعاملة مثل رقم المعاملة أو المرجع والمبلغ وطريقة الدفع والتاريخ.</p>
 
-      <h3>3.9 Server and Technical Data</h3>
-      <p>Our servers automatically log certain technical data associated with your use of the App, such as your IP address, App version, device and operating system information, and errors. We use error-monitoring tools to detect, diagnose, and fix crashes and faults. We do not use advertising trackers, and we do not use your data for behavioral advertising.</p>
+        <h3>3.5 الموقع</h3>
+        <p>إذا منحت التطبيق إذن الوصول إلى موقع جهازك، فقد نستخدم الموقع لعرض الملاعب القريبة وترتيب نتائج البحث وعرض الاتجاهات. إذن الموقع اختياري، ويمكنك البحث بالمدينة أو المنطقة أو الاسم دون منحه. وتعتمد الخرائط والترميز الجغرافي والاتجاهات على خدمات Google Maps، والتي قد تقوم بمعالجة البيانات وفقًا لسياساتها وشروطها الخاصة.</p>
 
-      <h3>3.10 Notifications and App Version</h3>
-      <p>When you enable notifications, we store a device push token so we can deliver booking, match, and account notifications. You can turn notifications off at any time in your device settings. When the App starts, it checks with our servers whether a newer version is required and which version you are running; this is used to keep the App secure and up to date.</p>
+        <h3>3.6 المباريات والميزات الاجتماعية</h3>
+        <p>عند إنشاء مباراة أو الانضمام إليها، نعالج بيانات مشاركتك وقوائم اللاعبين والدعوات والتفاصيل التي تقدمها. وقد يتمكن المشاركون الآخرون في المباراة من رؤية اسم المستخدم وبعض معلومات ملفك الشخصي التي تكون متاحة لهم داخل التطبيق.</p>
 
-      <h2>4. Legal Bases for Processing</h2>
-      <p>Under Egyptian law, including the Personal Data Protection Law No. 151 of 2020, we process your personal data on the following bases:</p>
-      <ul>
-        <li><strong>Performance of a contract:</strong> to create and manage your account, process bookings and payments, provide chat and notifications, and deliver the features you request.</li>
-        <li><strong>Consent:</strong> where you agree, for example when you accept these policies during sign-up, grant location permission, or enable notifications. You may withdraw consent at any time.</li>
-        <li><strong>Legitimate interests:</strong> to secure the App, prevent fraud and abuse, and defend legal claims.</li>
-        <li><strong>Legal obligation:</strong> to comply with applicable Egyptian laws and respond to lawful requests from competent authorities.</li>
-      </ul>
+        <h3>3.7 المحادثات والبلاغات</h3>
+        <p>نعالج الرسائل التي ترسلها في محادثات المباريات والمحادثات المباشرة، بالإضافة إلى البلاغات التي تقدمها بشأن المستخدمين أو المحتوى. وتُستخدم هذه البيانات لتوفير خدمة المراسلة والتعامل مع البلاغات ومعالجة إساءة الاستخدام والحفاظ على سلامة الخدمة. ويتم تخزين الرسائل في قاعدة بياناتنا ولا تتم مراجعتها بشكل روتيني، ولكن قد يتم الوصول إليها عند الحاجة للتعامل مع بلاغ أو مشكلة أمنية أو إساءة استخدام أو طلب قانوني.</p>
 
-      <h2>5. How We Use Data</h2>
-      <p>We use the data we collect to create, operate, and secure accounts; verify accounts; display stadiums and manage bookings, cancellations, and refunds; operate matches, invitations, and in-app notifications; provide chat; review stadiums submitted by Owners; handle reports and abuse; detect and resolve technical issues; maintain the security of the App; respond to support requests; maintain records and obligations related to operating the service; and handle legal requests or proceedings that reach us.</p>
-      <p>We do not sell users' personal data, we do not use it for behavioral advertising, and we do not place advertising trackers in the App.</p>
+        <h3>3.8 بيانات مالكي الملاعب</h3>
+        <p>إذا سجلت بصفتك مالكًا، فقد نعالج بيانات الملاعب التي تقوم بإدراجها، بما في ذلك الأسماء والعناوين والمواقع والصور والأسعار والجداول والأوصاف والمرافق. كما قد نعالج حالة مراجعة الملعب وأي حجوزات مباشرة (دون حجز مسبق) تسجلها.</p>
 
-      <h2>6. Sharing Data</h2>
-      <ul>
-        <li><strong>Stadium Owners:</strong> When you book a stadium, the Owner may receive the information needed to fulfill the booking and host you, such as your name, contact number, booking time, and number of players.</li>
-        <li><strong>Other Users:</strong> Participants in a match or chat may be able to see your username and profile information made available to them within the App.</li>
-        <li><strong>Service Providers:</strong> We rely on third-party providers, including <strong>Amazon Web Services (AWS)</strong> for hosting, <strong>Supabase</strong> for database and file storage, <strong>Resend</strong> for email delivery, <strong>Google</strong> for maps and geocoding, and push notification services (Expo and web push) for delivering notifications. Where card or wallet payments are enabled in the future, a third-party payment provider will process them.</li>
-        <li><strong>Advisors and Authorities:</strong> We may share data when necessary to handle a dispute, claim, or legal proceeding, or to protect the rights of users or the safety of the service.</li>
-        <li><strong>Business Transfers:</strong> If the App is sold, or the business is merged or transferred to another party, certain data may be transferred to the party that takes over its operation, with appropriate steps taken to notify users where required.</li>
-      </ul>
+        <h3>3.9 بيانات الخادم والبيانات التقنية</h3>
+        <p>تقوم خوادمنا تلقائيًا بتسجيل بعض البيانات التقنية المرتبطة باستخدام التطبيق، مثل عنوان IP، وإصدار التطبيق، ومعلومات الجهاز أو نظام التشغيل، والأخطاء. ونستخدم أدوات لمراقبة الأخطاء لاكتشاف الأعطال والمشكلات وتشخيصها وإصلاحها. لا نستخدم أدوات تتبع إعلانية، ولا نستخدم بياناتك للإعلانات السلوكية.</p>
 
-      <h2>7. Transfer of Data Outside Egypt</h2>
-      <p>Some data may be processed outside Egypt because our service providers operate in other countries. These may include countries in the European Union and the United States. We choose service providers that apply appropriate data-protection measures. Processing locations may change as our infrastructure or providers change.</p>
+        <h3>3.10 الإشعارات وإصدار التطبيق</h3>
+        <p>عند تفعيلك للإشعارات، نحتفظ برمز إشعار خاص بالجهاز (Push Token) حتى نتمكن من إرسال إشعارات الحجوزات والمباريات والحساب، ويمكنك إيقاف الإشعارات في أي وقت من إعدادات جهازك. وعند تشغيل التطبيق، يتحقق من خوادمنا مما إذا كان مطلوبًا إصدار أحدث ومن الإصدار الذي تستخدمه، وذلك للحفاظ على أمان التطبيق وتحديثه.</p>
 
-      <h2>8. Data Retention</h2>
-      <p>We keep data only as long as necessary for the purposes described in this Policy:</p>
-      <ul>
-        <li><strong>Account and profile data:</strong> kept while your account is active. When you delete your account, we delete or anonymize the data described in Section 11.</li>
-        <li><strong>Booking, payment, and financial records:</strong> kept longer where needed for financial records, disputes, or legal obligations.</li>
-        <li><strong>Chat messages and reports:</strong> kept as needed to operate the service and to address safety issues, disputes, or reports.</li>
-        <li><strong>Verification data, push tokens, and server logs:</strong> kept as needed for security, troubleshooting, and operating the service.</li>
-      </ul>
-      <p>We do not set a fixed retention period for every category. We keep data only while there is a legitimate need or a legal obligation, after which it is deleted or anonymized.</p>
+        <h2>4. الأسس القانونية للمعالجة</h2>
+        <p>بموجب القانون المصري، بما في ذلك قانون حماية البيانات الشخصية رقم 151 لسنة 2020، نعالج بياناتك الشخصية على الأسس التالية:</p>
+        <ul>
+          <li><strong>تنفيذ عقد:</strong> لإنشاء حسابك وإدارته، ومعالجة الحجوزات والمدفوعات، وتوفير المحادثات والإشعارات، وتقديم الميزات التي تطلبها.</li>
+          <li><strong>الموافقة:</strong> عندما توافق، على سبيل المثال عند قبولك لهذه السياسات أثناء التسجيل، أو منحك إذن الموقع، أو تفعيلك للإشعارات. ويمكنك سحب موافقتك في أي وقت.</li>
+          <li><strong>المصالح المشروعة:</strong> لتأمين التطبيق، ومنع الاحتيال وإساءة الاستخدام، والدفاع عن المطالبات القانونية.</li>
+          <li><strong>الالتزام القانوني:</strong> للامتثال للقوانين المصرية المعمول بها والاستجابة للطلبات القانونية من الجهات المختصة.</li>
+        </ul>
 
-      <h2>9. Data Security</h2>
-      <ul>
-        <li>Encrypting communication between the App and our servers using TLS.</li>
-        <li>Storing passwords as salted hashes.</li>
-        <li>Keeping session tokens in secure storage on the device.</li>
-        <li>Restricting access to production data to authorized persons.</li>
-        <li>Reviewing security measures as needed.</li>
-      </ul>
-      <p>No method of electronic transmission or storage can be guaranteed to be completely secure, so we cannot guarantee absolute security of data. If we discover a security incident affecting data, we will take appropriate steps to address it and notify affected parties or the competent authorities where required.</p>
+        <h2>5. كيفية استخدام البيانات</h2>
+        <p>نستخدم البيانات التي نجمعها لإنشاء الحسابات وتشغيلها وتأمينها؛ والتحقق من الحسابات؛ وعرض الملاعب وإدارة الحجوزات والإلغاءات واسترداد الأموال؛ وتشغيل المباريات والدعوات والإشعارات داخل التطبيق؛ وتوفير المحادثات؛ ومراجعة الملاعب التي يقدمها المالكون؛ والتعامل مع البلاغات وإساءة الاستخدام؛ واكتشاف المشكلات والأخطاء التقنية ومعالجتها؛ والحفاظ على أمان التطبيق؛ والرد على طلبات الدعم؛ وإدارة السجلات والالتزامات المرتبطة بتشغيل الخدمة؛ والتعامل مع الطلبات أو الإجراءات القانونية التي تصل إلينا.</p>
+        <p>لا نبيع البيانات الشخصية للمستخدمين، ولا نستخدمها للإعلانات السلوكية، ولا نضع أدوات تتبع إعلانية داخل التطبيق.</p>
 
-      <h2>10. Your Rights</h2>
-      <p>You may contact us about your personal data to request:</p>
-      <ul>
-        <li>To know what data is associated with your account, and to obtain a copy of it.</li>
-        <li>To correct inaccurate or incomplete data.</li>
-        <li>To delete your account and associated data, subject to the records we may need to retain (see Section 11).</li>
-        <li>To restrict or object to certain processing.</li>
-        <li>To withdraw any consent you have given, where possible.</li>
-        <li>To receive your data in a commonly used format where technically feasible.</li>
-      </ul>
-      <p>You can edit some of your profile data and cancel bookings directly within the App. For other requests, including account deletion, email <a href="mailto:e7gzsupport@gmail.com">e7gzsupport@gmail.com</a>. We will review the request and handle it within a reasonable period. If you believe your rights were violated, you may lodge a complaint with the competent data-protection authority in Egypt.</p>
+        <h2>6. مشاركة البيانات</h2>
+        <ul>
+          <li><strong>مالكو الملاعب:</strong> عند حجز ملعب، قد يحصل المالك على المعلومات اللازمة لتنفيذ الحجز واستضافتك، مثل اسمك ورقم التواصل ووقت الحجز وعدد اللاعبين.</li>
+          <li><strong>المستخدمون الآخرون:</strong> قد يتمكن المشاركون في المباراة أو المحادثة من رؤية اسم المستخدم ومعلومات الملف الشخصي التي تكون متاحة لهم داخل التطبيق.</li>
+          <li><strong>مزودو الخدمات:</strong> نعتمد على مزودي خدمات خارجيين، من بينهم <strong>Amazon Web Services (AWS)</strong> للاستضافة، و<strong>Supabase</strong> لقاعدة البيانات وتخزين الملفات، و<strong>Resend</strong> لإرسال البريد الإلكتروني، و<strong>Google</strong> لخدمات الخرائط والترميز الجغرافي، وخدمات إشعارات الدفع (Expo وWeb Push) لإرسال الإشعارات. وفي حال تفعيل مدفوعات البطاقات أو المحافظ في المستقبل، سيتولى معالجتها مزود خدمة دفع من جهات خارجية.</li>
+          <li><strong>المستشارون والجهات المختصة:</strong> قد نشارك البيانات عندما يكون ذلك ضروريًا للتعامل مع نزاع أو مطالبة أو إجراء قانوني أو لحماية حقوق المستخدمين أو سلامة الخدمة.</li>
+          <li><strong>نقل النشاط التجاري:</strong> في حال بيع التطبيق أو دمج النشاط أو نقله إلى جهة أخرى، قد يتم نقل بعض البيانات المرتبطة بالخدمة إلى الجهة التي تتولى تشغيلها، مع اتخاذ الإجراءات المناسبة لإبلاغ المستخدمين عندما يكون ذلك مطلوبًا.</li>
+        </ul>
 
-      <h2>11. Account Deletion</h2>
-      <p>You can delete your account at any time:</p>
-      <ul>
-        <li>From inside the App, from the account settings; or</li>
-        <li>Through our account-deletion page at <a href="https://app.e7gz.app/delete-account">https://app.e7gz.app/delete-account</a>; or</li>
-        <li>By emailing <a href="mailto:e7gzsupport@gmail.com">e7gzsupport@gmail.com</a> from the email address registered to your account.</li>
-      </ul>
-      <p>When your account is deleted:</p>
-      <ul>
-        <li>We remove your sign-in details (email, username, and password) and anonymize your profile so it no longer identifies you.</li>
-        <li>We delete your active sessions, push tokens, notifications, favorites, blocked-users list, and profile photo.</li>
-        <li>We keep some records where we have a legal or legitimate reason — for example, booking and payment records, completed matches and their player lists, reviews, chat messages, reports, and uploaded payment-proof images. These are retained as described in Section 8. Some of these records may still contain details you provided, such as a name shown on a receipt.</li>
-      </ul>
-      <p>If you want a record erased that we are keeping, email us and we will assess the request against our legal obligations.</p>
+        <h2>7. نقل البيانات خارج مصر</h2>
+        <p>قد تتم معالجة بعض البيانات خارج مصر لأن مزودي خدماتنا يعملون في دول أخرى. وقد تشمل هذه الدول دولًا في الاتحاد الأوروبي والولايات المتحدة. نختار مزودي خدمات يطبقون إجراءات مناسبة لحماية البيانات، وقد تختلف أماكن معالجة البيانات بحسب البنية التحتية أو مزود الخدمة.</p>
 
-      <h2>12. Children</h2>
-      <p>The App is intended for people aged <strong>18 or older</strong>. When registering, you confirm that you are at least 18 years old. We do not aim to collect data from people under 18. If we learn that a person under this age has created an account, you can contact us at <a href="mailto:e7gzsupport@gmail.com">e7gzsupport@gmail.com</a>.</p>
+        <h2>8. الاحتفاظ بالبيانات</h2>
+        <p>نحتفظ بالبيانات فقط للمدة اللازمة للأغراض الموضحة في هذه السياسة:</p>
+        <ul>
+          <li><strong>بيانات الحساب والملف الشخصي:</strong> نحتفظ بها أثناء استخدام الحساب. وعند حذف حسابك، نحذف البيانات الموضحة في البند 11 أو نخفي هويتها.</li>
+          <li><strong>سجلات الحجوزات والمدفوعات والسجلات المالية:</strong> نحتفظ بها لفترة أطول عند الحاجة لإدارة السجلات المالية أو النزاعات أو الالتزامات القانونية.</li>
+          <li><strong>رسائل المحادثات والبلاغات:</strong> نحتفظ بها حسب الحاجة لتشغيل الخدمة والتعامل مع مشكلات السلامة أو النزاعات أو البلاغات.</li>
+          <li><strong>بيانات التحقق ورموز الإشعارات وسجلات الخادم:</strong> نحتفظ بها حسب الحاجة لأغراض الأمان وتشخيص المشكلات وتشغيل الخدمة.</li>
+        </ul>
+        <p>لا نضع مدة احتفاظ ثابتة لكل فئة. فنحن نحتفظ بالبيانات فقط طالما توجد حاجة مشروعة أو التزام قانوني، وبعد ذلك يتم حذفها أو إخفاء هويتها.</p>
 
-      <h2>13. Device Permissions and Local Storage</h2>
-      <ul>
-        <li><strong>Location:</strong> To show nearby stadiums and directions. Optional; can be controlled from your device settings.</li>
-        <li><strong>Photos/Media:</strong> To select profile pictures, stadium photos, or a payment screenshot. Optional.</li>
-        <li><strong>Notifications:</strong> To inform you about bookings, matches, and payments. Optional; can be controlled from your device settings.</li>
-      </ul>
-      <p>We may also store your language, theme, and authentication token on your device. The authentication token is used to recognize your session when connecting to our servers.</p>
+        <h2>9. حماية البيانات</h2>
+        <ul>
+          <li>تشفير الاتصال بين التطبيق وخوادمنا باستخدام TLS.</li>
+          <li>تخزين كلمات المرور في صورة تجزئات مملحة.</li>
+          <li>الاحتفاظ برموز الجلسات في التخزين الآمن على الجهاز.</li>
+          <li>تقييد الوصول إلى بيانات الإنتاج على الأشخاص المصرح لهم.</li>
+          <li>مراجعة إجراءات الحماية عند الحاجة.</li>
+        </ul>
+        <p>لا توجد وسيلة نقل أو تخزين إلكترونية يمكن ضمان أنها آمنة بشكل كامل، ولذلك لا يمكننا ضمان الأمان المطلق للبيانات. وفي حال اكتشاف حادث أمني يؤثر على البيانات، سنتخذ الإجراءات المناسبة للتعامل معه وإخطار الأطراف المتأثرة أو الجهات المختصة عندما يكون ذلك مطلوبًا.</p>
 
-      <h2>14. Third-Party Services</h2>
-      <p>The App may use services provided by third parties, such as maps, infrastructure, hosting, email, notifications, and payment services. When these services are used, some data may be processed by their providers in accordance with their own policies and terms.</p>
+        <h2>10. حقوق المستخدم</h2>
+        <p>يمكنك التواصل معنا بشأن بياناتك الشخصية لطلب:</p>
+        <ul>
+          <li>معرفة البيانات المرتبطة بحسابك والحصول على نسخة منها.</li>
+          <li>تصحيح البيانات غير الدقيقة أو غير المكتملة.</li>
+          <li>حذف حسابك والبيانات المرتبطة به، مع مراعاة السجلات التي قد نحتاج إلى الاحتفاظ بها (انظر البند 11).</li>
+          <li>تقييد معالجة معينة أو الاعتراض عليها.</li>
+          <li>سحب أي موافقة قدمتها عندما يكون ذلك ممكنًا.</li>
+          <li>الحصول على بياناتك بصيغة شائعة الاستخدام عندما يكون ذلك ممكنًا من الناحية الفنية.</li>
+        </ul>
+        <p>يمكنك تعديل بعض بيانات ملفك الشخصي وإلغاء الحجوزات مباشرة من التطبيق. وللطلبات الأخرى، بما في ذلك حذف الحساب، راسلنا على <a href="mailto:e7gzsupport@gmail.com">e7gzsupport@gmail.com</a>. سنراجع الطلب ونتعامل معه خلال مدة معقولة. وإذا كنت ترى أن حقوقك قد انتهكت، فيمكنك تقديم شكوى إلى الجهة المختصة بحماية البيانات في مصر.</p>
 
-      <h2>15. Changes to This Privacy Policy</h2>
-      <p>We may update this Privacy Policy from time to time as a result of changes to the App, the services, or how we handle data. When we make material changes, we will update the version or effective date, and we may notify you through the App or other appropriate means.</p>
+        <h2>11. حذف الحساب</h2>
+        <p>يمكنك حذف حسابك في أي وقت:</p>
+        <ul>
+          <li>من داخل التطبيق، من إعدادات الحساب؛ أو</li>
+          <li>من خلال صفحة حذف الحساب على <a href="https://app.e7gz.app/delete-account">https://app.e7gz.app/delete-account</a>؛ أو</li>
+          <li>عبر مراسلتنا على <a href="mailto:e7gzsupport@gmail.com">e7gzsupport@gmail.com</a> من عنوان البريد الإلكتروني المسجل في حسابك.</li>
+        </ul>
+        <p>عند حذف حسابك:</p>
+        <ul>
+          <li>نزيل بيانات تسجيل الدخول (البريد الإلكتروني واسم المستخدم وكلمة المرور) ونخفي هوية ملفك الشخصي بحيث لا يعود يعرّف بك.</li>
+          <li>نحذف جلساتك النشطة ورموز الإشعارات والإشعارات والمفضلة وقائمة المستخدمين المحظورين وصورة ملفك الشخصي.</li>
+          <li>نحتفظ ببعض السجلات عندما يكون لدينا سبب قانوني أو مشروع — مثل سجلات الحجوزات والمدفوعات، والمباريات المكتملة وقوائم لاعبها، والمراجعات، ورسائل المحادثات، والبلاغات، وصور إثبات الدفع المرفوعة. ويتم الاحتفاظ بها على النحو الموضح في البند 8. وقد تحتوي بعض هذه السجلات على تفاصيل قدمتها، مثل اسم يظهر على إيصال.</li>
+        </ul>
+        <p>وإذا أردت حذف سجل نحتفظ به، فراسلنا وسنقيّم الطلب في ضوء التزاماتنا القانونية.</p>
 
-      <h2>16. Contact</h2>
-      <p>For any questions or requests related to privacy and personal data: <a href="mailto:e7gzsupport@gmail.com">e7gzsupport@gmail.com</a></p>
+        <h2>12. الأطفال</h2>
+        <p>التطبيق مخصص للأشخاص الذين تبلغ أعمارهم <strong>18 عامًا أو أكثر</strong>. وعند التسجيل، تؤكد أن عمرك لا يقل عن 18 عامًا. لا نهدف إلى جمع بيانات الأشخاص الذين تقل أعمارهم عن 18 عامًا. وإذا علمنا أن شخصًا دون هذا السن أنشأ حسابًا، فيمكن التواصل معنا على <a href="mailto:e7gzsupport@gmail.com">e7gzsupport@gmail.com</a>.</p>
+
+        <h2>13. أذونات الجهاز والتخزين المحلي</h2>
+        <ul>
+          <li><strong>الموقع:</strong> لعرض الملاعب القريبة والاتجاهات. اختياري ويمكن التحكم فيه من إعدادات الجهاز.</li>
+          <li><strong>الصور/الوسائط:</strong> لاختيار صور الملف الشخصي أو صور الملاعب أو لقطة شاشة للدفع. اختياري.</li>
+          <li><strong>الإشعارات:</strong> لإبلاغك بالحجوزات والمباريات والمدفوعات. اختياري ويمكن التحكم فيه من إعدادات الجهاز.</li>
+        </ul>
+        <p>قد نقوم أيضًا بتخزين اللغة والمظهر (Theme) ورمز المصادقة (Authentication Token) على جهازك. ويتم استخدام رمز المصادقة للتعرف على جلسة استخدامك عند الاتصال بخوادمنا.</p>
+
+        <h2>14. خدمات الجهات الخارجية</h2>
+        <p>قد يستخدم التطبيق خدمات تابعة لجهات خارجية، مثل خدمات الخرائط والبنية التحتية والاستضافة والبريد الإلكتروني والإشعارات والدفع. وعند استخدام هذه الخدمات، قد تتم معالجة بعض البيانات بواسطة مزوديها وفقًا للسياسات والشروط الخاصة بهم.</p>
+
+        <h2>15. التغييرات على سياسة الخصوصية</h2>
+        <p>قد نقوم بتحديث سياسة الخصوصية من وقت لآخر نتيجة تغييرات في التطبيق أو الخدمات أو طريقة تعاملنا مع البيانات. وعند إجراء تغييرات مهمة، سنقوم بتحديث تاريخ الإصدار أو السريان، وقد نبلغك بالتغيير من خلال التطبيق أو وسائل التواصل المناسبة.</p>
+
+        <h2>16. التواصل</h2>
+        <p>لأي استفسارات أو طلبات متعلقة بالخصوصية والبيانات الشخصية: <a href="mailto:e7gzsupport@gmail.com">e7gzsupport@gmail.com</a></p>
+      </div>
     </div>
-  </main>
 
-  <footer class="legal-footer">
-    <div class="container">
-      <p>© 2026 E7GZ. All rights reserved.</p>
-      <p><a href="index.html">Home</a> · <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Use</a> · <a href="privacy-ar.html">العربية</a> · <a href="mailto:e7gzsupport@gmail.com">e7gzsupport@gmail.com</a></p>
-    </div>
-  </footer>
+    <footer class="legal-footer">
+      <div class="container">
+        <p>© 2026 E7GZ. جميع الحقوق محفوظة.</p>
+        <p><a href="index.html">الرئيسية</a> · <a href="privacy.html">سياسة الخصوصية</a> · <a href="terms.html">شروط الاستخدام</a> · <a href="mailto:e7gzsupport@gmail.com">e7gzsupport@gmail.com</a></p>
+      </div>
+    </footer>
+
+  </div>
 
   <script src="js/script.js"></script>
+  <script src="js/i18n.js"></script>
 </body>
 </html>

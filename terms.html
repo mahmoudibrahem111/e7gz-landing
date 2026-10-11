@@ -1,176 +1,340 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"
+  data-title-en="Terms of Use — E7GZ"
+  data-title-ar="شروط الاستخدام — E7GZ"
+  data-desc-en="E7GZ Terms of Use — the agreement governing your use of the E7GZ app."
+  data-desc-ar="شروط الاستخدام لـ E7GZ — الاتفاق الذي ينظم استخدامك لتطبيق E7GZ.">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Terms of Use — E7GZ</title>
   <meta name="description" content="E7GZ Terms of Use — the agreement governing your use of the E7GZ app." />
   <link rel="icon" type="image/png" href="assets/e7gz-logo.png" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-  <header class="navbar">
+  <header class="navbar" id="navbar">
     <div class="container nav-inner">
       <a href="index.html" class="brand">
         <img src="assets/e7gz-logo.png" alt="E7GZ احجز logo" class="brand-logo" />
       </a>
-      <nav class="nav-links">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="index.html#features" class="nav-link">Features</a>
-        <a href="index.html#screenshots" class="nav-link">Screenshots</a>
-        <a href="privacy.html" class="nav-link">Privacy Policy</a>
-        <a href="terms.html" class="nav-link active">Terms of Use</a>
-        <a href="terms-ar.html" class="nav-link">العربية</a>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html" class="nav-link" data-i18n="nav.home">Home</a>
+        <a href="index.html#features" class="nav-link" data-i18n="nav.features">Features</a>
+        <a href="index.html#screenshots" class="nav-link" data-i18n="nav.screenshots">Screenshots</a>
+        <a href="privacy.html" class="nav-link" data-i18n="footer.privacy">Privacy Policy</a>
+        <a href="terms.html" class="nav-link active" data-i18n="footer.terms">Terms of Use</a>
       </nav>
       <div class="nav-cta">
-        <a href="index.html#download" class="btn btn-primary btn-sm">Download App</a>
+        <button class="lang-toggle" id="langToggle" type="button" aria-label="Switch language / تبديل اللغة">
+          <span class="lt-ar">العربية</span>
+          <span class="lt-en">EN</span>
+        </button>
+        <a href="index.html#download" class="btn btn-primary btn-sm" data-i18n="nav.download">Download App</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </div>
   </header>
 
-  <section class="legal-hero">
-    <div class="container">
-      <a href="index.html" class="back-link">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px"><path d="m15 18-6-6 6-6"/></svg>
-        Back to home
-      </a>
-      <h1>Terms of Use</h1>
-      <p>Version 1.1 — Effective date: October 11, 2026</p>
+  <!-- ===== English ===== -->
+  <div class="legal-block-en">
+
+    <section class="legal-hero">
+      <div class="container">
+        <a href="index.html" class="back-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px"><path d="m15 18-6-6 6-6"/></svg>
+          Back to home
+        </a>
+        <h1>Terms of Use</h1>
+        <p>Version 1.1 — Effective date: October 11, 2026</p>
+      </div>
+    </section>
+
+    <div class="legal-body">
+      <div class="legal-wrap">
+
+        <p>These Terms of Use (the "Terms") are a binding agreement between you and <strong>Mahmoud Ibrahim</strong>, an individual based in Alexandria, Egypt, who operates the <strong>E7GZ</strong> application (the "App"). These Terms govern your use of the App and the services provided through it, including stadium bookings, matches, chats, and payments.</p>
+        <p>By ticking the consent box when you register or by using the App, you agree to these Terms and to our <a href="privacy.html">Privacy Policy</a>. If you do not agree to these Terms, do not use the App.</p>
+
+        <h2>1. Definitions</h2>
+        <ul>
+          <li><strong>"App":</strong> The E7GZ application and its related services that we operate.</li>
+          <li><strong>"User":</strong> Any person who uses the App as a Player or an Owner.</li>
+          <li><strong>"Player":</strong> A User who books stadiums or creates or joins matches.</li>
+          <li><strong>"Owner":</strong> A User who adds a stadium to the App and manages its availability.</li>
+          <li><strong>"Stadium":</strong> A stadium, pitch, court, or similar sports facility listed on the App.</li>
+          <li><strong>"Booking":</strong> A confirmed reservation of a time slot at a stadium made through the App.</li>
+          <li><strong>"Time Slot":</strong> A specific date and period of time available at a stadium.</li>
+          <li><strong>"Start Time":</strong> The time at which the booked Time Slot begins.</li>
+          <li><strong>"Match":</strong> A sporting event that Players create or join through the App.</li>
+        </ul>
+
+        <h2>2. Eligibility and Accounts</h2>
+        <p>You must be at least <strong>18 years old</strong> to use the App. By registering, you confirm that you meet this requirement and that the information you provide (name, username, email, and phone number) is accurate, current, and complete.</p>
+        <p>You are responsible for keeping your login credentials confidential and for all activity that takes place through your account. You must notify us immediately at <a href="mailto:e7gzsupport@gmail.com">e7gzsupport@gmail.com</a> if you suspect unauthorized access to your account.</p>
+        <p>You may not transfer your account to another person, create an account on behalf of another person, or impersonate anyone. We may refuse registration or close any account that violates these Terms or the law.</p>
+
+        <h2>3. Nature of the Service</h2>
+        <p>E7GZ is an online platform and marketplace that connects Players with Stadium Owners and enables bookings, matches, messaging, and payments.</p>
+        <p>E7GZ is a project operated by Mahmoud Ibrahim as an individual. It is not a registered company.</p>
+        <p>We do not own, operate, manage, or control any stadium. Owners are solely responsible for their stadium listings, their availability, the condition and safety of their facilities, and compliance with the laws that apply to their activity. We review stadiums before they are published and may reject or disable any listing, but this review does not make us responsible for a stadium's legality, quality, or safety.</p>
+
+        <h2>4. Acceptable Use</h2>
+        <p>You agree not to:</p>
+        <ul>
+          <li>Provide false or misleading information or create fake bookings.</li>
+          <li>Use the App for any unlawful purpose or in violation of Egyptian law.</li>
+          <li>Harass, threaten, insult, or defame others, or send spam through chats or invitations.</li>
+          <li>Book slots for the purpose of commercial resale without the Owner's written consent.</li>
+          <li>Manipulate ratings, reviews, match capacity, or search results.</li>
+          <li>Interfere with the App, test its security, bypass authentication systems, scrape data, or reverse engineer any part of it.</li>
+          <li>Upload content that is unlawful, infringing, obscene, hateful, or harmful to minors.</li>
+          <li>Use an account or payment method that belongs to someone else without authorization.</li>
+        </ul>
+        <p>We may investigate suspected violations, remove content, restrict features, suspend accounts, and cooperate with the competent authorities where the law requires.</p>
+
+        <h2>5. Bookings</h2>
+        <p>A Booking is created when you select an available Time Slot, complete the payment (or, for InstaPay, upload proof of payment) and receive confirmation within the App. A Booking covers only the Time Slot you booked.</p>
+        <p>Owners set prices in Egyptian pounds (EGP), and any taxes or fees are shown before you complete payment. Owners manage slot availability. If a Time Slot becomes unavailable after you book it due to an Owner's error or the closure of the stadium, Section 6 applies. You must arrive on time and comply with the stadium's rules.</p>
+
+        <h2>6. Cancellation and Refunds</h2>
+        <p>Booking payments are made directly between the Player and the Owner (see Section 7). The cancellation and refund rules that apply to a Booking are the ones shown in the App before you complete payment.</p>
+        <p>The booking deposit is non-refundable, except where a refund is required by applicable law, or where the Owner cancels the Booking or the stadium becomes unavailable for reasons not attributable to you.</p>
+        <p>Because InstaPay payments are made directly to the Owner, E7GZ does not collect or hold these payments and does not itself process refunds for them. Any refund for such a Booking is arranged between you and the Owner.</p>
+        <p>If E7GZ processes a payment for a Booking (for example, if card or wallet payments are introduced in future), any refund for that Booking will follow the rules displayed before payment.</p>
+
+        <h2>7. Payments</h2>
+        <p>The payment method currently available for Bookings is <strong>InstaPay</strong>: you transfer the Booking amount directly to the Owner and upload proof of payment (a screenshot and reference) in the App, which the Owner verifies. E7GZ does not receive, hold, or process these payments; the payment is between you and the Owner.</p>
+        <p>Card and e-wallet payments are not currently available. If they become available in the future, they will be processed by a third-party payment provider; we do not store card numbers and will keep only transaction-related data.</p>
+        <p>You are responsible for paying the correct amount for each Booking you confirm. A Booking paid by InstaPay is confirmed once the Owner verifies your proof of payment. Unpaid or reversed payments may result in cancellation of the affected Bookings and suspension of the account. Payments suspected to be fraudulent may be reported to the competent authorities.</p>
+
+        <h2>8. Fees</h2>
+        <p>For InstaPay Bookings, the Player pays the Owner directly. E7GZ does not collect or hold the Booking payment and does not currently charge a commission on it.</p>
+        <p>If E7GZ introduces platform fees, a commission, or an Owner subscription in the future, the amounts and how they apply will be disclosed to Owners before they take effect. Owners are responsible for their own taxes and registrations, if any, arising from the revenue they receive.</p>
+
+        <h2>9. Matches</h2>
+        <p>Players may create Matches at or near stadiums and invite others to them. The Match creator sets its details, capacity, and visibility, and is responsible for managing it fairly, removing players only for valid reasons, and updating or cancelling the Match in a timely manner.</p>
+        <p>Joining a Match does not create an employment, agency, or partnership relationship between Players. Playing sports is at your own risk; you must assess your own physical fitness to participate, follow the rules of play, and respect others. Any side arrangements between Players, such as splitting costs or sharing equipment or transportation, are the sole responsibility of the parties involved.</p>
+
+        <h2>10. Chats and Community Conduct</h2>
+        <p>The chat feature exists to coordinate Matches and Bookings. You are responsible for the messages you send. Prohibited conduct includes harassment, hate speech, threats, sexual content, advertisements, spam, sharing other people's personal information, and any unlawful activity.</p>
+        <p>We do not routinely read messages, but we may review them when reasonably necessary to handle a report, investigate abuse or a security incident, enforce these Terms, or comply with the law, as described in the Privacy Policy. We may remove messages and restrict or suspend accounts that violate this Section.</p>
+
+        <h2>11. Stadium Owner Obligations</h2>
+        <p>Owners represent and warrant that:</p>
+        <ul>
+          <li>They lawfully own, lease, or manage each stadium they list and hold the licenses required to operate it.</li>
+          <li>The listing information, including photos, location, prices, facilities, and schedules, is accurate and up to date.</li>
+          <li>Published time slots reflect real availability and confirmed Bookings will be honored.</li>
+          <li>The facilities are safe, clean, and compliant with applicable health, safety, and building requirements.</li>
+          <li>They will treat all Users fairly and will not request payments outside the App or engage in unlawful discrimination.</li>
+          <li>They will use Players' personal data, such as name and phone number, only to host the Booking and for related purposes, and will keep it confidential and secure.</li>
+        </ul>
+        <p>Listings are subject to our approval process. We may request corrections, reject or disable listings, and permanently delete accounts in the case of repeated violations.</p>
+
+        <h2>12. Ratings and Reviews</h2>
+        <p>Users may rate stadiums and write reviews about them after eligible Bookings. Reviews must be honest and based on real experience, and free of profanity, personal attacks, and irrelevant content. We may remove reviews that violate these Terms. You may not offer or accept payment or any benefit in exchange for reviews, and you may not review a stadium that you own, manage, or compete with.</p>
+
+        <h2>13. Intellectual Property</h2>
+        <p>The App, including its design, code, name, logos, and content, is owned by us or our licensors and is protected by law. We grant you a limited, revocable, non-exclusive, non-transferable license to use the App for its intended purpose.</p>
+        <p>You may not copy, modify, distribute, sell, sublicense, or create derivative works from the App, except to the extent permitted by law. You retain ownership of the content you provide, such as stadium photos, Match details, and messages, and you grant us a worldwide, royalty-free license under intellectual property rights to host, store, copy, modify, and display that content solely as necessary to operate and promote the service.</p>
+
+        <h2>14. Disclaimer</h2>
+        <p>The App is provided <strong>"as is" and "as available"</strong>, without warranties of any kind, to the extent permitted by law. We do not guarantee that the service will be uninterrupted, error-free, or completely secure.</p>
+        <p>We do not endorse or guarantee any stadium, Owner, or Player, and we do not guarantee the quality, safety, or legality of stadiums, Matches, or interactions between Users. Nothing in these Terms excludes liability that cannot be excluded under Egyptian law, including liability for fraud, gross negligence, or intentional misconduct, and nothing affects mandatory consumer rights.</p>
+
+        <h2>15. Limitation of Liability</h2>
+        <p>To the extent permitted by law, we are not liable for indirect or consequential damages, or for loss of profits, revenue, reputation, or data. Our total liability arising out of the App and these Terms is limited to the <strong>greater of</strong>: the fees you actually paid through the App during the three months preceding the event giving rise to the claim, or <strong>EGP 500</strong>. This limit does not apply to amounts owed to you as a refund under Section 6, or to liability that cannot lawfully be limited.</p>
+
+        <h2>16. Indemnification</h2>
+        <p>To the extent permitted by law, you agree to indemnify us for claims, losses, and reasonable legal costs arising from your breach of these Terms, your violation of the law or of the rights of others, or your conduct in connection with a stadium, Booking, Match, or chat, except to the extent caused by our own actions.</p>
+
+        <h2>17. Account Suspension and Termination</h2>
+        <p>You may stop using the App at any time and delete your account from inside the App, by using our account-deletion page at <a href="https://app.e7gz.app/delete-account">https://app.e7gz.app/delete-account</a>, or by emailing <a href="mailto:e7gzsupport@gmail.com">e7gzsupport@gmail.com</a> from the email address registered to your account.</p>
+        <p>We may suspend or terminate your account if you materially breach these Terms, act fraudulently or abusively, fail to pay amounts due, or if the law or a competent authority requires it. Upon termination of an account, paid and confirmed Bookings may be honored or refunded in accordance with Section 6. Your license to use the App ends, while provisions that by their nature are intended to survive termination continue, including intellectual property, disclaimer, limitation of liability, indemnification, and governing law.</p>
+
+        <h2>18. Governing Law and Dispute Resolution</h2>
+        <p>These Terms are governed by the laws of the <strong>Arab Republic of Egypt</strong>, including Consumer Protection Law No. 181 of 2018 and Personal Data Protection Law No. 151 of 2020, where applicable. The parties will first seek to resolve any dispute amicably by contacting <a href="mailto:e7gzsupport@gmail.com">e7gzsupport@gmail.com</a>. If the dispute is not resolved within <strong>30 days</strong>, the competent Egyptian courts have jurisdiction, without prejudice to any mandatory consumer rights.</p>
+
+        <h2>19. Force Majeure</h2>
+        <p>Neither party is liable for delay or failure to perform resulting from events beyond its reasonable control, including natural disasters, epidemics, government actions, war, unrest, labor disputes, utility or internet outages, and large-scale cyberattacks. This does not relieve payment obligations for Bookings that have already been used.</p>
+
+        <h2>20. General Provisions</h2>
+        <p>If any provision of these Terms is held invalid or unenforceable, the remaining provisions stay in effect, and the invalid provision is replaced with a valid one that comes as close as possible to its intended purpose. Failure to enforce any provision is not a waiver of the right to enforce it later. You may not assign your rights or obligations without our written consent. We may assign our rights and obligations upon a sale or transfer of the App, and we will notify you of it. These Terms, the <a href="privacy.html">Privacy Policy</a>, and any rules displayed at checkout constitute the entire agreement between you and us regarding the App.</p>
+
+        <h2>21. Language</h2>
+        <p>These Terms are published in <strong>Arabic and English</strong>. In the event of any conflict between the two versions, <strong>the Arabic version is the authoritative and governing version</strong>.</p>
+
+        <h2>22. Changes to These Terms</h2>
+        <p>We may amend these Terms to reflect changes to the service, pricing, technology, or the law. Material changes take effect <strong>at least 7 days</strong> after we notify you through the App or by email, except for changes required by law or urgent security fixes, which may take effect immediately upon notice. If you do not agree to an amendment, you must stop using the App and request deletion of your account.</p>
+
+        <h2>23. Contact</h2>
+        <p><strong>Email:</strong> <a href="mailto:e7gzsupport@gmail.com">e7gzsupport@gmail.com</a></p>
+      </div>
     </div>
-  </section>
 
-  <main class="legal-body">
-    <div class="legal-wrap">
+    <footer class="legal-footer">
+      <div class="container">
+        <p>© 2026 E7GZ. All rights reserved.</p>
+        <p><a href="index.html">Home</a> · <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Use</a> · <a href="mailto:e7gzsupport@gmail.com">e7gzsupport@gmail.com</a></p>
+      </div>
+    </footer>
 
-      <p>These Terms of Use (the "Terms") are a binding agreement between you and <strong>Mahmoud Ibrahim</strong>, an individual based in Alexandria, Egypt, who operates the <strong>E7GZ</strong> application (the "App"). These Terms govern your use of the App and the services provided through it, including stadium bookings, matches, chats, and payments.</p>
-      <p>By ticking the consent box when you register or by using the App, you agree to these Terms and to our <a href="privacy.html">Privacy Policy</a>. If you do not agree to these Terms, do not use the App.</p>
+  </div>
 
-      <h2>1. Definitions</h2>
-      <ul>
-        <li><strong>"App":</strong> The E7GZ application and its related services that we operate.</li>
-        <li><strong>"User":</strong> Any person who uses the App as a Player or an Owner.</li>
-        <li><strong>"Player":</strong> A User who books stadiums or creates or joins matches.</li>
-        <li><strong>"Owner":</strong> A User who adds a stadium to the App and manages its availability.</li>
-        <li><strong>"Stadium":</strong> A stadium, pitch, court, or similar sports facility listed on the App.</li>
-        <li><strong>"Booking":</strong> A confirmed reservation of a time slot at a stadium made through the App.</li>
-        <li><strong>"Time Slot":</strong> A specific date and period of time available at a stadium.</li>
-        <li><strong>"Start Time":</strong> The time at which the booked Time Slot begins.</li>
-        <li><strong>"Match":</strong> A sporting event that Players create or join through the App.</li>
-      </ul>
+  <!-- ===== العربية (RTL) ===== -->
+  <div class="legal-block-ar" dir="rtl">
 
-      <h2>2. Eligibility and Accounts</h2>
-      <p>You must be at least <strong>18 years old</strong> to use the App. By registering, you confirm that you meet this requirement and that the information you provide (name, username, email, and phone number) is accurate, current, and complete.</p>
-      <p>You are responsible for keeping your login credentials confidential and for all activity that takes place through your account. You must notify us immediately at <a href="mailto:e7gzsupport@gmail.com">e7gzsupport@gmail.com</a> if you suspect unauthorized access to your account.</p>
-      <p>You may not transfer your account to another person, create an account on behalf of another person, or impersonate anyone. We may refuse registration or close any account that violates these Terms or the law.</p>
+    <section class="legal-hero">
+      <div class="container">
+        <a href="index.html" class="back-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px"><path d="m15 18-6-6 6-6"/></svg>
+          العودة إلى الرئيسية
+        </a>
+        <h1>شروط الاستخدام</h1>
+        <p>الإصدار 1.1 — تاريخ السريان: 11 أكتوبر 2026</p>
+      </div>
+    </section>
 
-      <h2>3. Nature of the Service</h2>
-      <p>E7GZ is an online platform and marketplace that connects Players with Stadium Owners and enables bookings, matches, messaging, and payments.</p>
-      <p>E7GZ is a project operated by Mahmoud Ibrahim as an individual. It is not a registered company.</p>
-      <p>We do not own, operate, manage, or control any stadium. Owners are solely responsible for their stadium listings, their availability, the condition and safety of their facilities, and compliance with the laws that apply to their activity. We review stadiums before they are published and may reject or disable any listing, but this review does not make us responsible for a stadium's legality, quality, or safety.</p>
+    <div class="legal-body">
+      <div class="legal-wrap">
 
-      <h2>4. Acceptable Use</h2>
-      <p>You agree not to:</p>
-      <ul>
-        <li>Provide false or misleading information or create fake bookings.</li>
-        <li>Use the App for any unlawful purpose or in violation of Egyptian law.</li>
-        <li>Harass, threaten, insult, or defame others, or send spam through chats or invitations.</li>
-        <li>Book slots for the purpose of commercial resale without the Owner's written consent.</li>
-        <li>Manipulate ratings, reviews, match capacity, or search results.</li>
-        <li>Interfere with the App, test its security, bypass authentication systems, scrape data, or reverse engineer any part of it.</li>
-        <li>Upload content that is unlawful, infringing, obscene, hateful, or harmful to minors.</li>
-        <li>Use an account or payment method that belongs to someone else without authorization.</li>
-      </ul>
-      <p>We may investigate suspected violations, remove content, restrict features, suspend accounts, and cooperate with the competent authorities where the law requires.</p>
+        <p>تُعد شروط الاستخدام هذه ("الشروط") اتفاقًا ملزمًا بينك وبين <strong>محمود إبراهيم</strong>، وهو فرد مقرّه الإسكندرية بمصر، ويدير تطبيق <strong>E7GZ</strong> ("التطبيق"). وتنظم هذه الشروط استخدامك للتطبيق والخدمات المقدمة من خلاله، بما في ذلك حجز الملاعب والمباريات والمحادثات والمدفوعات.</p>
+        <p>بتحديدك لمربع الموافقة عند التسجيل أو باستخدامك للتطبيق، فإنك توافق على هذه الشروط وعلى <a href="privacy.html">سياسة الخصوصية</a> الخاصة بنا. وإذا كنت لا توافق على هذه الشروط، يُرجى عدم استخدام التطبيق.</p>
 
-      <h2>5. Bookings</h2>
-      <p>A Booking is created when you select an available Time Slot, complete the payment (or, for InstaPay, upload proof of payment) and receive confirmation within the App. A Booking covers only the Time Slot you booked.</p>
-      <p>Owners set prices in Egyptian pounds (EGP), and any taxes or fees are shown before you complete payment. Owners manage slot availability. If a Time Slot becomes unavailable after you book it due to an Owner's error or the closure of the stadium, Section 6 applies. You must arrive on time and comply with the stadium's rules.</p>
+        <h2>1. التعريفات</h2>
+        <ul>
+          <li><strong>"التطبيق":</strong> تطبيق E7GZ وخدماته المرتبطة التي نُشغّلها.</li>
+          <li><strong>"المستخدم":</strong> أي شخص يستخدم التطبيق بصفتك اللاعب أو المالك.</li>
+          <li><strong>"اللاعب":</strong> المستخدم الذي يحجز الملاعب أو ينشئ المباريات أو ينضم إليها.</li>
+          <li><strong>"المالك":</strong> المستخدم الذي يضيف ملعبًا إلى التطبيق ويدير توفره.</li>
+          <li><strong>"الملعب":</strong> استاد أو ملعب أو ساحة أو منشأة رياضية مماثلة مدرجة على التطبيق.</li>
+          <li><strong>"الحجز":</strong> حجز مؤكد لفتحة زمنية في ملعب يتم من خلال التطبيق.</li>
+          <li><strong>"الفتحة الزمنية":</strong> تاريخ وفترة زمنية محددة متاحة في ملعب.</li>
+          <li><strong>"وقت البدء":</strong> الوقت الذي تبدأ فيه الفتحة الزمنية المحجوزة.</li>
+          <li><strong>"المباراة":</strong> فعالية رياضية ينشئها اللاعبون أو ينضمون إليها من خلال التطبيق.</li>
+        </ul>
 
-      <h2>6. Cancellation and Refunds</h2>
-      <p>Booking payments are made directly between the Player and the Owner (see Section 7). The cancellation and refund rules that apply to a Booking are the ones shown in the App before you complete payment.</p>
-      <p>The booking deposit is non-refundable, except where a refund is required by applicable law, or where the Owner cancels the Booking or the stadium becomes unavailable for reasons not attributable to you.</p>
-      <p>Because InstaPay payments are made directly to the Owner, E7GZ does not collect or hold these payments and does not itself process refunds for them. Any refund for such a Booking is arranged between you and the Owner.</p>
-      <p>If E7GZ processes a payment for a Booking (for example, if card or wallet payments are introduced in future), any refund for that Booking will follow the rules displayed before payment.</p>
+        <h2>2. الأهلية والحسابات</h2>
+        <p>يجب أن يكون عمرك <strong>18 عامًا أو أكثر</strong> لاستخدام التطبيق. وبتسجيلك، فإنك تؤكد أنك تستوفي هذا الشرط وأن المعلومات التي تقدمها (الاسم واسم المستخدم والبريد الإلكتروني ورقم الهاتف) دقيقة وحديثة وكاملة.</p>
+        <p>أنت مسؤول عن الحفاظ على سرية بيانات تسجيل دخولك وعن جميع الأنشطة التي تتم عبر حسابك. ويجب إبلاغنا فورًا على <a href="mailto:e7gzsupport@gmail.com">e7gzsupport@gmail.com</a> إذا اشتبهت في وجود وصول غير مصرح به إلى حسابك.</p>
+        <p>لا يجوز لك نقل حسابك إلى شخص آخر، أو إنشاء حساب نيابةً عن شخص آخر، أو انتحال شخصية أي أحد. ويجوز لنا رفض التسجيل أو إغلاق أي حساب يخالف هذه الشروط أو القانون.</p>
 
-      <h2>7. Payments</h2>
-      <p>The payment method currently available for Bookings is <strong>InstaPay</strong>: you transfer the Booking amount directly to the Owner and upload proof of payment (a screenshot and reference) in the App, which the Owner verifies. E7GZ does not receive, hold, or process these payments; the payment is between you and the Owner.</p>
-      <p>Card and e-wallet payments are not currently available. If they become available in the future, they will be processed by a third-party payment provider; we do not store card numbers and will keep only transaction-related data.</p>
-      <p>You are responsible for paying the correct amount for each Booking you confirm. A Booking paid by InstaPay is confirmed once the Owner verifies your proof of payment. Unpaid or reversed payments may result in cancellation of the affected Bookings and suspension of the account. Payments suspected to be fraudulent may be reported to the competent authorities.</p>
+        <h2>3. طبيعة الخدمة</h2>
+        <p>E7GZ منصة إلكترونية وسوق إلكتروني يربط اللاعبين بمالكي الملاعب، ويتيح الحجوزات والمباريات والمراسلة والمدفوعات.</p>
+        <p>E7GZ مشروع يديره محمود إبراهيم بصفتك الفردية، وهو ليس شركة مسجلة.</p>
+        <p>نحن لا نملك أي ملعب ولا نُشغّله ولا نديره ولا نتحكم فيه. والمالكون هم المسؤولون وحدهم عن قوائم ملاعبهم وتوفرها وحالة منشآتهم وسلامتها والالتزام بالقوانين التي تنطبق على نشاطهم. ونحن نراجع الملاعب قبل نشرها، ويجوز لنا رفض أي قائمة أو تعطيلها، لكن هذه المراجعة لا تجعلنا مسؤولين عن قانونية الملعب أو جودته أو سلامته.</p>
 
-      <h2>8. Fees</h2>
-      <p>For InstaPay Bookings, the Player pays the Owner directly. E7GZ does not collect or hold the Booking payment and does not currently charge a commission on it.</p>
-      <p>If E7GZ introduces platform fees, a commission, or an Owner subscription in the future, the amounts and how they apply will be disclosed to Owners before they take effect. Owners are responsible for their own taxes and registrations, if any, arising from the revenue they receive.</p>
+        <h2>4. الاستخدام المقبول</h2>
+        <p>أنت توافق على عدم القيام بما يلي:</p>
+        <ul>
+          <li>تقديم معلومات كاذبة أو مضللة أو إنشاء حجوزات وهمية.</li>
+          <li>استخدام التطبيق لأي غرض غير قانوني أو بما يخالف القانون المصري.</li>
+          <li>التحرش بالآخرين أو تهديدهم أو إهانتهم أو التشهير بهم، أو إرسال رسائل مزعجة عبر المحادثات أو الدعوات.</li>
+          <li>حجز الفتحات بغرض إعادة البيع التجاري دون موافقة كتابية من المالك.</li>
+          <li>التلاعب بالتقييمات أو المراجعات أو سعة المباراة أو نتائج البحث.</li>
+          <li>التدخل في التطبيق أو اختبار أمنه أو تجاوز أنظمة المصادقة أو جمع البيانات بشكل آلي (Scraping) أو إجراء هندسة عكسية لأي جزء منه.</li>
+          <li>رفع محتوى غير قانوني أو منتهك للحقوق أو فاحش أو يحض على الكراهية أو يضر بالقُصّر.</li>
+          <li>استخدام حساب أو وسيلة دفع تعود لشخص آخر دون تصريح.</li>
+        </ul>
+        <p>ويجوز لنا التحقيق في المخالفات المشتبه بها وحذف المحتوى وتقييد الميزات وإيقاف الحسابات والتعاون مع الجهات المختصة عندما يقتضي القانون ذلك.</p>
 
-      <h2>9. Matches</h2>
-      <p>Players may create Matches at or near stadiums and invite others to them. The Match creator sets its details, capacity, and visibility, and is responsible for managing it fairly, removing players only for valid reasons, and updating or cancelling the Match in a timely manner.</p>
-      <p>Joining a Match does not create an employment, agency, or partnership relationship between Players. Playing sports is at your own risk; you must assess your own physical fitness to participate, follow the rules of play, and respect others. Any side arrangements between Players, such as splitting costs or sharing equipment or transportation, are the sole responsibility of the parties involved.</p>
+        <h2>5. الحجوزات</h2>
+        <p>يُنشأ الحجز عند اختيارك لفتحة زمنية متاحة وإتمامك للدفع (أو، في حالة إنستاباي، رفعك لإثبات الدفع) واستلامك للتأكيد داخل التطبيق. ويغطي الحجز الفتحة الزمنية التي قمت بحجزها فقط.</p>
+        <p>يحدد المالكون الأسعار بالجنيه المصري (EGP)، وتُعرض أي ضرائب أو رسوم قبل إتمامك للدفع. ويدير المالكون توفر الفتحات. وإذا أصبحت الفتحة الزمنية غير متاحة بعد حجزها بسبب خطأ من المالك أو إغلاق الملعب، يسري البند 6. ويجب أن تصل في الوقت المحدد وأن تلتزم بقواعد الملعب.</p>
 
-      <h2>10. Chats and Community Conduct</h2>
-      <p>The chat feature exists to coordinate Matches and Bookings. You are responsible for the messages you send. Prohibited conduct includes harassment, hate speech, threats, sexual content, advertisements, spam, sharing other people's personal information, and any unlawful activity.</p>
-      <p>We do not routinely read messages, but we may review them when reasonably necessary to handle a report, investigate abuse or a security incident, enforce these Terms, or comply with the law, as described in the Privacy Policy. We may remove messages and restrict or suspend accounts that violate this Section.</p>
+        <h2>6. الإلغاء والاسترداد</h2>
+        <p>تُدفع مبالغ الحجز مباشرة بين اللاعب والمالك (انظر البند 7). وقواعد الإلغاء والاسترداد التي تسري على الحجز هي تلك المعروضة في التطبيق قبل إتمامك للدفع.</p>
+        <p>ودفعة تأمين الحجز غير قابلة للاسترداد، إلا في حالات يستلزم فيها القانون المعمول به الاسترداد، أو إذا ألغى المالك الحجز أو أصبح الملعب غير متاح لأسباب لا تُعزى إليك.</p>
+        <p>ولأن مدفوعات إنستاباي تتم مباشرةً إلى المالك، فإن E7GZ لا تجمع هذه المدفوعات ولا تحتفظ بها ولا تعالج المبالغ المستردة الخاصة بها بنفسها. ويتم ترتيب أي استرداد لهذا الحجز بينك وبين المالك.</p>
+        <p>وإذا قامت E7GZ بمعالجة دفع لحجز ما (على سبيل المثال، إذا أُتيحت مدفوعات البطاقات أو المحافظ في المستقبل)، فإن أي استرداد لذلك الحجز سيتبع القواعد المعروضة قبل الدفع.</p>
 
-      <h2>11. Stadium Owner Obligations</h2>
-      <p>Owners represent and warrant that:</p>
-      <ul>
-        <li>They lawfully own, lease, or manage each stadium they list and hold the licenses required to operate it.</li>
-        <li>The listing information, including photos, location, prices, facilities, and schedules, is accurate and up to date.</li>
-        <li>Published time slots reflect real availability and confirmed Bookings will be honored.</li>
-        <li>The facilities are safe, clean, and compliant with applicable health, safety, and building requirements.</li>
-        <li>They will treat all Users fairly and will not request payments outside the App or engage in unlawful discrimination.</li>
-        <li>They will use Players' personal data, such as name and phone number, only to host the Booking and for related purposes, and will keep it confidential and secure.</li>
-      </ul>
-      <p>Listings are subject to our approval process. We may request corrections, reject or disable listings, and permanently delete accounts in the case of repeated violations.</p>
+        <h2>7. المدفوعات</h2>
+        <p>وسيلة الدفع المتاحة حاليًا للحجوزات هي <strong>إنستاباي (InstaPay)</strong>: حيث تقوم بتحويل مبلغ الحجز مباشرةً إلى المالك وترفع إثبات الدفع (لقطة شاشة ومرجع) في التطبيق، ويتحقق المالك منه. ولا تستلم E7GZ هذه المدفوعات ولا تحتفظ بها ولا تعالجها؛ فالعملية بينك وبين المالك.</p>
+        <p>مدفوعات البطاقات والمحافظ الإلكترونية غير متاحة حاليًا. وإذا أُتيحت في المستقبل، فستُعالج بواسطة مزود خدمة دفع من جهات خارجية؛ ونحن لا نخزّن أرقام البطاقات ونحتفظ فقط بالبيانات المرتبطة بالمعاملة.</p>
+        <p>أنت مسؤول عن دفع المبلغ الصحيح لكل حجز تؤكده. ويُعد الحجز المدفوع عبر إنستاباي مؤكدًا بمجرد أن يتحقق المالك من إثبات دفعك. وقد يؤدي عدم الدفع أو الدفع المرتجع إلى إلغاء الحجوزات المتأثرة وإيقاف الحساب. وقد يتم إبلاغ الجهات المختصة عن أي مدفوعات يُشتبه في أنها احتيالية.</p>
 
-      <h2>12. Ratings and Reviews</h2>
-      <p>Users may rate stadiums and write reviews about them after eligible Bookings. Reviews must be honest and based on real experience, and free of profanity, personal attacks, and irrelevant content. We may remove reviews that violate these Terms. You may not offer or accept payment or any benefit in exchange for reviews, and you may not review a stadium that you own, manage, or compete with.</p>
+        <h2>8. الرسوم</h2>
+        <p>بالنسبة لحجوزات إنستاباي، يدفع اللاعب إلى المالك مباشرةً. ولا تجمع E7GZ مبلغ الحجز ولا تحتفظ به ولا تفرض حاليًا عمولة عليه.</p>
+        <p>وإذا أدخلت E7GZ في المستقبل رسومًا على المنصة أو عمولة أو اشتراكًا للمالك، فسيتم الإفصاح عن المبالغ وطريقة تطبيقها للمالكين قبل أن تصبح سارية. والمالكون مسؤولون عن ضرائبهم وتسجيلاتهم الخاصة، إن وُجدت، الناتجة عن الإيرادات التي يستلمونها.</p>
 
-      <h2>13. Intellectual Property</h2>
-      <p>The App, including its design, code, name, logos, and content, is owned by us or our licensors and is protected by law. We grant you a limited, revocable, non-exclusive, non-transferable license to use the App for its intended purpose.</p>
-      <p>You may not copy, modify, distribute, sell, sublicense, or create derivative works from the App, except to the extent permitted by law. You retain ownership of the content you provide, such as stadium photos, Match details, and messages, and you grant us a worldwide, royalty-free license under intellectual property rights to host, store, copy, modify, and display that content solely as necessary to operate and promote the service.</p>
+        <h2>9. المباريات</h2>
+        <p>يجوز للاعبين إنشاء مباريات في الملاعب أو بالقرب منها ودعوة الآخرين إليها. ويحدد منشئ المباراة تفاصيلها وسعتها وإمكانية ظهورها، وهو مسؤول عن إدارتها بشكل عادل، وإزالة اللاعبين لأسباب وجيهة فقط، وتحديث المباراة أو إلغائها في الوقت المناسب.</p>
+        <p>والانضمام إلى مباراة لا ينشئ علاقة عمل أو وكالة أو شراكة بين اللاعبين. وممارسة الرياضة تحدث على مسؤوليتك الشخصية؛ ويجب أن تقيّم لياقتك البدنية للمشاركة وأن تلتزم بقواعد اللعب وتحترم الآخرين. وأي ترتيبات جانبية بين اللاعبين، مثل تقسيم التكاليف أو مشاركة المعدات أو النقل، تقع على عاتق الأطراف المعنية وحدها.</p>
 
-      <h2>14. Disclaimer</h2>
-      <p>The App is provided <strong>"as is" and "as available"</strong>, without warranties of any kind, to the extent permitted by law. We do not guarantee that the service will be uninterrupted, error-free, or completely secure.</p>
-      <p>We do not endorse or guarantee any stadium, Owner, or Player, and we do not guarantee the quality, safety, or legality of stadiums, Matches, or interactions between Users. Nothing in these Terms excludes liability that cannot be excluded under Egyptian law, including liability for fraud, gross negligence, or intentional misconduct, and nothing affects mandatory consumer rights.</p>
+        <h2>10. المحادثات وسلوك المجتمع</h2>
+        <p>ميزة المحادثة موجودة لتنسيق المباريات والحجوزات. وأنت مسؤول عن الرسائل التي ترسلها. وتشمل السلوكيات المحظورة التحرش وخطاب الكراهية والتهديدات والمحتوى الجنسي والإعلانات والرسائل المزعجة ومشاركة المعلومات الشخصية للآخرين وأي نشاط غير قانوني.</p>
+        <p>نحن لا نقرأ الرسائل بشكل روتيني، لكننا قد نراجعها عندما يلزم ذلك بشكل معقول للتعامل مع بلاغ أو التحقيق في إساءة أو حادث أمني أو إنفاذ هذه الشروط أو الامتثال للقانون، على النحو الموضح في سياسة الخصوصية. ويجوز لنا حذف الرسائل وتقييد الحسابات المخالفة لهذا البند أو إيقافها.</p>
 
-      <h2>15. Limitation of Liability</h2>
-      <p>To the extent permitted by law, we are not liable for indirect or consequential damages, or for loss of profits, revenue, reputation, or data. Our total liability arising out of the App and these Terms is limited to the <strong>greater of</strong>: the fees you actually paid through the App during the three months preceding the event giving rise to the claim, or <strong>EGP 500</strong>. This limit does not apply to amounts owed to you as a refund under Section 6, or to liability that cannot lawfully be limited.</p>
+        <h2>11. التزامات مالكي الملاعب</h2>
+        <p>يقرّ المالكون ويضمنون ما يلي:</p>
+        <ul>
+          <li>أنهم يملكون أو يستأجرون أو يديرون كل ملعب يدرجونه بشكل قانوني، ويحملون التراخيص اللازمة لتشغيله.</li>
+          <li>أن بيانات القائمة، بما يشمل الصور والموقع والأسعار والمرافق والجداول، دقيقة ومحدثة.</li>
+          <li>أن الفتحات الزمنية المنشورة تعكس توفرًا حقيقيًا وأن الحجوزات المؤكدة سيتم الوفاء بها.</li>
+          <li>أن المنشآت آمنة ونظيفة ومتوافقة مع متطلبات الصحة والسلامة والبناء المعمول بها.</li>
+          <li>أنهم سيعاملون جميع المستخدمين بشكل عادل ولن يطلبوا مدفوعات خارج التطبيق ولن يمارسوا تمييزًا غير قانوني.</li>
+          <li>أنهم سيستخدمون بيانات اللاعبين الشخصية، مثل الاسم ورقم الهاتف، فقط لاستضافة الحجز ولأغراض مرتبطة به، وسيحفظونها بسرية وأمان.</li>
+        </ul>
+        <p>تخضع القوائم لعملية الموافقة الخاصة بنا. ويجوز لنا طلب تصحيحات ورفض القوائم أو تعطيلها وحذف الحسابات نهائيًا في حالة تكرار المخالفات.</p>
 
-      <h2>16. Indemnification</h2>
-      <p>To the extent permitted by law, you agree to indemnify us for claims, losses, and reasonable legal costs arising from your breach of these Terms, your violation of the law or of the rights of others, or your conduct in connection with a stadium, Booking, Match, or chat, except to the extent caused by our own actions.</p>
+        <h2>12. التقييمات والمراجعات</h2>
+        <p>يجوز للمستخدمين تقييم الملاعب وكتابة مراجعات عنها بعد إتمام الحجوزات المؤهلة. ويجب أن تكون المراجعات صادقة ومبنية على تجربة حقيقية وخالية من الألفاظ البذيئة والهجمات الشخصية والمحتوى غير ذي الصلة. ويجوز لنا حذف المراجعات المخالفة لهذه الشروط. ولا يجوز لك عرض أو قبول أي مقابل أو ميزة مقابل المراجعات، ولا مراجعة ملعب تملكه أو تديره أو تنافسه.</p>
 
-      <h2>17. Account Suspension and Termination</h2>
-      <p>You may stop using the App at any time and delete your account from inside the App, by using our account-deletion page at <a href="https://app.e7gz.app/delete-account">https://app.e7gz.app/delete-account</a>, or by emailing <a href="mailto:e7gzsupport@gmail.com">e7gzsupport@gmail.com</a> from the email address registered to your account.</p>
-      <p>We may suspend or terminate your account if you materially breach these Terms, act fraudulently or abusively, fail to pay amounts due, or if the law or a competent authority requires it. Upon termination of an account, paid and confirmed Bookings may be honored or refunded in accordance with Section 6. Your license to use the App ends, while provisions that by their nature are intended to survive termination continue, including intellectual property, disclaimer, limitation of liability, indemnification, and governing law.</p>
+        <h2>13. الملكية الفكرية</h2>
+        <p>التطبيق، بما في ذلك تصميمه وبرمجته واسمه وشعاراته ومحتواه، مملوك لنا أو للجهات المرخِّصة لنا ومحمي بموجب القانون. ونمنحك ترخيصًا محدودًا وقابلًا للسحب وغير حصري وغير قابل للتحويل لاستخدام التطبيق لغرضه المحدد.</p>
+        <p>ولا يجوز لك نسخ التطبيق أو تعديله أو توزيعه أو بيعه أو الترخيص من الباطن أو إنشاء أعمال مشتقة منه، إلا بالقدر الذي يسمح به القانون. وتحتفظ بملكية المحتوى الذي تقدمه، مثل صور الملاعب وتفاصيل المباريات والرسائل، وتمنحنا ترخيصًا عالميًا بدون مقابل بموجب حقوق الملكية الفكرية لاستضافة هذا المحتوى وتخزينه ونسخه وتعديله وعرضه فقط حسب ما يلزم لتشغيل الخدمة والترويج لها.</p>
 
-      <h2>18. Governing Law and Dispute Resolution</h2>
-      <p>These Terms are governed by the laws of the <strong>Arab Republic of Egypt</strong>, including Consumer Protection Law No. 181 of 2018 and Personal Data Protection Law No. 151 of 2020, where applicable. The parties will first seek to resolve any dispute amicably by contacting <a href="mailto:e7gzsupport@gmail.com">e7gzsupport@gmail.com</a>. If the dispute is not resolved within <strong>30 days</strong>, the competent Egyptian courts have jurisdiction, without prejudice to any mandatory consumer rights.</p>
+        <h2>14. إخلاء المسؤولية</h2>
+        <p>يُقدَّم التطبيق <strong>"كما هو" و"حسب توفره"</strong>، دون ضمانات من أي نوع، بالقدر الذي يسمح به القانون. ولا نضمن أن تكون الخدمة متواصلة أو خالية من الأخطاء أو آمنة تمامًا.</p>
+        <p>ولا نصادق على أي ملعب أو مالك أو لاعب ولا نضمنه، ولا نضمن جودة الملاعب أو المباريات أو التفاعلات بين المستخدمين أو قانونيتها أو سلامتها. ولا شيء في هذه الشروط يستثني المسؤولية التي لا يمكن استثناؤها بموجب القانون المصري، بما يشمل المسؤولية عن الاحتيال أو الإهمال الجسيم أو السلوك المتعمد، ولا شيء يمس حقوق المستهلك الإلزامية.</p>
 
-      <h2>19. Force Majeure</h2>
-      <p>Neither party is liable for delay or failure to perform resulting from events beyond its reasonable control, including natural disasters, epidemics, government actions, war, unrest, labor disputes, utility or internet outages, and large-scale cyberattacks. This does not relieve payment obligations for Bookings that have already been used.</p>
+        <h2>15. حدود المسؤولية</h2>
+        <p>بالقدر الذي يسمح به القانون، لا نكون مسؤولين عن الأضرار غير المباشرة أو التبعية، أو عن فقدان الأرباح أو الإيرادات أو السمعة أو البيانات. وتقتصر مسؤوليتنا الإجمالية الناشئة عن التطبيق وهذه الشروط على <strong>الأكبر</strong> من: الرسوم التي دفعت فعليًا من خلال التطبيق خلال الثلاثة أشهر السابقة للحادثة المنشئة للمطالبة، أو <strong>500 جنيه مصري</strong>. ولا يسري هذا الحد على المبالغ المستحقة لك كاسترداد بموجب البند 6، أو على المسؤولية التي لا يجوز تقييدها قانونًا.</p>
 
-      <h2>20. General Provisions</h2>
-      <p>If any provision of these Terms is held invalid or unenforceable, the remaining provisions stay in effect, and the invalid provision is replaced with a valid one that comes as close as possible to its intended purpose. Failure to enforce any provision is not a waiver of the right to enforce it later. You may not assign your rights or obligations without our written consent. We may assign our rights and obligations upon a sale or transfer of the App, and we will notify you of it. These Terms, the <a href="privacy.html">Privacy Policy</a>, and any rules displayed at checkout constitute the entire agreement between you and us regarding the App.</p>
+        <h2>16. التعويض</h2>
+        <p>بالقدر الذي يسمح به القانون، توافق على تعويضنا عن المطالبات والخسائر والتكاليف القانونية المعقولة الناشئة عن مخالفتك لهذه الشروط، أو انتهاكك للقانون أو حقوق الآخرين، أو سلوكك المرتبط بملعب أو حجز أو مباراة أو محادثة، إلا بالقدر الناتج عن أفعالنا نحن.</p>
 
-      <h2>21. Language</h2>
-      <p>These Terms are published in <strong>Arabic and English</strong>. In the event of any conflict between the two versions, <strong>the Arabic version is the authoritative and governing version</strong>.</p>
+        <h2>17. إيقاف الحساب وإنهاؤه</h2>
+        <p>يمكنك التوقف عن استخدام التطبيق في أي وقت وحذف حسابك من داخل التطبيق، أو باستخدام صفحة حذف الحساب على <a href="https://app.e7gz.app/delete-account">https://app.e7gz.app/delete-account</a>، أو بمراسلتنا على <a href="mailto:e7gzsupport@gmail.com">e7gzsupport@gmail.com</a> من عنوان البريد الإلكتروني المسجل في حسابك.</p>
+        <p>ويجوز لنا إيقاف حسابك أو إنهاؤه إذا خالفت هذه الشروط مخالفة جوهرية، أو تصرفت باحتيال أو إساءة، أو تخلفت عن سداد المبالغ المستحقة، أو إذا اقتضى القانون أو جهة مختصة ذلك. وعند إنهاء الحساب، قد يُوفى بالحجوزات المدفوعة والمؤكدة أو تُسترد وفقًا للبند 6. وينتهي ترخيصك لاستخدام التطبيق، وتستمر الأحكام التي يُفترض بطبيعتها أن تستمر بعد الإنهاء، بما يشمل الملكية الفكرية وإخلاء المسؤولية وحدود المسؤولية والتعويض والقانون الواجب التطبيق.</p>
 
-      <h2>22. Changes to These Terms</h2>
-      <p>We may amend these Terms to reflect changes to the service, pricing, technology, or the law. Material changes take effect <strong>at least 7 days</strong> after we notify you through the App or by email, except for changes required by law or urgent security fixes, which may take effect immediately upon notice. If you do not agree to an amendment, you must stop using the App and request deletion of your account.</p>
+        <h2>18. القانون الواجب التطبيق وتسوية النزاعات</h2>
+        <p>تخضع هذه الشروط لقوانين <strong>جمهورية مصر العربية</strong>، بما يشمل قانون حماية المستهلك رقم 181 لسنة 2018 وقانون حماية البيانات الشخصية رقم 151 لسنة 2020، حيث ينطبق ذلك. وسيسعى الطرفان أولًا لتسوية أي نزاع بالتراضي عبر التواصل على <a href="mailto:e7gzsupport@gmail.com">e7gzsupport@gmail.com</a>. وإذا لم يُسوَّ النزاع خلال <strong>30 يومًا</strong>، تكون للمحاكم المصرية المختصة الولاية القضائية، دون المساس بأي حقوق إلزامية للمستهلك.</p>
 
-      <h2>23. Contact</h2>
-      <p><strong>Email:</strong> <a href="mailto:e7gzsupport@gmail.com">e7gzsupport@gmail.com</a></p>
+        <h2>19. القوة القاهرة</h2>
+        <p>لا يكون أي من الطرفين مسؤولًا عن التأخير أو الإخفاق في الأداء الناتج عن أحداث خارجة عن سيطرته المعقولة، بما يشمل الكوارث الطبيعية والأوبئة والإجراءات الحكومية والحروب والاضطرابات والنزاعات العمالية وانقطاع المرافق أو الإنترنت والهجمات الإلكترونية الواسعة. ولا يُعفي ذلك من التزامات الدفع الخاصة بحجوزات سبق استخدامها.</p>
+
+        <h2>20. أحكام عامة</h2>
+        <p>إذا اعتُبر أي حكم من هذه الشروط باطلًا أو غير قابل للتنفيذ، تظل الأحكام المتبقية سارية، ويُستبدل الحكم الباطل بحكم صحيح يقترب قدر الإمكان من غايته المقصودة. ولا يُعتبر عدم إنفاذ أي حكم تنازلًا عن الحق في إنفاذه لاحقًا. ولا يجوز لك التنازل عن حقوقك أو التزاماتك دون موافقتنا الكتابية. ويجوز لنا التنازل عن حقوقنا والتزاماتنا عند بيع التطبيق أو نقله، وسنُبلغك بذلك. وتُشكّل هذه الشروط و<a href="privacy.html">سياسة الخصوصية</a> وأي قواعد تُعرض عند الدفع الاتفاق الكامل بينك وبيننا بشأن التطبيق.</p>
+
+        <h2>21. اللغة</h2>
+        <p>تُنشر هذه الشروط باللغتين <strong>العربية والإنجليزية</strong>. وفي حال وجود أي تعارض بين النسختين، تكون <strong>النسخة العربية هي النسخة المعتمدة والحاكمة</strong>.</p>
+
+        <h2>22. التغييرات على هذه الشروط</h2>
+        <p>يجوز لنا تعديل هذه الشروط بما يعكس التغييرات في الخدمة أو التسعير أو التقنية أو القانون. وتصبح التغييرات الجوهرية سارية <strong>خلال 7 أيام</strong> على الأقل بعد إبلاغك عبر التطبيق أو البريد الإلكتروني، باستثناء التغييرات التي يقتضيها القانون أو إصلاحات الأمان العاجلة، والتي يجوز أن تصبح سارية فور الإبلاغ. وإذا كنت لا توافق على أي تعديل، فيجب عليك التوقف عن استخدام التطبيق وطلب حذف حسابك.</p>
+
+        <h2>23. التواصل</h2>
+        <p><strong>البريد الإلكتروني:</strong> <a href="mailto:e7gzsupport@gmail.com">e7gzsupport@gmail.com</a></p>
+      </div>
     </div>
-  </main>
 
-  <footer class="legal-footer">
-    <div class="container">
-      <p>© 2026 E7GZ. All rights reserved.</p>
-      <p><a href="index.html">Home</a> · <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Use</a> · <a href="terms-ar.html">العربية</a> · <a href="mailto:e7gzsupport@gmail.com">e7gzsupport@gmail.com</a></p>
-    </div>
-  </footer>
+    <footer class="legal-footer">
+      <div class="container">
+        <p>© 2026 E7GZ. جميع الحقوق محفوظة.</p>
+        <p><a href="index.html">الرئيسية</a> · <a href="privacy.html">سياسة الخصوصية</a> · <a href="terms.html">شروط الاستخدام</a> · <a href="mailto:e7gzsupport@gmail.com">e7gzsupport@gmail.com</a></p>
+      </div>
+    </footer>
+
+  </div>
 
   <script src="js/script.js"></script>
+  <script src="js/i18n.js"></script>
 </body>
 </html>

@@ -201,6 +201,7 @@
 
     "footer.privacy": "سياسة الخصوصية",
     "footer.terms": "شروط الاستخدام",
+    "footer.delete": "حذف الحساب",
     "footer.copy":
       "© 2026 E7GZ. كل الحقوق محفوظة · <a href=\"privacy.html\">سياسة الخصوصية</a> · <a href=\"terms.html\">شروط الاستخدام</a>",
     "footer.suggest": "اقترح ملعب",

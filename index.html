@@ -33,7 +33,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
@@ -95,8 +95,8 @@
           <a href="#features" class="nav-link" data-i18n="nav.features">Features</a>
           <a href="#screenshots" class="nav-link" data-i18n="nav.screenshots">Screenshots</a>
           <a href="#how-it-works" class="nav-link" data-i18n="nav.how">How It Works</a>
+          <a href="#list-court" class="nav-link" data-i18n="nav.venues">For Venues</a>
           <a href="#install" class="nav-link" data-i18n="nav.install">Install</a>
-          <a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a>
         </nav>
         <div class="nav-cta">
           <a
@@ -112,12 +112,13 @@
             <span class="lt-ar">العربية</span>
             <span class="lt-en">EN</span>
           </button>
-          <a href="#home" class="btn btn-primary btn-sm" data-i18n="nav.download">Download App</a>
+          <a href="#download" class="btn btn-primary btn-sm" data-i18n="nav.download">Download App</a>
           <button
             class="hamburger"
             id="hamburger"
             aria-label="Toggle menu"
             aria-expanded="false"
+            aria-controls="navLinks"
           >
             <span></span><span></span><span></span>
           </button>
@@ -125,15 +126,23 @@
       </div>
     </header>
 
-    <!-- ============ HERO ============ -->
+    <!-- ============ HERO — the pitch is the layout ============ -->
     <section class="hero" id="home">
-      <div class="hero-bg">
-        <div class="floodlight floodlight-1"></div>
-        <div class="floodlight floodlight-2"></div>
-        <div class="hero-pitch"></div>
+      <div class="hero-field" aria-hidden="true">
+        <div class="hero-grid"></div>
+        <div class="flood flood-a"></div>
+        <div class="flood flood-b"></div>
+        <span class="touchline touchline-l"></span>
+        <span class="touchline touchline-r"></span>
+        <span class="centre-circle"></span>
+        <span class="goal-line"></span>
       </div>
       <div class="container hero-inner">
-        <div class="hero-copy reveal">
+        <div class="hero-copy">
+          <p class="hero-kicker">
+            <span class="dot-live"></span>
+            <span data-i18n="hero.kicker">One app · both sides of the pitch</span>
+          </p>
           <h1 class="hero-title" data-i18n="hero.title">
             Book. Play.<br />Win with <span class="green">E7GZ</span>
           </h1>
@@ -141,152 +150,126 @@
             E7GZ is your ultimate app for booking football fields, joining
             matches, and connecting with players. Fast, easy, and reliable.
           </p>
+
           <div class="hero-actions" id="download">
             <div class="dl-item">
-              <a
-                href="https://api.e7gz.app/api/v1/download/apk"
-                class="btn btn-primary btn-lg"
-              >
-                <svg viewBox="0 0 24 24" fill="currentColor" class="icon">
-  <path d="M6.523 15.34c0 .58.47 1.05 1.05 1.05h.699l.01 2.45c0 1.94 2.93 1.93 2.93 0v-2.45h1.6v2.45c0 1.93 2.93 1.94 2.93 0l.01-2.45h.7c.58 0 1.05-.47 1.05-1.05V8.821H6.523v6.52zM4.71 8.821c-.78 0-1.4.63-1.4 1.4v5.19c0 1.85 2.8 1.85 2.8 0v-5.19c0-.77-.63-1.4-1.4-1.4zm14.58 0c-.78 0-1.4.63-1.4 1.4v5.19c0 1.85 2.8 1.85 2.8 0v-5.19c0-.77-.63-1.4-1.4-1.4zM15.94 4.30l1.09-1.09a.4.4 0 0 0-.57-.57l-1.24 1.24A5.87 5.87 0 0 0 12 3.02c-1.15 0-2.24.28-3.21.78L7.55 2.56a.4.4 0 1 0-.57.57l1.09 1.09A6.42 6.42 0 0 0 5.6 8.02h12.8a6.42 6.42 0 0 0-2.46-3.72zM9.9 6.15a.55.55 0 1 1 0-1.1.55.55 0 0 1 0 1.1zm4.2 0a.55.55 0 1 1 0-1.1.55.55 0 0 1 0 1.1z"/>
-</svg>
-                <span data-i18n="hero.apk">Download Android APK</span>
+              <a href="https://api.e7gz.app/api/v1/download/apk" class="btn btn-primary btn-lg">
+                <svg viewBox="0 0 24 24" fill="currentColor" class="icon" aria-hidden="true">
+                  <path d="M6.523 15.34c0 .58.47 1.05 1.05 1.05h.699l.01 2.45c0 1.94 2.93 1.93 2.93 0v-2.45h1.6v2.45c0 1.93 2.93 1.94 2.93 0l.01-2.45h.7c.58 0 1.05-.47 1.05-1.05V8.821H6.523v6.52zM4.71 8.821c-.78 0-1.4.63-1.4 1.4v5.19c0 1.85 2.8 1.85 2.8 0v-5.19c0-.77-.63-1.4-1.4-1.4zm14.58 0c-.78 0-1.4.63-1.4 1.4v5.19c0 1.85 2.8 1.85 2.8 0v-5.19c0-.77-.63-1.4-1.4-1.4zM15.94 4.30l1.09-1.09a.4.4 0 0 0-.57-.57l-1.24 1.24A5.87 5.87 0 0 0 12 3.02c-1.15 0-2.24.28-3.21.78L7.55 2.56a.4.4 0 1 0-.57.57l1.09 1.09A6.42 6.42 0 0 0 5.6 8.02h12.8a6.42 6.42 0 0 0-2.46-3.72zM9.9 6.15a.55.55 0 1 1 0-1.1.55.55 0 0 1 0 1.1zm4.2 0a.55.55 0 1 1 0-1.1.55.55 0 0 1 0 1.1z"/>
+                </svg>
+                <span data-i18n="hero.apk">Download for Android</span>
               </a>
-              <small class="dl-note" data-i18n="hero.apkNote">For Android phones &mdash; direct APK download</small>
+              <small class="dl-note" data-i18n="hero.apkNote">Download didn't start? Tap to retry</small>
             </div>
             <div class="dl-item">
-              <a href="https://www.e7gz.app" class="btn btn-dark btn-lg" target="_blank" rel="noopener">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  class="icon"
-                >
-                  <circle cx="12" cy="12" r="10" />
-                  <path d="M2 12h20" />
-                  <path
-                    d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
-                  />
+              <a href="https://www.e7gz.app" class="btn btn-ghost btn-lg" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="icon" aria-hidden="true">
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="M3 12h18" />
+                  <path d="M12 3a14.5 14.5 0 0 1 3.8 9 14.5 14.5 0 0 1-3.8 9 14.5 14.5 0 0 1-3.8-9A14.5 14.5 0 0 1 12 3z" />
                 </svg>
-                <span data-i18n="hero.web">Open Web App</span>
+                <span data-i18n="hero.web">Open the web app</span>
               </a>
-              <small class="dl-note" data-i18n="hero.webNote">For iPhone &mdash; opens in Safari, no download</small>
+              <small class="dl-note" data-i18n="hero.webNote">For iPhone — opens in Safari, no download</small>
             </div>
-            <a href="#install" class="section-link" data-i18n="hero.installLink">
-              How to install it on your phone &mdash; step-by-step guide &rarr;
-            </a>
           </div>
-          <ul class="hero-trust">
-            <li>
-              <span class="trust-icon">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path
-                    d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
-                  />
-                  <path d="m9 12 2 2 4-4" />
-                </svg>
-              </span>
-              <div>
-                <strong data-i18n="trust.pay.t">Secure Payments</strong><small data-i18n="trust.pay.s">Safe &amp; encrypted checkout</small>
-              </div>
-            </li>
-            <li>
-              <span class="trust-icon">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path
-                    d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"
-                  />
-                </svg>
-              </span>
-              <div>
-                <strong data-i18n="trust.instant.t">Instant Booking</strong
-                ><small data-i18n="trust.instant.s">Real-time availability</small>
-              </div>
-            </li>
-            <li>
-              <span class="trust-icon">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-                  <circle cx="9" cy="7" r="4" />
-                  <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-                  <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-                </svg>
-              </span>
-              <div>
-                <strong data-i18n="trust.play.t">Play Together</strong
-                ><small data-i18n="trust.play.s">Invite &amp; join matches</small>
-              </div>
-            </li>
-          </ul>
+
+        <ul class="hero-perks">
+          <li>
+            <span class="perk-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 3l7 3v6c0 4.2-2.9 7.6-7 9-4.1-1.4-7-4.8-7-9V6l7-3z" />
+                <path d="m9 12 2 2 4-4" />
+              </svg>
+            </span>
+            <span>
+              <strong data-i18n="trust.pay.t">Secure payments</strong>
+              <em data-i18n="trust.pay.s">Encrypted checkout</em>
+            </span>
+          </li>
+          <li>
+            <span class="perk-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M13 3 5 14h6l-1 7 8-11h-6l1-7z" />
+              </svg>
+            </span>
+            <span>
+              <strong data-i18n="trust.instant.t">Instant booking</strong>
+              <em data-i18n="trust.instant.s">Live availability</em>
+            </span>
+          </li>
+          <li>
+            <span class="perk-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="9" cy="8" r="3.2" />
+                <path d="M3 20c0-3.2 2.7-5.4 6-5.4s6 2.2 6 5.4" />
+                <path d="M16 5.5a3.2 3.2 0 0 1 0 6.2" />
+                <path d="M18 14.8c2 .7 3 2.6 3 5.2" />
+              </svg>
+            </span>
+            <span>
+              <strong data-i18n="trust.play.t">Play together</strong>
+              <em data-i18n="trust.play.s">Join or host matches</em>
+            </span>
+          </li>
+        </ul>
         </div>
 
-        <!-- Hero phones : real app screenshots -->
-        <div class="hero-phones reveal">
-          <div class="phone phone-left">
-            <div class="phone-screen">
-              <img
-                class="shot-img"
-                src="assets/screen-booking.jpg"
-                alt="E7GZ app — booking slots at Alex Arena"
-              />
+        <div class="hero-screens">
+          <figure class="hero-screen">
+            <figcaption class="screen-label">
+              <span class="dot"></span>
+              <span data-i18n="hero.playersLabel">For players</span>
+            </figcaption>
+            <div class="phone">
+              <div class="phone-screen">
+                <img
+                  class="shot-img"
+                  src="assets/app-home.jpg"
+                  alt="E7GZ player app home screen — live pitches, prices and quick actions"
+                  fetchpriority="high"
+                />
+              </div>
             </div>
-          </div>
+            <p class="screen-note" data-i18n="hero.screenPlayers">
+              Find a pitch. Book your slot.
+            </p>
+          </figure>
 
-          <div class="phone phone-center">
-            <div class="phone-screen">
-              <img
-                class="shot-img"
-                src="assets/screen-home.jpg"
-                alt="E7GZ app — find and book football fields near you"
-              />
+          <figure class="hero-screen">
+            <figcaption class="screen-label">
+              <span class="dot dot-muted"></span>
+              <span data-i18n="hero.ownersLabel">For venue owners</span>
+            </figcaption>
+            <div class="phone">
+              <div class="phone-screen">
+                <img
+                  class="shot-img"
+                  src="assets/owner-dashboard-live.jpg"
+                  alt="E7GZ owner dashboard — today's bookings, slots left and revenue"
+                />
+              </div>
             </div>
-          </div>
-
-          <div class="phone phone-right">
-            <div class="phone-screen">
-              <img
-                class="shot-img"
-                src="assets/screen-matches.jpg"
-                alt="E7GZ app — matches explorer"
-              />
-            </div>
-          </div>
+            <p class="screen-note" data-i18n="hero.screenOwners">
+              Bookings, open slots &amp; revenue.
+            </p>
+          </figure>
         </div>
+
       </div>
     </section>
+
 
     <!-- ============ FEATURES ============ -->
     <section class="section features" id="features">
       <div class="container">
         <div class="features-head reveal">
           <span class="eyebrow" data-i18n="features.eyebrow">FEATURES</span>
-          <h2 data-i18n="features.title">Everything you need<br />to enjoy the game</h2>
+          <h2 data-i18n="features.title">Two kinds of people.<br />One app.</h2>
           <p data-i18n="features.sub">
-            Whether you play or you run the venue, E7GZ gives you all the tools
-            — book fields, join matches, manage your game experience, and run
-            your business.
+            Players get discovery, live slots and open matches. Venues get a
+            live calendar, pricing and payouts. Switch sides below — the app
+            does the rest.
           </p>
         </div>
 
@@ -554,8 +537,8 @@
           <span class="eyebrow" data-i18n="shots.eyebrow">SCREENSHOTS</span>
           <h2 data-i18n="shots.title">Take a look inside <span class="green">E7GZ</span></h2>
           <p data-i18n="shots.sub">
-            One app, two experiences — a player app to book and play, and an
-            owner app to run your venues.
+            Real screens from the player and owner apps — every booking, slot
+            and price you see here is the live product.
           </p>
         </div>
 
@@ -589,7 +572,7 @@
 
         <!-- Player screens -->
         <div class="tab-panel active" id="shots-players" data-group="shots">
-          <div class="shots-grid">
+          <div class="shots-rail" tabindex="0" role="region" aria-label="Player app screenshots">
             <div class="shot reveal">
               <div class="phone phone-sm">
                 <div class="phone-screen">
@@ -752,11 +735,15 @@
               </div>
             </div>
           </div>
+          <p class="rail-hint">
+            <span data-i18n="shots.hint">Drag or scroll for more</span>
+            <svg viewBox="0 0 26 10" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M0 5h24M20 1l4 4-4 4"/></svg>
+          </p>
         </div>
 
         <!-- Owner screens -->
         <div class="tab-panel" id="shots-owners" data-group="shots">
-          <div class="shots-grid shots-grid-3">
+          <div class="shots-rail" tabindex="0" role="region" aria-label="Owner app screenshots">
             <div class="shot reveal">
               <div class="phone phone-sm">
                 <div class="phone-screen">
@@ -838,6 +825,10 @@
               </div>
             </div>
           </div>
+          <p class="rail-hint">
+            <span data-i18n="shots.hint">Drag or scroll for more</span>
+            <svg viewBox="0 0 26 10" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M0 5h24M20 1l4 4-4 4"/></svg>
+          </p>
         </div>
       </div>
     </section>
@@ -1092,49 +1083,36 @@
       </div>
     </section>
 
-    <!-- ============ STATS ============ -->
-    <!--  <section class="section stats-section">
-    <div class="container">
-      <div class="stats-band reveal">
-        <p class="stats-title">Trusted by players and field owners</p>
-        <div class="stats-grid">
-          <div class="stat">
-            <span class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
-            <div><strong>10K+</strong><small>Active Players</small></div>
-          </div>
-          <div class="stat">
-            <span class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 12h3m12 0h3M12 5v2m0 10v2"/><circle cx="12" cy="12" r="2.5"/></svg></span>
-            <div><strong>200+</strong><small>Stadiums</small></div>
-          </div>
-          <div class="stat">
-            <span class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="m9 15 2 2 4-4"/></svg></span>
-            <div><strong>50K+</strong><small>Bookings</small></div>
-          </div>
-          <div class="stat">
-            <span class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
-            <div><strong>4.8/5</strong><small>User Rating</small></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
->
 
   <!-- ============ OWNER CTA BANNER ============ -->
     <section class="section owner-cta" id="list-court">
       <div class="container">
         <div class="owner-cta-card reveal">
           <div class="owner-cta-copy">
-            <h2 data-i18n="owncta.title">Got a court? <span class="hl">Add it to E7GZ.</span></h2>
+            <span class="mono-tag" data-i18n="owncta.tag">For venues</span>
+            <h2 data-i18n="owncta.title">Got a court? <span class="hl">Fill it with bookings.</span></h2>
             <p data-i18n="owncta.desc">
               Turn empty hours into daily income — set your hours and prices,
               take bookings and payments, and manage everything from one app.
             </p>
+            <ul class="owner-checks">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 13 4 4L19 7"/></svg>
+                <span data-i18n="owncta.c1">0% commission in your first month</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 13 4 4L19 7"/></svg>
+                <span data-i18n="owncta.c3">Live revenue and daily calendar</span>
+              </li>
+            </ul>
           </div>
-          <a href="list-your-court.html" class="btn btn-primary btn-lg owner-cta-btn">
-            <span data-i18n="owncta.btn">Add your court</span>
-            <span class="btn-arrow" aria-hidden="true">→</span>
-          </a>
+          <div class="owner-cta-side">
+            <a href="list-your-court.html" class="btn btn-primary btn-lg owner-cta-btn">
+              <span data-i18n="owncta.btn">List your court</span>
+              <span class="btn-arrow" aria-hidden="true">→</span>
+            </a>
+            <span class="owner-note" data-i18n="owncta.note">Free to list · Published after review</span>
+          </div>
         </div>
       </div>
     </section>
@@ -1143,93 +1121,123 @@
     <section class="section cta" id="contact">
       <div class="container">
         <div class="cta-card reveal">
-          <h2 data-i18n="cta.title">Ready to play?</h2>
+          <span class="cta-kicker" data-i18n="cta.kicker">Kickoff today</span>
+          <h2 data-i18n="cta.title">Download E7GZ.<br />Book a pitch tonight.</h2>
           <p data-i18n="cta.sub">
-            Download E7GZ today and book your next match in seconds.<br />Questions?
-            Reach us at<br />
-            <span class="cta-links"
-              ><a href="mailto:e7gzsupport@gmail.com">e7gzsupport@gmail.com</a
-              ><a href="tel:+201155246156">+20 115 524 6156</a></span
-            >
+            Free to download and free to browse. Players pay per booking in EGP
+            — owners list their courts at no cost.
           </p>
           <div class="cta-actions">
             <div class="dl-item">
               <a href="https://api.e7gz.app/api/v1/download/apk" class="btn btn-primary btn-lg">
-                <svg viewBox="0 0 24 24" fill="currentColor" class="icon">
+                <svg viewBox="0 0 24 24" fill="currentColor" class="icon" aria-hidden="true">
                   <path
                     d="M6 18c0 .55.45 1 1 1h1v3.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5V19h2v3.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5V19h1c.55 0 1-.45 1-1V8H6v10zM3.5 8C2.67 8 2 8.67 2 9.5v7c0 .83.67 1.5 1.5 1.5S5 17.33 5 16.5v-7C5 8.67 4.33 8 3.5 8zm17 0c-.83 0-1.5.67-1.5 1.5v7c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5v-7c0-.83-.67-1.5-1.5-1.5zm-4.97-5.84l1.3-1.3c.2-.2.2-.51 0-.71-.2-.2-.51-.2-.71 0l-1.48 1.48A5.84 5.84 0 0 0 12 1c-.96 0-1.86.23-2.66.63L7.85.15c-.2-.2-.51-.2-.71 0-.2.2-.2.51 0 .71l1.31 1.31A5.98 5.98 0 0 0 6 7h12c0-1.99-.97-3.75-2.47-4.84zM10 5H9V4h1v1zm5 0h-1V4h1v1z"
                   />
                 </svg>
-                <span data-i18n="cta.apk">Download Android APK</span>
+                <span data-i18n="cta.apk">Download for Android</span>
               </a>
-              <small class="dl-note" data-i18n="cta.apkNote">For Android phones &mdash; direct APK download</small>
+              <small class="dl-note" data-i18n="cta.apkNote">Android 8.0+ &mdash; direct APK download</small>
             </div>
             <div class="dl-item">
-              <a href="https://www.e7gz.app" class="btn btn-dark btn-lg" target="_blank" rel="noopener">
+              <a href="https://www.e7gz.app" class="btn btn-ghost btn-lg" target="_blank" rel="noopener">
                 <svg
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
-                  stroke-width="2"
+                  stroke-width="1.8"
                   class="icon"
+                  aria-hidden="true"
                 >
-                  <circle cx="12" cy="12" r="10" />
-                  <path d="M2 12h20" />
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="M3 12h18" />
                   <path
-                    d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+                    d="M12 3a14.5 14.5 0 0 1 3.8 9 14.5 14.5 0 0 1-3.8 9 14.5 14.5 0 0 1-3.8-9A14.5 14.5 0 0 1 12 3z"
                   />
                 </svg>
-                <span data-i18n="cta.web">Open Web App</span>
+                <span data-i18n="cta.web">Open the web app</span>
               </a>
-              <small class="dl-note" data-i18n="cta.webNote">For iPhone &mdash; opens in Safari, no download</small>
+              <small class="dl-note" data-i18n="cta.webNote">iPhone &mdash; opens in Safari, no download</small>
             </div>
-            <a href="#home" class="section-link" data-i18n="cta.back">Back to top &uarr;</a>
           </div>
+          <p class="cta-links">
+            <a href="mailto:e7gzsupport@gmail.com">e7gzsupport@gmail.com</a>
+            <span aria-hidden="true">·</span>
+            <a href="tel:+201155246156">+20 115 524 6156</a>
+          </p>
         </div>
       </div>
     </section>
 
     <!-- ============ FOOTER ============ -->
     <footer class="footer">
-      <div class="container footer-inner">
-        <img src="assets/e7gz-logo.png" alt="E7GZ احجز" class="footer-logo" />
-        <nav class="footer-links">
-          <a href="#home" data-i18n="nav.home">Home</a>
-          <a href="#features" data-i18n="nav.features">Features</a>
-          <a href="#screenshots" data-i18n="nav.screenshots">Screenshots</a>
-          <a href="#how-it-works" data-i18n="nav.how">How It Works</a>
-          <a href="#install" data-i18n="nav.install">Install</a>
-          <a href="#contact" data-i18n="nav.contact">Contact</a>
-          <a href="suggest.html" data-i18n="footer.suggest">Suggest a Court</a>
-          <a href="list-your-court.html" data-i18n="footer.list">Add Your Court</a>
-          <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a>
-          <a href="terms.html" data-i18n="footer.terms">Terms of Use</a>
-          <a href="delete-account.html" data-i18n="footer.delete">Delete Account</a>
-        </nav>
-        <div class="footer-contact">
-          <a href="mailto:e7gzsupport@gmail.com" class="footer-mail"
-            >e7gzsupport@gmail.com</a
-          >
-          <a href="tel:+201155246156" class="footer-mail">+20 115 524 6156</a>
-          <a
-            href="https://www.instagram.com/e7gz._/"
-            class="footer-mail footer-social"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg>
-            Instagram
-          </a>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <img src="assets/e7gz-logo.png" alt="E7GZ احجز" class="footer-logo" />
+            <p data-i18n="footer.about">
+              The booking layer for football and padel in Egypt. One app for
+              players who want a pitch tonight, and venues that want the empty
+              hours filled.
+            </p>
+            <span class="footer-tag" data-i18n="footer.tag">Book · Play · Win</span>
+          </div>
+
+          <nav class="footer-col">
+            <h4 data-i18n="footer.explore">Explore</h4>
+            <a href="#features" data-i18n="nav.features">Features</a>
+            <a href="#screenshots" data-i18n="nav.screenshots">Screenshots</a>
+            <a href="#how-it-works" data-i18n="nav.how">How It Works</a>
+            <a href="#prices" data-i18n="nav.prices">Prices</a>
+            <a href="suggest.html" data-i18n="footer.suggest">Suggest a Court</a>
+          </nav>
+
+          <nav class="footer-col">
+            <h4 data-i18n="footer.platform">Platform</h4>
+            <a href="https://www.e7gz.app" target="_blank" rel="noopener" data-i18n="footer.pwa">iOS Web App (PWA)</a>
+            <a href="https://api.e7gz.app/api/v1/download/apk" data-i18n="footer.apkLink">Android Direct APK</a>
+            <a href="list-your-court.html" data-i18n="footer.venues">Venue Partners</a>
+            <a href="mailto:e7gzsupport@gmail.com" data-i18n="footer.support">Support Desk</a>
+            <a href="https://www.instagram.com/e7gz._/" target="_blank" rel="noopener noreferrer" data-i18n="footer.instagram">Instagram</a>
+          </nav>
+
+          <div class="footer-col footer-store-col">
+            <h4 data-i18n="footer.getapp">Get the app</h4>
+            <div class="footer-store">
+              <a href="https://www.e7gz.app" class="store-tile" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+                </svg>
+                <span>
+                  <small data-i18n="footer.iosTile">Install for</small>
+                  <strong data-i18n="footer.iosTileSub">Apple iOS (Safari)</strong>
+                </span>
+              </a>
+              <a href="https://api.e7gz.app/api/v1/download/apk" class="store-tile">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M17.6 9.48l1.84-3.18c.16-.31.04-.69-.26-.85-.29-.15-.65-.06-.83.22l-1.88 3.24a11.46 11.46 0 0 0-8.94 0L5.65 5.67c-.19-.29-.58-.38-.87-.2-.28.18-.37.54-.22.83L6.4 9.48A10.81 10.81 0 0 0 1 18h22a10.81 10.81 0 0 0-5.4-8.52M7 15.25a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5m10 0a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5z" />
+                </svg>
+                <span>
+                  <small data-i18n="footer.apkTile">Download for</small>
+                  <strong data-i18n="footer.apkTileSub">Android Direct APK</strong>
+                </span>
+              </a>
+            </div>
+          </div>
         </div>
-        <p class="copyright" data-i18n="footer.copy">
-          © 2026 E7GZ. All rights reserved. ·
-          <a href="privacy.html">Privacy Policy</a> ·
-          <a href="terms.html">Terms of Use</a>
-        </p>
+
+        <div class="footer-bottom">
+          <p data-i18n="footer.copy">© 2026 E7GZ. All rights reserved.</p>
+          <nav class="footer-legal">
+            <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a>
+            <a href="terms.html" data-i18n="footer.terms">Terms of Use</a>
+            <a href="delete-account.html" data-i18n="footer.delete">Delete Account</a>
+          </nav>
+        </div>
       </div>
     </footer>
 
     <script src="js/script.js"></script>
-    <script src="js/i18n.js"></script>
+    <script src="js/i18n.js?v=20261023-hero-copy"></script>
   </body>
 </html>

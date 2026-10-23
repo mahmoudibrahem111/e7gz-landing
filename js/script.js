@@ -1,3 +1,5 @@
+document.documentElement.classList.add("js-ready");
+
 // Mobile nav
 const hamburger = document.getElementById("hamburger");
 const navLinks = document.getElementById("navLinks");
@@ -15,6 +17,13 @@ navLinks.querySelectorAll("a").forEach((link) =>
     hamburger.setAttribute("aria-expanded", "false");
   })
 );
+
+// Navbar state once the page moves
+const navbarEl = document.getElementById("navbar");
+const syncNavbar = () =>
+  navbarEl.classList.toggle("scrolled", window.scrollY > 12);
+window.addEventListener("scroll", syncNavbar, { passive: true });
+syncNavbar();
 
 // Active nav link on scroll
 const sections = document.querySelectorAll("section[id]");
@@ -62,19 +71,23 @@ if (window.location.hash === "#owners") {
 }
 
 // Reveal on scroll
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-        observer.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.12 }
-);
+if ("IntersectionObserver" in window) {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.12 }
+  );
 
-document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+  document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+} else {
+  document.querySelectorAll(".reveal").forEach((el) => el.classList.add("visible"));
+}
 
 // Download countdown (APK links only — web app buttons open instantly)
 document.querySelectorAll(".dl-item .btn-primary, .dl-item .btn-dark").forEach((btn) => {

@@ -56,8 +56,10 @@
   }
 
   function clearErrs() {
-    form.querySelectorAll(".field.invalid").forEach(function (el) {
+    form.querySelectorAll(".sp-field.invalid").forEach(function (el) {
       el.classList.remove("invalid");
+      var e = el.querySelector(".field-err");
+      if (e) e.textContent = "";
     });
   }
 
@@ -70,7 +72,7 @@
 
   function showPass() {
     stage = "pass";
-    if (codeWrap) codeWrap.style.display = "none";
+    if (codeWrap) codeWrap.style.display = "";
     if (passWrap) passWrap.style.display = "";
     if (resendBox) resendBox.style.display = "";
     if (submit) submit.innerHTML = buttonLabel();
@@ -101,8 +103,8 @@
       }
       showPass();
       showBanner(msg(
-        "We sent a 6-digit code to " + email + ". Enter it below.",
-        "ابعتنا كود من 6 أرقام على " + email + ". اكتبه بالأسفل."
+        "We sent a 6-digit code to " + email + ". Enter it below and choose your password.",
+        "ابعتنا كود من 6 أرقام على " + email + ". اكتبه بالأسفل واختار كلمة المرور."
       ), "ok");
       if (codeInput) codeInput.focus();
       return true;
@@ -126,18 +128,21 @@
     var ok = true;
 
     if (code.length !== 6) {
-      setErr(codeInput && codeInput.closest(".field"), msg("Enter the 6-digit code", "اكتب الكود المكوّن من 6 أرقام"));
+      setErr(codeInput && codeInput.closest(".sp-field"), msg("Enter the 6-digit code", "اكتب الكود المكوّن من 6 أرقام"));
       ok = false;
     }
     if (pass.length < MIN_LEN) {
-      setErr(passInput && passInput.closest(".field"), msg("Use at least 8 characters", "اكتب 8 حروف على الأقل"));
+      setErr(passInput && passInput.closest(".sp-field"), msg("Use at least 8 characters", "اكتب 8 حروف على الأقل"));
       ok = false;
     }
     if (pass !== confirm) {
-      setErr(confirmInput && confirmInput.closest(".field"), msg("Passwords don't match", "كلمتا المرور غير متطابقتين"));
+      setErr(confirmInput && confirmInput.closest(".sp-field"), msg("Passwords don't match", "كلمتا المرور غير متطابقتين"));
       ok = false;
     }
-    if (!ok) return;
+    if (!ok) {
+      loading(false);
+      return;
+    }
 
     api("verifyOtp", { email: email, otp: code })
       .then(function (res) {

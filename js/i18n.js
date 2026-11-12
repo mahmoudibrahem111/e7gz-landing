@@ -28,7 +28,7 @@
     "hero.screenOwners": "الحجوزات والمواعيد والإيراد.",
     "hero.apk": "حمّل للأندرويد",
     "hero.web": "افتح تطبيق الويب",
-    "hero.apkNote": "التحميل مبدأش؟ اضغط تاني",
+    "hero.apkNote": "متاح دلوقتي على Google Play",
     "hero.webNote": "للآيفن — بيفتح في Safari من غير تحميل",
 
     "trust.pay.t": "دفع آمن",
@@ -124,7 +124,7 @@
 
     "step1.title": "افتح وسجّل",
     "step1.desc":
-      "ثبّت تطبيق الويب على موبايلك (أو حمّل APK للأندرويد) واعمل بروفايل اللاعب بتاعك في أقل من دقيقة.",
+      "ثبّت تطبيق الويب على موبايلك (أو حمّل تطبيق أندرويد من Google Play) واعمل بروفايل اللاعب بتاعك في أقل من دقيقة.",
     "step2.title": "لاقي ملعبك",
     "step2.desc":
       "اتفرّج على الملاعب القريبة، شوف المرافق والتقييمات والأماكن على الخريطة.",
@@ -179,18 +179,18 @@
       "انزل لتحت واضغط <strong>«إضافة إلى الشاشة الرئيسية»</strong> وبعدين <strong>إضافة</strong>",
     "install.iosNote":
       "E7GZ هتظهر على شاشة موبايلك وتفتح بملء الشاشة، زي أي تطبيق.",
-    "install.android": "أندرويد — APK",
+    "install.android": "أندرويد — Google Play",
     "install.and1":
-      "حمّل <a href=\"https://api.e7gz.app/api/v1/download/apk\">ملف الـ APK</a> على موبايلك",
-    "install.and2": "افتح ملف الـ <strong>.apk</strong> اللي نزل من الإشعارات",
+      "افتح <a href=\"https://play.google.com/store/apps/details?id=com.e7gz.app\" target=\"_blank\" rel=\"noopener\">Google Play</a> وابحث عن E7GZ",
+    "install.and2": "اضغط <strong>تثبيت</strong> على صفحة E7GZ",
     "install.and3":
-      "اضغط <strong>«تثبيت»</strong> وبعدين <strong>افتح</strong> التطبيق",
+      "بعد ما التثبيت يخلص اضغط <strong>فتح</strong>",
     "install.andNote":
-      "E7GZ هتتثبت على موبايلك على طول — من غير متجر التطبيقات.",
+      "حمّل E7GZ بأمان من متجر Google Play.",
     "install.openWeb": "افتح تطبيق الويب (للآيفن)",
     "install.openWebNote": "بيفتح في Safari — ضيفه على شاشتك الرئيسية",
-    "install.dlApk": "حمّل APK للأندرويد",
-    "install.dlApkNote": "لفونات الأندرويد — ثبّت ملف الـ APK",
+    "install.dlApk": "حمّل من Google Play",
+    "install.dlApkNote": "متاح دلوقتي على Google Play",
 
     "owncta.tag": "لأصحاب الملاعب",
     "owncta.title": "عندك ملعب؟ <span class=\"hl\">املا حجوزات.</span>",
@@ -205,8 +205,8 @@
     "cta.title": "حمّل E7GZ.<br />واحجز ملعب النهارده.",
     "cta.sub":
       "التحميل مجاني والتصفح مجاني. اللاعب بيدفع لكل حجز بالجنيه — وصاحب الملعب بيضيف ملاعبه من غير فلوس.",
-    "cta.apk": "حمّل APK للأندرويد",
-    "cta.apkNote": "لفونات الأندرويد — تحميل مباشر للـ APK",
+    "cta.apk": "حمّل من Google Play",
+    "cta.apkNote": "متاح دلوقتي على Google Play",
     "cta.web": "افتح تطبيق الويب",
     "cta.webNote": "للآيفن — بيفتح في Safari من غير تحميل",
     "cta.back": "ارجع لأعلى &uarr;",
@@ -219,14 +219,14 @@
     "footer.platform": "المنصة",
     "footer.getapp": "حمّل التطبيق",
     "footer.pwa": "تطبيق الويب (آيفن)",
-    "footer.apkLink": "APK أندرويد مباشر",
+    "footer.apkLink": "حمّل من Google Play",
     "footer.venues": "لأصحاب الملاعب",
     "footer.support": "الدعم",
     "footer.instagram": "إنستجرام",
     "footer.iosTile": "ثبّت على",
     "footer.iosTileSub": "آيفن (Safari)",
     "footer.apkTile": "حمّل على",
-    "footer.apkTileSub": "أندرويد APK",
+    "footer.apkTileSub": "Google Play",
 
     "footer.privacy": "سياسة الخصوصية",
     "footer.terms": "شروط الاستخدام",
